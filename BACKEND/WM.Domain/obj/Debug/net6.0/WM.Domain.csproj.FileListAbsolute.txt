@@ -1,0 +1,23 @@
+A:\Warehouse Management v4\WM.Domain\bin\Debug\net6.0\WM.Domain.deps.json
+A:\Warehouse Management v4\WM.Domain\bin\Debug\net6.0\WM.Domain.dll
+A:\Warehouse Management v4\WM.Domain\bin\Debug\net6.0\WM.Domain.pdb
+A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.AssemblyReference.cache
+A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfoInputs.cache
+A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfo.cs
+A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.CoreCompileInputs.cache
+A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.dll
+A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\refint\WM.Domain.dll
+A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
+A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\bin\Debug\net6.0\WM.Domain.deps.json
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\bin\Debug\net6.0\WM.Domain.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\bin\Debug\net6.0\WM.Domain.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfoInputs.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfo.cs
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.CoreCompileInputs.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\refint\WM.Domain.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll

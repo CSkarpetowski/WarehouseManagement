@@ -1,0 +1,30 @@
+A:\Warehouse Management v4\WM.IData\bin\Debug\net6.0\WM.IData.deps.json
+A:\Warehouse Management v4\WM.IData\bin\Debug\net6.0\WM.IData.dll
+A:\Warehouse Management v4\WM.IData\bin\Debug\net6.0\WM.IData.pdb
+A:\Warehouse Management v4\WM.IData\bin\Debug\net6.0\WM.Domain.dll
+A:\Warehouse Management v4\WM.IData\bin\Debug\net6.0\WM.Domain.pdb
+A:\Warehouse Management v4\WM.IData\obj\Debug\net6.0\WM.IData.csproj.AssemblyReference.cache
+A:\Warehouse Management v4\WM.IData\obj\Debug\net6.0\WM.IData.GeneratedMSBuildEditorConfig.editorconfig
+A:\Warehouse Management v4\WM.IData\obj\Debug\net6.0\WM.IData.AssemblyInfoInputs.cache
+A:\Warehouse Management v4\WM.IData\obj\Debug\net6.0\WM.IData.AssemblyInfo.cs
+A:\Warehouse Management v4\WM.IData\obj\Debug\net6.0\WM.IData.csproj.CoreCompileInputs.cache
+A:\Warehouse Management v4\WM.IData\obj\Debug\net6.0\WM.IData.csproj.CopyComplete
+A:\Warehouse Management v4\WM.IData\obj\Debug\net6.0\WM.IData.dll
+A:\Warehouse Management v4\WM.IData\obj\Debug\net6.0\refint\WM.IData.dll
+A:\Warehouse Management v4\WM.IData\obj\Debug\net6.0\WM.IData.pdb
+A:\Warehouse Management v4\WM.IData\obj\Debug\net6.0\ref\WM.IData.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\bin\Debug\net6.0\WM.IData.deps.json
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\bin\Debug\net6.0\WM.IData.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\bin\Debug\net6.0\WM.IData.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\bin\Debug\net6.0\WM.Domain.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\bin\Debug\net6.0\WM.Domain.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\obj\Debug\net6.0\WM.IData.csproj.AssemblyReference.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\obj\Debug\net6.0\WM.IData.GeneratedMSBuildEditorConfig.editorconfig
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\obj\Debug\net6.0\WM.IData.AssemblyInfoInputs.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\obj\Debug\net6.0\WM.IData.AssemblyInfo.cs
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\obj\Debug\net6.0\WM.IData.csproj.CoreCompileInputs.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\obj\Debug\net6.0\WM.IData.csproj.CopyComplete
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\obj\Debug\net6.0\WM.IData.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\obj\Debug\net6.0\refint\WM.IData.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\obj\Debug\net6.0\WM.IData.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.IData\obj\Debug\net6.0\ref\WM.IData.dll

@@ -1,0 +1,9 @@
+#timeBox{
+    padding: 1%;
+    border-radius: 5%;
+    background-color: #0F1A2B;
+    width: 5%;
+    position: fixed;
+    left: 90%;
+    border: 1px solid #c87cfc;
+}

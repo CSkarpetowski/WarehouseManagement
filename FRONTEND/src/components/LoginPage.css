@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+#mainLogin
+{   
+height:100vh;
+margin: 0;
+background-image: url('../img/loginBackground.png');
+background-size: cover;
+}
+#loginNav
+{
+    background-color: #0F1A2B; 
+    padding: 1%;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+}
+h1
+{
+    font-size: 35px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    margin: 1%;
+
+}
+#loginArea
+{
+    padding-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+#loginBlock
+{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: flex;
+    background-color: #0F1A2B;
+    justify-content: center;
+    flex-direction: column;
+    overflow: auto;
+    padding: 1%;
+    border-radius: 1%;
+    border: 5px solid #c87cfc;
+    box-shadow: 0px 26px 26px black; */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    background-color: #0F1A2B;
+    border-radius: 10px;
+    border: 5px solid #c87cfc;
+    box-shadow: 0px 26px 26px black;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; */
+    border: 5px solid #c87cfc;
+    background-color: #0F1A2B;
+    border-radius: 10px;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+}
+::-webkit-input-placeholder { text-align:center; }
+input{
+    /* width: 80%;
+    margin: 1%;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 25px;
+    padding: 2%;
+    padding-left: 10%; */
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 25px;
+  padding-left: 10%;
+  font-family: 'Comfortaa', cursive;
+}
+
+button{
+    
+  width: 100%;
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4b6cb7;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 16px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+button:hover
+{
+    background-color: #093b6c;
+}
+#loginBlock > h1
+{
+    color: white;
+    margin-bottom: 5%;
+    font-family: 'Comfortaa', cursive;
+}
+
+#iD
+{
+    position: absolute;
+    padding-top: 15px;
+    border-right: 1px solid black;
+    height: 45px;
+}
+#pass
+{
+    position: absolute;
+    padding-top: 15px;
+    border-right: 1px solid black;
+    height: 45px;
+}

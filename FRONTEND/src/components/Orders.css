@@ -1,0 +1,32 @@
+#orderCard
+{
+    padding-left: 15%;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.orderTable {
+    width: 80%;
+    border-collapse: collapse;
+  }
+  
+  .orderTable th {
+    background-color: #0F1A2B;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .orderTable th, .orderTable td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .orderTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .orderTable tr:nth-child(odd) {
+    background-color: #fff;
+  }
