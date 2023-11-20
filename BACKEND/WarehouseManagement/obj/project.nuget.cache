@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sM42+sttH9L1GPByqTge1neXM7TwvSYzYnnshlbcBDegf2A5hZiaCeTeR5EAuu2FPEpijFBlgRgESSY22BBS8Q==",
+  "dgSpecHash": "tpAc9sHNd7IwiJrfSaToRrYp06OTdVy6MbYVl2ptWF1h+MyAkmobo7jSMqtfOE9FkHMqE76a6sGD1ySzV1wZkw==",
   "success": true,
-  "projectFilePath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WarehouseManagement\\WarehouseManagement.csproj",
+  "projectFilePath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WarehouseManagement\\WarehouseManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FrOzen\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
     "C:\\Users\\FrOzen\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",

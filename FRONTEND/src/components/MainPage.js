@@ -11,20 +11,20 @@ export default function MainPage() {
       <div onClick={()=>alert('Warehouse1')} id='warehouseOne'>
         <p className='warehouseTitle'>Magazyn 1</p>
         <img src={warehouseIcon} width={250} />
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-           It has roots in a piece of classical Latin literature from 45 BC.</p>
+        <p>Zapełnienie:</p>
+          <progress value={80} max={100}></progress>
       </div>
       <div onClick={()=>alert('Warehouse2')} id='warehouseTwo'>
         <p className='warehouseTitle'>Magazyn 2</p>
         <img src={warehouseIcon} width={250}/>
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-           It has roots in a piece of classical Latin literature from 45 BC.</p>
+        <p>Zapełnienie:</p>
+          <progress value={40} max={100}></progress>
       </div>
       <div onClick={()=>alert('Warehouse3')} id='warehouseThree'>
         <p className='warehouseTitle'>Magazyn 3</p>
         <img src={warehouseIcon} width={250}/>
-        <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
-           It has roots in a piece of classical Latin literature from 45 BC.</p>
+        <p>Zapełnienie:</p>
+          <progress value={0} max={100}></progress>
       </div>
     </div>
     </div>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.IServices\\WM.IServices.csproj": {}
+    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {}
   },
   "projects": {
-    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Domain\\WM.Domain.csproj": {
+    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Domain\\WM.Domain.csproj",
+        "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
         "projectName": "WM.Domain",
-        "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Domain\\WM.Domain.csproj",
+        "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
         "packagesPath": "C:\\Users\\FrOzen\\.nuget\\packages\\",
-        "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Domain\\obj\\",
+        "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FrOzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.IServices\\WM.IServices.csproj": {
+    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.IServices\\WM.IServices.csproj",
+        "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
         "projectName": "WM.IServices",
-        "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.IServices\\WM.IServices.csproj",
+        "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
         "packagesPath": "C:\\Users\\FrOzen\\.nuget\\packages\\",
-        "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.IServices\\obj\\",
+        "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FrOzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +83,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Domain\\WM.Domain.csproj": {
-                "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Domain\\WM.Domain.csproj"
+              "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
+                "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
               }
             }
           }

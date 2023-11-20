@@ -10,16 +10,21 @@ import { FaDatabase } from 'react-icons/fa';
 import {FaSignOutAlt} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import LoginPage from './LoginPage';
+import { MdAssignmentAdd } from "react-icons/md";
 
 export default function NavBar() {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
   const username = localStorage.getItem("username");
   function SignOut()
   {
     localStorage.removeItem("token");
-   // navigate("/");
+   navigate("/");
     window.location.reload();
   }
+  const navDashboard = () => {navigate("/MainPage")}
+  const navAddProduct = () => {navigate("/AddProduct")}
+  const navAddOrder = () => {navigate("/AddOrder")}
+  const navWorkers = () => {navigate("/MainPage")}
   return (
     <nav>
 
@@ -30,49 +35,51 @@ export default function NavBar() {
           <BiUserCircle className='icon' size={25} color='#c87cfc'/>
           <p id='userName'>Stefan</p>
         </div>
-        {/* <div style={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
-        <AiOutlineIdcard className='icon' size={25} color='#c87cfc'/>
-        <p id='userCode'>#47238</p>
-        </div> */}
       
       </div>
       <div id='appMenu'>
         <ul id='listMenu'>
 
-          <li className='listItem'>
+          <li onClick={navDashboard} className='listItem'>
              <div>
             <AiOutlineDashboard size={20} color='#c87cfc'/>
             Dashboard
              </div>
             </li>
             <li className='listItem'>
-            <div>
+            <div onClick={navAddProduct}>
             <FaDatabase size={20} color="#c87cfc"/>
             <p>AddProduct</p>
             </div>
           </li>
           <li className='listItem'>
-            <div>
+            <div onClick={navAddOrder}>
+            <MdAssignmentAdd size={20}  color="#c87cfc" />
+            <p>AddOrder</p>
+            </div>
+          </li>
+           {/* <li className='listItem'>
+            <div onClick={navOrders}>
               <LiaClipboardListSolid size={20} color="#c87cfc"/>
               <p></p> Orders
             </div>
-            </li>
+            </li> */}
 
           <li className='listItem'>
-            <div>
+            <div onClick={navWorkers}>
             <GoPeople size={20} color="#c87cfc"/>
             <p>Workers</p>
             </div>
             </li>
 
-          <li className='listItem'>
-            <div>
+          {/* <li className='listItem'>
+            <div onClick={navClients}>
             <BsTruck size={20} color="#c87cfc"/>
             <p>Clients</p>
             </div>
-          </li>
+          </li> */}
           <li className='listItem'>
-          <div > 
+          <div onClick={SignOut}> 
             <FaSignOutAlt size={20} color="#c87cfc" />
             <p id='signOut' >SignOut</p>
           </div>

@@ -40,3 +40,24 @@ D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseM
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Services\obj\Debug\net6.0\refint\WM.Services.dll
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Services\obj\Debug\net6.0\WM.Services.pdb
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Services\obj\Debug\net6.0\ref\WM.Services.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Services.deps.json
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Services.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Services.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Data.Sql.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Domain.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IData.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IServices.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Data.Sql.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Domain.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IData.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IServices.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.csproj.AssemblyReference.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.AssemblyInfoInputs.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.AssemblyInfo.cs
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.csproj.CoreCompileInputs.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.csproj.CopyComplete
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\refint\WM.Services.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\ref\WM.Services.dll

@@ -3423,11 +3423,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WarehouseManagement\\WarehouseManagement.csproj",
+      "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WarehouseManagement\\WarehouseManagement.csproj",
       "projectName": "WarehouseManagement",
-      "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WarehouseManagement\\WarehouseManagement.csproj",
+      "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WarehouseManagement\\WarehouseManagement.csproj",
       "packagesPath": "C:\\Users\\FrOzen\\.nuget\\packages\\",
-      "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WarehouseManagement\\obj\\",
+      "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WarehouseManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FrOzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3444,11 +3444,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\ClassLibrary1\\WM.Data.Sql.csproj": {
-              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\ClassLibrary1\\WM.Data.Sql.csproj"
+            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj": {
+              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj"
             },
-            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Services\\WM.Services.csproj": {
-              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Services\\WM.Services.csproj"
+            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Services\\WM.Services.csproj": {
+              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Services\\WM.Services.csproj"
             }
           }
         }

@@ -2746,11 +2746,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Services\\WM.Services.csproj",
+      "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Services\\WM.Services.csproj",
       "projectName": "WM.Services",
-      "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Services\\WM.Services.csproj",
+      "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Services\\WM.Services.csproj",
       "packagesPath": "C:\\Users\\FrOzen\\.nuget\\packages\\",
-      "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Services\\obj\\",
+      "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FrOzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2767,17 +2767,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\ClassLibrary1\\WM.Data.Sql.csproj": {
-              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\ClassLibrary1\\WM.Data.Sql.csproj"
+            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj": {
+              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj"
             },
-            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Domain\\WM.Domain.csproj": {
-              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Domain\\WM.Domain.csproj"
+            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
+              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
             },
-            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.IData\\WM.IData.csproj": {
-              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.IData\\WM.IData.csproj"
+            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IData\\WM.IData.csproj": {
+              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IData\\WM.IData.csproj"
             },
-            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.IServices\\WM.IServices.csproj": {
-              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.IServices\\WM.IServices.csproj"
+            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {
+              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj"
             }
           }
         }

@@ -1,0 +1,88 @@
+#orderPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+    background-image: url("../img/background.png");
+  }
+  
+  .cardTitle {
+    color: white;
+    font-size: 40px;
+    margin: 0;
+    padding: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    margin-left: 20%;
+  }
+  
+  .warehouseArea {
+    display: flex;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 20px;
+    padding-left: 5%;
+  }
+  
+  .table {
+    background-color: white;
+    height: 20px;
+  }
+  
+  .orderTable {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .orderTable th,
+  .orderTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: black;
+    width: 200x;
+  }
+  
+  .orderTable th {
+    background-color: #f2f2f2;
+  }
+  
+  .toggleButton {
+    display: inline-block;
+    background-color: #4b6cb7;
+    color: white;
+    font-size: 14px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    justify-content: center;
+    max-width: 200px;
+    margin-left: 20%;
+  }
+  
+  .buttonContainer {
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 72%;
+    max-width: 30%;
+  }
+  
+  .buttonContainer2 {
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+    margin-left: 79%;
+    max-width: 20%;
+  }

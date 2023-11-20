@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IpEfk/K/Qc3RJyZ8ZYS+q4iaub4CiD3N7HDLC9CAGlEGmZ6C2utrGZ+lIHNCVwEC4yG/Jc6+n1h2xE6jR9d3GQ==",
+  "dgSpecHash": "TXl7ltjG8ujrNPbD7mukbJQD3pDU54EHsEoKNpNCowR+IujLV2COpFHzVOT43c9dJKNQtjMyMqJ39uDDAi+zHw==",
   "success": true,
-  "projectFilePath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\Projekt_WarehouseManager\\Warehouse Management v5\\WM.Services\\WM.Services.csproj",
+  "projectFilePath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Services\\WM.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FrOzen\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\FrOzen\\.nuget\\packages\\jquery\\1.6.4\\jquery.1.6.4.nupkg.sha512",
