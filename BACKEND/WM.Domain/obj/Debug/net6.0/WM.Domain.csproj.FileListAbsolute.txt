@@ -32,3 +32,15 @@ D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Domain\obj\Debug\net6.0\refint\WM.Domain.dll
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.deps.json
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.pdb
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfoInputs.cache
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfo.cs
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.CoreCompileInputs.cache
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.sourcelink.json
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\refint\WM.Domain.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll

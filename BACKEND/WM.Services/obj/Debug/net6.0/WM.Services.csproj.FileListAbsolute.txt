@@ -61,3 +61,25 @@ D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\refint\WM.Services.dll
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.pdb
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Services\obj\Debug\net6.0\ref\WM.Services.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Services.deps.json
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Services.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Services.pdb
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Data.Sql.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Domain.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IData.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IServices.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Data.Sql.pdb
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Domain.pdb
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IData.pdb
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IServices.pdb
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.csproj.AssemblyReference.cache
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.GeneratedMSBuildEditorConfig.editorconfig
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.AssemblyInfoInputs.cache
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.AssemblyInfo.cs
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.csproj.CoreCompileInputs.cache
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.sourcelink.json
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.csproj.CopyComplete
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\refint\WM.Services.dll
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.pdb
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\ref\WM.Services.dll
