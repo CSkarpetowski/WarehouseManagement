@@ -15,6 +15,8 @@ import { MdAssignmentAdd } from "react-icons/md";
 export default function NavBar() {
   const navigate = useNavigate();
   const username = localStorage.getItem("username");
+  const isManager = localStorage.getItem("isManager");
+
   function SignOut()
   {
     localStorage.removeItem("token");
@@ -34,7 +36,7 @@ export default function NavBar() {
 
         <div style={{display:'flex', alignItems:'center', justifyContent:'space-between'}}> 
           <BiUserCircle className='icon' size={25} color='#c87cfc'/>
-          <p id='userName'>{username}</p>
+          <p style={{color: isManager ? 'gold' : 'white'}} id='userName'>{username}</p>
         </div>
       
       </div>
