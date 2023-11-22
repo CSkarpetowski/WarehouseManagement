@@ -67,6 +67,7 @@ body{
     font-size: 25px;
     font-weight: 700;
     margin: 5%;
+    text-align: center;
 }
 
 #warehouseOne:hover
@@ -85,4 +86,11 @@ body{
 { 
     background-color: #1b3050;
     transition: 0.2s ease-in-out;
+}
+progress
+{
+    height: 20px;
+    width: 100%;
+    box-shadow: 2px 14px 15px -7px rgba(30, 166, 250, 0.36);
+    border-radius: 50px;
 }

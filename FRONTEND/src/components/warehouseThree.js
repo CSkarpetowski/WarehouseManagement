@@ -1,7 +1,11 @@
-import React from 'react'
-
-export default function warehouseThree() {
+import React from 'react';
+import NavBar from './NavBar';
+import './warehouseThree.css';
+export default function WarehouseThree() {
   return (
-    <div>warehouseThree</div>
+    <>
+    <NavBar />
+    <h1 className='cardTitle'>Warehouse 3</h1>
+    </>
   )
 }

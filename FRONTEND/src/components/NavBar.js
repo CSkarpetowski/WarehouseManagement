@@ -24,7 +24,8 @@ export default function NavBar() {
   const navDashboard = () => {navigate("/MainPage")}
   const navAddProduct = () => {navigate("/AddProduct")}
   const navAddOrder = () => {navigate("/AddOrder")}
-  const navWorkers = () => {navigate("/MainPage")}
+  const navWorkers = () => {navigate("/Workers")}
+  const navDriver = () => {navigate("/Driver")}
   return (
     <nav>
 
@@ -33,7 +34,7 @@ export default function NavBar() {
 
         <div style={{display:'flex', alignItems:'center', justifyContent:'space-between'}}> 
           <BiUserCircle className='icon' size={25} color='#c87cfc'/>
-          <p id='userName'>Stefan</p>
+          <p id='userName'>{username}</p>
         </div>
       
       </div>
@@ -72,14 +73,14 @@ export default function NavBar() {
             </div>
             </li>
 
-          {/* <li className='listItem'>
-            <div onClick={navClients}>
+           <li className='listItem'>
+            <div onClick={navDriver}>
             <BsTruck size={20} color="#c87cfc"/>
-            <p>Clients</p>
+            <p>Driver</p>
             </div>
-          </li> */}
+          </li> 
           <li className='listItem'>
-          <div onClick={SignOut}> 
+          <div className='signOut' onClick={SignOut}> 
             <FaSignOutAlt size={20} color="#c87cfc" />
             <p id='signOut' >SignOut</p>
           </div>

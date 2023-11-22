@@ -2,29 +2,28 @@ import React from 'react';
 import './MainPage.css';
 import NavBar from './NavBar';
 import warehouseIcon from '../img/warehouse.png';
+import { useNavigate } from 'react-router-dom';
 export default function MainPage() {
+  const navigate = useNavigate();
   return (
     <div id='mainPage'>
       <NavBar/>
     <h1  className='cardTitle'>Dashboard</h1>
     <div  className='warehouseArea'>
-      <div onClick={()=>alert('Warehouse1')} id='warehouseOne'>
+      <div onClick={()=>navigate("/WarehouseOne")} id='warehouseOne'>
         <p className='warehouseTitle'>Magazyn 1</p>
         <img src={warehouseIcon} width={250} />
-        <p>Zapełnienie:</p>
           <progress value={80} max={100}></progress>
       </div>
-      <div onClick={()=>alert('Warehouse2')} id='warehouseTwo'>
+      <div onClick={()=>navigate("/WarehouseTwo")} id='warehouseTwo'>
         <p className='warehouseTitle'>Magazyn 2</p>
         <img src={warehouseIcon} width={250}/>
-        <p>Zapełnienie:</p>
           <progress value={40} max={100}></progress>
       </div>
-      <div onClick={()=>alert('Warehouse3')} id='warehouseThree'>
+      <div onClick={()=>navigate("/WarehouseThree")} id='warehouseThree'>
         <p className='warehouseTitle'>Magazyn 3</p>
         <img src={warehouseIcon} width={250}/>
-        <p>Zapełnienie:</p>
-          <progress value={0} max={100}></progress>
+          <progress value={20} max={100}></progress>
       </div>
     </div>
     </div>

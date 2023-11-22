@@ -27,7 +27,6 @@ namespace WarehouseManagement.Controllers
 
         [HttpGet("{IdProdukt:min(1)}", Name = "GetProdukt")]
 
-
         public async Task<IActionResult> GetProduktById(int IdProdukt)
         {
             var Produkt = await _produktService.GetProduktByIdProduktu(IdProdukt);
