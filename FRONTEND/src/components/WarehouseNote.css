@@ -1,0 +1,36 @@
+.warehouse-note-container {
+    position: relative;
+    text-shadow: 0 0 2px rgb(0, 0, 0)
+  }
+  
+  .warehouse-note-list {
+    position: absolute;
+    top: 10px; /* Odległość od przycisku */
+    right: 0;
+    background: linear-gradient(to bottom right, #6b6b6b, #343434);
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.471);
+    z-index: 1; /* ma być na wierzchu */
+  }
+  
+  .warehouse-note-item {
+    margin-bottom: 5px;
+  }
+  
+  .warehouse-note-text {
+    font-weight: bold;
+    color:whitesmoke;
+  }
+  
+  .warehouse-note-timestamp {
+    color: rgb(147, 147, 147);
+  }
+  
+  
+.noteHeader {
+    color: rgb(233, 233, 233);
+    text-align: center;
+    text-justify: distribute-all-lines;
+  }

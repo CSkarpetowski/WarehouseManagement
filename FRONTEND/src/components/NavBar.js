@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./NavBar.css";
 import {BiUserCircle} from "react-icons/bi";
+import {BiBell} from "react-icons/bi";
 import {AiOutlineIdcard} from 'react-icons/ai';
 import {AiOutlineDashboard} from 'react-icons/ai';
 import {LiaClipboardListSolid} from 'react-icons/lia';
@@ -11,11 +12,13 @@ import {FaSignOutAlt} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import LoginPage from './LoginPage';
 import { MdAssignmentAdd } from "react-icons/md";
+import WarehouseNote from './WarehouseNote'; //Import powiadomień
 
 export default function NavBar() {
   const navigate = useNavigate();
   const username = localStorage.getItem("username");
   const isManager = localStorage.getItem("isManager");
+  const [showNote, setShowNote] = useState(false); // Stan do kontrolowania widoczności WarehouseNote
 
   function SignOut()
   {
@@ -23,6 +26,11 @@ export default function NavBar() {
    navigate("/");
     window.location.reload();
   }
+{/*Przełączanie powiadomień*/}
+  const toggleNote = () => {
+    setShowNote(!showNote);
+  };
+
   const navDashboard = () => {navigate("/MainPage")}
   const navAddProduct = () => {navigate("/AddProduct")}
   const navAddOrder = () => {navigate("/AddOrder")}
@@ -30,6 +38,11 @@ export default function NavBar() {
   const navDriver = () => {navigate("/Driver")}
   return (
     <nav>
+
+    <div>
+      <BiBell className='noteBell' size={25} color='#c87cfc' onClick={toggleNote}/>
+      <WarehouseNote {...{ showNote, toggleNote }} />
+    </div>
 
       <h2 id='barTitle'>Warehouse Management</h2>
       <div id='userDetail'>
