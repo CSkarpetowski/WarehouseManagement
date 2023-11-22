@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WM.Data.Sql;
 using WM.Data.Sql.DAO;
 
@@ -16,10 +17,10 @@ namespace WarehouseManagement.Controllers
         }
 
         [HttpGet]
-        public List<Klient> GetAll()
+        public IActionResult GetAll()
         {
-            List<Klient> Drivers = _context.Klient.ToList();
-            return Drivers;
+            var Drivers = _context.Klient.Include(x => x.Zamowienia);
+            return Ok(Drivers);
         }
     }
 }
