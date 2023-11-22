@@ -9,8 +9,17 @@ export default function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-
   const navigate = useNavigate();
+
+  const isManager = async (username) => {
+    try {
+      const response = await axios.get(`https://localhost:7099/idfromlogin/ismanager/${username}`);
+      // Sprawdź odpowiedź serwera - jeśli zawiera odpowiednią informację, zwróć true, w przeciwnym razie false
+      localStorage.setItem("isManager",response.data);
+    } catch (err) {
+      setError("ARGH !");
+    }
+  };
 
   const handleSubmit = async () => {
       try {
@@ -21,6 +30,7 @@ export default function LoginPage() {
           const token = response.data.token;
           localStorage.setItem("token", token);
           localStorage.setItem("username", username);
+          isManager(username);
           alert("Pomyslnie Zalogowano!");
           navigate('/');
           window.location.reload();
