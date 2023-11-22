@@ -3,10 +3,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainPage from './components/MainPage';
 import LoginPage from './components/LoginPage';
 import PageLoader from './components/PageLoader';
-import ViewOrderDetails from './components/ViewOrderDetails';
 import OrderPage from './components/OrderPage';
-import NavBar from './components/NavBar';
 import AddProduct from './components/AddProduct';
+import WarehouseOne from './components/WarehouseOne';
+import WarehouseTwo from './components/WarehouseTwo';
+import WarehouseThree from './components/WarehouseThree';
+import DriverPage from './components/DriverPage';
+import WorkersPage from './components/WorkersPage';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -42,6 +45,11 @@ function App() {
           <Route path='/Dashboard' element={hasJWT() ? <MainPage /> : <LoginPage />} />
           <Route path='/AddProduct' element={hasJWT() ? <AddProduct/> : <LoginPage />} />
           <Route path='/AddOrder' element={hasJWT() ? <OrderPage/> : <LoginPage />} />
+          <Route path='/WarehouseOne' element={hasJWT() ? <WarehouseOne/> : <LoginPage />} />
+          <Route path='/WarehouseTwo' element={hasJWT() ? <WarehouseTwo/> : <LoginPage />} />
+          <Route path='/WarehouseThree' element={hasJWT() ? <WarehouseThree/> : <LoginPage />} />
+          <Route path='/Driver' element={hasJWT() ? <DriverPage/> : <LoginPage />} />
+          <Route path='/Workers' element={hasJWT() ? <WorkersPage/> : <LoginPage />} />
         </Routes>
       </Router>
       )} 

@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
+import './warehouseOne.css';
 export default function warehouseOne() {
   return (
     <>
