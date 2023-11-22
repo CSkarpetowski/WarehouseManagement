@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WM.Data.Sql;
@@ -26,6 +26,7 @@ namespace WarehouseManagement.Controllers
         }
 
         [HttpGet("{IdProdukt:min(1)}", Name = "GetProdukt")]
+
 
         public async Task<IActionResult> GetProduktById(int IdProdukt)
         {

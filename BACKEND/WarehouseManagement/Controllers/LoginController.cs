@@ -23,5 +23,12 @@ namespace WarehouseManagement.Controllers
             var user = _context.Login.FirstOrDefault(x => x.Uzytkownik == username);
             return user.IdPracownik;
         }
+        [HttpGet("ismanager/{username}", Name = "IsManager")]
+        public bool GetIsmanager(string username)
+        {
+            var user = _context.Login.FirstOrDefault(x => x.Uzytkownik == username);
+            var worker = _context.Pracownik.FirstOrDefault(x => x.IdPracownik == user.IdPracownik);
+            return worker.IsManager;
+        }
     }
 }
