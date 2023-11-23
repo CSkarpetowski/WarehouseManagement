@@ -1,0 +1,61 @@
+/* DriverPage.css */
+.driverPage
+{
+    height: 100vh;
+    background-image: url("../img/background.png");
+}
+
+.tableDriver
+{
+    height: 95vh;
+    margin: 0 auto 200px;
+    overflow: auto;
+    width: auto;
+    background-color: #0F1A2B;
+    border: 1px solid #c87cfc;
+    padding-left: 5%;
+}
+
+.driverTable {
+    background-color: white;
+    height: 100px;
+    margin:0 auto 100px;
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    overflow: scroll;
+    
+  }
+  
+
+  .driverTable th,
+  .driverTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .driverTable th {
+    background-color: #f2f2f2;
+  }
+  
+  .driverTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .driverTable tbody tr:hover {
+    background-color: #edd3ff;
+  }
+
+  .orderButton
+  {
+    text-align: center;
+    margin: 5px;
+    scale: .9;
+  }
+
+
+  .driverTable
+  {
+    list-style: none;
+  }

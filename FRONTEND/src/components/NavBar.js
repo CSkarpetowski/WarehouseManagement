@@ -91,7 +91,7 @@ export default function NavBar() {
            <li className='listItem'>
             <div onClick={navDriver}>
             <BsTruck size={20} color="#c87cfc"/>
-            <p>Driver</p>
+            <p>Order</p>
             </div>
           </li> 
           <li className='listItem'>

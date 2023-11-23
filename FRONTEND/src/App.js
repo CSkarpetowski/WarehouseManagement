@@ -8,7 +8,7 @@ import AddProduct from './components/AddProduct';
 import WarehouseOne from './components/WarehouseOne';
 import WarehouseTwo from './components/warehouseTwo';
 import WarehouseThree from './components/warehouseThree';
-import DriverPage from './components/DriverPage';
+import Order from './components/Order';
 import WorkersPage from './components/WorkersPage';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -48,7 +48,7 @@ function App() {
           <Route path='/WarehouseOne' element={hasJWT() ? <WarehouseOne/> : <LoginPage />} />
           <Route path='/WarehouseTwo' element={hasJWT() ? <WarehouseTwo/> : <LoginPage />} />
           <Route path='/WarehouseThree' element={hasJWT() ? <WarehouseThree/> : <LoginPage />} />
-          <Route path='/Driver' element={hasJWT() ? <DriverPage/> : <LoginPage />} />
+          <Route path='/Driver' element={hasJWT() ? <Order/> : <LoginPage />} />
           <Route path='/Workers' element={hasJWT() ? <WorkersPage/> : <LoginPage />} />
         </Routes>
       </Router>
