@@ -67,7 +67,16 @@ namespace WarehouseManagement.Controllers
                 }
 
                 return NotFound();
-            }
+        }
+        [HttpGet("details/{ZamowienieId}", Name = "GetDetails")]
+        public IActionResult GetDetails(int ZamowienieId) {
+
+            var details = _context.ZamowienieLista.Include(x => x.Produkty).FirstOrDefault(x => x.zIdZamowienie == ZamowienieId);
+
+            return Ok(details);
+        }
+
+            
 
     }
     
