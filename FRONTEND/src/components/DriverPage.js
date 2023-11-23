@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
+import axios from 'axios';
 import "./DriverPage.css";
 import { MdDelete } from "react-icons/md";
-export default function DriverPage() {
+import OrderDetails from './OrderDetails';
+export default function DriverPageTest() {
+    const [clientsData, setClientsData] = useState([]);
+    const [showDetails, setShowDetails] = useState(false);
+    const [orderId, setOrderId] = useState(0);
+    useEffect(()=> {
+      axios.get('https://localhost:7099/Drivers').then((Response)=> {
+        setClientsData(Response.data);
+      })
+    }, []);
+    
+    function openOrderDetails(idZam)
+    {
+      setShowDetails(true);
+      setOrderId(idZam);
+    }
+    function closeOrderDetails()
+    {
+      setShowDetails(false);
+    }
+
     const drivers = [
         { id: 1, idZam: "1" ,name: 'Jan Kowalski', company: 'Transport Sp. z o.o.', phone: '123-456-789', nip: '1234567890' },
         { id: 2, idZam: "1" ,name: 'Anna Nowak', company: 'Logistics Plus', phone: '987-654-321', nip: '0987654321' },
@@ -12,8 +33,14 @@ export default function DriverPage() {
 
         // Tutaj możesz dodać więcej danych kierowców
       ];
+
+      if (!Array.isArray(clientsData)) {
+        // Handle the case where clientsData is not an array (could be null, object, or something else)
+        return <p>No data available</p>; // Or any other appropriate action or UI
+      }
   return (
     <>
+    {showDetails && <OrderDetails orderId={orderId} handleClose={closeOrderDetails}/>}
     <div className='driverPage'>
     <NavBar/>
     <h1 className='cardTitle'>Driver</h1>
@@ -31,19 +58,24 @@ export default function DriverPage() {
           </tr>
         </thead>
         <tbody>
-          {drivers.map((driver) => (
-            <tr key={driver.id}>
-              <td>{driver.id}</td>
-              <td>{driver.idZam}</td>
-              <td>{driver.name}</td>
-              <td>{driver.company}</td>
-              <td>{driver.phone}</td>
-              <td>{driver.nip}</td>
+          {clientsData.map((client) => (
+            <tr key={client.idKlient}>
+              <td>{client.idKlient}</td>
+              <td style={{display:'flex'}} >{client.zamowienia.map((order) => (
+              <li key={order.idZamowienie}>
+              <button onClick={() => openOrderDetails(order.idZamowienie)} className='orderButton'>{order.idZamowienie}</button>
+              </li>
+            ))}</td>
+              <td>{client.kierowca}</td>
+              <td>{client.firma}</td>
+              <td>{client.telefon}</td>
+              <td>{client.nip}</td>
               <td style={{textAlign:'center'}}><MdDelete  size={25}  color='red'/></td>
             </tr>
           ))}
         </tbody>
-      </table>
+      </table>      
+      
       </div>
       </div>
     </>

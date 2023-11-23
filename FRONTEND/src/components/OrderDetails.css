@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+.oderDetailsMain
+{
+    position: absolute;
+    left: 15vw;
+    top: 15vh;
+    z-index: 1;
+    background-color:#20385e;
+    border: 5px solid #c87cfc;
+    border-radius: 15px;
+    width: 80vw;
+    height: 70vh;
+}
+.closeButton
+{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Comfortaa', cursive;
+    text-align: end;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    left: 98%;
+    transition:ease-in-out 0.2s;
+}
+
+
+.closeButton:hover
+{
+   color: rgb(234, 93, 93);
+}

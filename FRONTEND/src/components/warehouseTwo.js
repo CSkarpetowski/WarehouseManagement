@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
-import './WarehouseTwo.css';
+import './warehouseTwo.css';
 
 const WarehouseTwo = () => {
   const initialOrderList = [
