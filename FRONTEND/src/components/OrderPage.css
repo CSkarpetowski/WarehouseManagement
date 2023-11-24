@@ -71,3 +71,8 @@
   font-size: 14px; 
   align-items: center;
 }
+
+#orderList:hover {
+  background-color: #c87cfc;
+  cursor: pointer;
+}

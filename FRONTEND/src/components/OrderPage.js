@@ -1,49 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
 import './OrderPage.css';
+import axios from 'axios';
 
 const OrderPage = () => {
-  const initialTableData = [
-    { id: 1, productName: "dwumasa", productId: "1", lot: "1245", ilosc: 0, isChecked: false },
-    { id: 2, productName: "tłok", productId: "2", lot: "8561", ilosc: 0, isChecked: false },
-    { id: 3, productName: "sprzęgło", productId: "3", lot: "5732", ilosc: 0, isChecked: false },
-  ];
+  const [tableData, setTableData] = useState([]);
 
-  const [tableData, setTableData] = useState(initialTableData);
-  const [selectedOrders, setSelectedOrders] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://localhost:7099/api/produkt/all/1');
+        console.log(response.data);
+        setTableData(response.data);
+      } catch (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          console.error('Server responded with a non-success status:', error.response.status);
+          console.error('Response data:', error.response.data);
+        } else if (error.request) {
+          // The request was made but no response was received
+          console.error('No response received from the server');
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.error('Error setting up the request:', error.message);
+        }
+      }
+    };
 
-  const handleCheckboxChange = (id) => {
-    setTableData((prevData) =>
-      prevData.map((row) =>
-        row.id === id ? { ...row, isChecked: !row.isChecked } : row
-      )
-    );
-
-    setSelectedOrders((prevSelected) => {
-      const isSelected = prevSelected.includes(id);
-      return isSelected
-        ? prevSelected.filter((selectedId) => selectedId !== id)
-        : [...prevSelected, id];
-    });
-  };
-
-  const handleQuantityChange = (id, value) => {
-    setTableData((prevData) =>
-      prevData.map((row) =>
-        row.id === id ? { ...row, ilosc: value } : row
-      )
-    );
-  };
-
-  const handleAddOrder = () => {
-    console.log("Dodaj zamówienie:", tableData);
-    setTableData(initialTableData);
-  };
-
-  const handleCancel = () => {
-    setTableData(initialTableData);
-  };
-
+    fetchData();
+  }, []);
 
   return (
     <div id='mainPage'>
@@ -55,45 +40,31 @@ const OrderPage = () => {
             <tr>
               <th>Wybór</th>
               <th>Produkty</th>
-              <th>ID produktu</th>
               <th>LOT</th>
               <th>Ilość palet</th>
+              <th>Magazyn</th>
             </tr>
           </thead>
           <tbody className='table'>
-            {tableData.map((row) => (
-              <tr id='orderList' key={row.id}>
+            {tableData && tableData.map((row) => (
+              <tr id='orderList' key={row.idProd}>
                 <td>
-                  <input
-                    type='checkbox'
-                    checked={row.isChecked}
-                    onChange={() => handleCheckboxChange(row.id)}
-                  />
+                  <input type='checkbox' />
                 </td>
-                <td>{row.productName}</td>
-                <td>{row.productId}</td>
+                <td>{row.nazwa}</td>
                 <td>{row.lot}</td>
-                <td>
-                  <input
-                    type='number'
-                    value={row.ilosc}
-                    onChange={(e) =>
-                      handleQuantityChange(row.id, e.target.value)
-                    }
-                  />
-                </td>
+                <td>{row.ilosc}</td>
+                <td>{row.pIdMagazyn}</td>
               </tr>
             ))}
           </tbody>
         </table>
         <div className='buttonContainer'>
-        <select>
-            <option value='Magazyn 1'>Magazyn 1</option>
-            <option value='Magazyn 2'>Magazyn 2</option>
-            <option value='Magazyn 3'>Magazyn 3</option>
+          <select>
+            <option value='Magazyn 1'>Kierowca 1</option>
+            <option value='Magazyn 2'>Kierowca 2</option>
+            <option value='Magazyn 3'>Kierowca 3</option>
           </select>
-          <button onClick={handleAddOrder}>Dodaj</button>
-          <button onClick={handleCancel}>Anuluj</button>
         </div>
       </div>
     </div>

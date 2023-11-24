@@ -119,6 +119,14 @@ namespace WarehouseManagement.Controllers
 
             return Ok(products);
         }
+        [HttpGet("all", Name = "GetAll")]
+        public IActionResult GetAll()
+        {
+
+            var products = _context.Produkt;
+
+            return Ok(products);
+        }
 
     }
 
