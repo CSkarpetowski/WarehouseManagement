@@ -3,7 +3,7 @@
 {   
 height:100vh;
 margin: 0;
-background-image: url('../img/loginBackground.png');
+ background-image: url('../img/loginBackground.png'); 
 background-size: cover;
 }
 #loginNav

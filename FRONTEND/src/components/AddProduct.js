@@ -45,8 +45,8 @@ export default function AddProduct() {
   return (
     <>
     <div className='addProductPage'>
-     <NavBar/> 
     <h1 className='cardTitle'>AddProduct</h1>
+     <NavBar/> 
       <div className='addProductArea'>
       <div className='leftSideForm'><img src={formImage} style={{width:'160%'}}/></div>
           <div className='addProductForm'>

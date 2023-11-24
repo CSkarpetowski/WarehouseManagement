@@ -9,7 +9,7 @@ export default function MainPage() {
     <div id='mainPage'>
       <NavBar/>
     <h1  className='cardTitle'>Dashboard</h1>
-    <div  className='warehouseArea'>
+    <div  className='warehouseAreaMain'>
       <div onClick={()=>navigate("/WarehouseOne")} id='warehouseOne'>
         <p className='warehouseTitle'>Magazyn 1</p>
         <img src={warehouseIcon} width={250} />

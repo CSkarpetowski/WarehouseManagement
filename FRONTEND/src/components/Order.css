@@ -1,8 +1,10 @@
 /* DriverPage.css */
 .driverPage
 {
-    height: 100vh;
-    background-image: url("../img/background.png");
+  height: 100vh;
+  margin: 0 auto;
+  width: auto;
+  background-color: #0F1A2B;
 }
 
 .tableDriver
@@ -12,7 +14,6 @@
     overflow: auto;
     width: auto;
     background-color: #0F1A2B;
-    border: 1px solid #c87cfc;
     padding-left: 5%;
 }
 
@@ -23,8 +24,6 @@
     width: 60%;
     border-collapse: collapse;
     margin-top: 40px;
-    overflow: scroll;
-    
   }
   
 

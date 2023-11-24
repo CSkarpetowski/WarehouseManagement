@@ -1,15 +1,14 @@
 nav
 {
-    background-color: #0F1A2B;
+    background-color: #252424;
     min-width: 200px;
-    max-width: 10%;
-    height: 100%;
+    max-width: 11vw;
+    height: 92vh;
     position:fixed;
-    top: 0;
-    left: 0;
-    padding: 2%;
-    border-radius: 0px 20px 0px 0px;
-    border-right: 1px solid #c87cfc;
+    bottom: 0;
+    left: 2px;
+    padding-top: 1vh;
+    border-right: 3px solid #c87cfc;
 }
 .normalText
 {
@@ -76,24 +75,44 @@ p
 {
     margin: 20px;
     font-weight: 500;
+    transition: 0.1s ease-in;
+    margin: 1px;
+    padding: 5px;
 }
+
 .listItem > div {
     display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    border-bottom: 1px solid white;
+    
 }
 .listItem:hover{
     background-color: #c97cfc5c;
-    box-shadow: 0 0 15px #c87cfc;
     border-radius: 4px;
     cursor: pointer;
     padding-left: 2px;
     padding-right: 2px;
 }
-#signOut:hover
+
+.signOut
+{
+    position: absolute;
+    bottom: 1vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(212, 87, 65);
+    width: 99%;
+} 
+
+
+.signOut:hover
 {
     cursor: pointer;
+    background-color: tomato;
 }
 
 .noteBell:hover

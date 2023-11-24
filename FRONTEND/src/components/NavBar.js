@@ -39,8 +39,8 @@ export default function NavBar() {
   return (
     <nav>
 
-    <div>
-      <BiBell className='noteBell' size={25} color='#c87cfc' onClick={toggleNote}/>
+    <div style={{textAlign:'end', padding:'10px'}}>
+      <BiBell className='noteBell' size={25} color='gold' onClick={toggleNote}/>
       <WarehouseNote {...{ showNote, toggleNote }} />
     </div>
 
@@ -62,6 +62,12 @@ export default function NavBar() {
             Dashboard
              </div>
             </li>
+            <li className='listItem'>
+            <div onClick={navDriver}>
+            <BsTruck size={20} color="#c87cfc"/>
+            <p>Order</p>
+            </div>
+          </li> 
             <li className='listItem'>
             <div onClick={navAddProduct}>
             <FaDatabase size={20} color="#c87cfc"/>
@@ -87,21 +93,11 @@ export default function NavBar() {
             <p>Workers</p>
             </div>
             </li>
-
-           <li className='listItem'>
-            <div onClick={navDriver}>
-            <BsTruck size={20} color="#c87cfc"/>
-            <p>Order</p>
-            </div>
-          </li> 
-          <li className='listItem'>
-          <div className='signOut' onClick={SignOut}> 
-            <FaSignOutAlt size={20} color="#c87cfc" />
-            <p id='signOut' >SignOut</p>
-          </div>
-          </li>
         </ul>
-
+        <button className='signOut' onClick={SignOut} > 
+            <FaSignOutAlt size={20} color="white" />
+            SignOut
+        </button>
       </div>
     </nav>
   )
