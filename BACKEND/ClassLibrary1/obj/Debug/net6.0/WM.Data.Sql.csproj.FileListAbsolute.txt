@@ -131,3 +131,22 @@ A:\Warehouse sprint3\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.D
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\refint\WM.Data.Sql.dll
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.pdb
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\ref\WM.Data.Sql.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.deps.json
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\ref\WM.Data.Sql.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.pdb
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Domain.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IData.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IServices.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Domain.pdb
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IData.pdb
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IServices.pdb
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.csproj.AssemblyReference.cache
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.AssemblyInfoInputs.cache
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.AssemblyInfo.cs
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.csproj.CoreCompileInputs.cache
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.csproj.CopyComplete
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\ref\WM.Data.Sql.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.pdb

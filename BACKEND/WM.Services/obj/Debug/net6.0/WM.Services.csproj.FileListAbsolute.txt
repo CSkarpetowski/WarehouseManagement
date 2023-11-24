@@ -83,3 +83,24 @@ A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Ser
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\refint\WM.Services.dll
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.pdb
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\ref\WM.Services.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Services.deps.json
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Services.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\ref\WM.Services.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Services.pdb
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Data.Sql.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Domain.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IData.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IServices.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Data.Sql.pdb
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.Domain.pdb
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IData.pdb
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\bin\Debug\net6.0\WM.IServices.pdb
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.csproj.AssemblyReference.cache
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.AssemblyInfoInputs.cache
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.AssemblyInfo.cs
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.csproj.CoreCompileInputs.cache
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.csproj.CopyComplete
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\ref\WM.Services.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Services\obj\Debug\net6.0\WM.Services.pdb

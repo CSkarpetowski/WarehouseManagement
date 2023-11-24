@@ -6,8 +6,8 @@ import PageLoader from './components/PageLoader';
 import OrderPage from './components/OrderPage';
 import AddProduct from './components/AddProduct';
 import WarehouseOne from './components/WarehouseOne';
-import WarehouseTwo from './components/warehouseTwo';
-import WarehouseThree from './components/warehouseThree';
+import WarehouseTwo from './components/WarehouseTwo';
+import WarehouseThree from './components/WarehouseThree';
 import Order from './components/Order';
 import WorkersPage from './components/WorkersPage';
 function App() {
