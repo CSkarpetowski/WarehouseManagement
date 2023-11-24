@@ -112,6 +112,14 @@ namespace WarehouseManagement.Controllers
             return NotFound();
         }
 
+        [HttpGet("all/{Idmag}", Name ="GetAllFromMag")]
+        public IActionResult GetAllFromMag(int Idmag) {
+
+            var products = _context.Produkt.Where(x => x.pIdMagazyn == Idmag);
+
+            return Ok(products);
+        }
+
     }
 
 
