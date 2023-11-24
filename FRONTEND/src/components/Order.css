@@ -44,7 +44,18 @@
   }
   
   .driverTable tbody tr:hover {
-    background-color: #c87cfc;
+    background-color: #edd3ff;
   }
 
-  
+  .orderButton
+  {
+    text-align: center;
+    margin: 5px;
+    scale: .9;
+  }
+
+
+  .driverTable
+  {
+    list-style: none;
+  }
