@@ -114,6 +114,9 @@ p
     cursor: pointer;
     background-color: tomato;
 }
+.noteBell{
+    transition: 0.2s;
+}
 
 .noteBell:hover
 {
@@ -121,5 +124,6 @@ p
     box-shadow: 0 0 10px #c87cfc;
     border-radius: 50%;
     padding-left: 2px;
+    color: red;
     cursor: pointer;
 }

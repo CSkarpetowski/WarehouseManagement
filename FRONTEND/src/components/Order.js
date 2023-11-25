@@ -38,7 +38,7 @@ export default function Order() {
     {showDetails && <OrderDetails orderId={orderId} handleClose={closeOrderDetails}/>}
     <div className='driverPage'>
     <NavBar/>
-    <h1 className='cardTitle'>Driver</h1>
+    <h1 className='cardTitle'>Orders</h1>
     <div className='tableDriver'>
     <table className='driverTable'>
         <thead>

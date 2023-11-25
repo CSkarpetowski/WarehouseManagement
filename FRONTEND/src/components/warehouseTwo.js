@@ -41,7 +41,7 @@ const WarehouseTwo = () => {
   return (
     <div id='mainPage'>
       <NavBar />
-      <h1 className='cardTitle'>Magazyn 2 - Zamówienia</h1>
+      <h1 className='cardTitle'>- Warehouse 2 -</h1>
       <div className='warehouseArea'>
         <table className='orderTable'>
           <thead>
