@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WarehouseManagement.BindingModel;
 using WM.Data.Sql;
 using WM.Data.Sql.DAO;
 
@@ -21,6 +22,22 @@ namespace WarehouseManagement.Controllers
 
             var notes = _context.Komunikat;
             return Ok(notes);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddNote([FromBody] AddNote addNote)
+        {
+            var komunikat = new Komunikat
+            {
+                
+                Tresc = addNote.Tresc, 
+                kIdMagazyn = addNote.kIdMagazyn,
+                data = addNote.data
+            };
+
+            await _context.AddAsync(komunikat);
+
+            return Ok(addNote);
         }
     }
 }

@@ -73,6 +73,7 @@ namespace WarehouseManagement.Controllers
         public IActionResult GetDetails(int ZamowienieId) {
 
             var details = _context.ZamowienieLista.Include(x => x.Produkty).FirstOrDefault(x => x.zIdZamowienie == ZamowienieId);
+            //var details = _context.ZamowienieLista.Include(x => x.Produkty).Where(x => x.zIdZamowienie == ZamowienieId); Tak powinno byæ, ale react nie ogarnia mapowania tego 
 
             return Ok(details);
         }

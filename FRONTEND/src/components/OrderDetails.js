@@ -8,11 +8,11 @@ export default function OrderDetails(props) {
     useEffect(() => {
       axios.get(`https://localhost:7099/api/zamowienie/details/${orderId}`)
         .then((response) => {
-          // Tworzenie tablicy z pojedynczym obiektem
-          const orderDataArray = [response.data];
-          setOrderDetails(orderDataArray);
-          console.log(orderDataArray);
-        })
+    console.log("Response data:", response.data); // Log the received data structure
+    const orderDataArray = [response.data];
+    setOrderDetails(orderDataArray);
+    console.log(orderDataArray);
+  })
         .catch((error) => {
           console.error("Error fetching order details:", error);
         });
