@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "wdtT0g2p8iVSzwHkQSNl21uc7ffMzZTCDP0fqlFe9C0EjtaK4+4XoY2ZZW0iFpudw9426ogOHMIt9nV3+FM1kw==",
   "success": true,
   "projectFilePath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
+=======
+  "dgSpecHash": "QyeMrgJ/qceLYwX9NbbM/EiTO02V7g/EjepS+n+kbjX5GWlKGvoKJolia8mw/QCHmNX1lhubHWDGic0WogWHvw==",
+  "success": true,
+  "projectFilePath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
+>>>>>>> 07d5479256f3bcb139d736311a230cb51ff62934
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -90,6 +90,20 @@ namespace WM.Data.Sql.Migrations
                 Nazwa = "Magazyn pierwszy"
             };
             magazynList.Add(Magazyn);
+            var Magazyn2 = new Magazyn()
+            {
+                IdMagazyn = 2,
+                Pojemnosc = 50,
+                Nazwa = "Magazyn drugi"
+            };
+            magazynList.Add(Magazyn2);
+            var Magazyn3 = new Magazyn()
+            {
+                IdMagazyn = 3,
+                Pojemnosc = 50,
+                Nazwa = "Magazyn trzeci"
+            };
+            magazynList.Add(Magazyn3);
             return magazynList;
         }
 
@@ -98,13 +112,76 @@ namespace WM.Data.Sql.Migrations
             var klientList = new List<Klient>();
             var Klient = new Klient()
             {
-                Kierowca = "A",
-                Firma = "B",
-                Telefon = "C",
-                NIP = "D"
+                Kierowca = "Janusz Matczak",
+                Firma = "Ikea",
+                Telefon = "646953132",
+                NIP = "1564702835"
 
             };
             klientList.Add(Klient);
+            var Klient2 = new Klient()
+            {
+                Kierowca = "Karol Kryszak",
+                Firma = "Hohland",
+                Telefon = "609659976",
+                NIP = "1239222309"
+
+            };
+            klientList.Add(Klient2);
+            var Klient3 = new Klient()
+            {
+                Kierowca = "Piotr Kowalczyk",
+                Firma = "CargoMasters",
+                Telefon = "777987654",
+                NIP = "2468109753"
+
+            };
+            klientList.Add(Klient3);
+            var Klient4 = new Klient()
+            {
+                Kierowca = "Magdalena Wiśniewska",
+                Firma = "SpeedyFreight",
+                Telefon = "333456789",
+                NIP = "1357924680"
+
+            };
+            klientList.Add(Klient4);
+            var Klient5 = new Klient()
+            {
+                Kierowca = "Tomasz Lewandowski",
+                Firma = "ExpressHaul",
+                Telefon = "666234567",
+                NIP = "1122334455"
+
+            };
+            klientList.Add(Klient5);
+            var Klient6 = new Klient()
+            {
+                Kierowca = "Monika Dąbrowska",
+                Firma = "SwiftTrans",
+                Telefon = "444876543",
+                NIP = "9876543212"
+
+            };
+            klientList.Add(Klient6);
+            var Klient7 = new Klient()
+            {
+                Kierowca = "Grzegorz Zając",
+                Firma = "QuickCargo",
+                Telefon = "222765432",
+                NIP = "9871236540"
+
+            };
+            klientList.Add(Klient7);
+            var Klient8 = new Klient()
+            {
+                Kierowca = "Karolina Jankowska",
+                Firma = "RapidDelivery",
+                Telefon = "999345678",
+                NIP = "3692581470"
+
+            };
+            klientList.Add(Klient8);
             return klientList;
         }
 
@@ -115,7 +192,8 @@ namespace WM.Data.Sql.Migrations
             {
                 IdKomunikat = 1,
                 Tresc = "Lorem ipsum",
-                kIdMagazyn = 1
+                kIdMagazyn = 1,
+                data = DateTime.Now
             };
             komunikatList.Add(Komunikat);
             return komunikatList;
@@ -132,6 +210,38 @@ namespace WM.Data.Sql.Migrations
                 IdPracownik =1
              };
             loginList.Add(Login);
+            var Login2 = new Login()
+            {
+                IdDane = 2,
+                Haslo = "123456",
+                Uzytkownik = "JS555",
+                IdPracownik = 2
+            };
+            loginList.Add(Login2);
+            var Login3 = new Login()
+            {
+                IdDane = 3,
+                Haslo = "123456",
+                Uzytkownik = "AJ789",
+                IdPracownik = 3
+            };
+            loginList.Add(Login3);
+            var Login4 = new Login()
+            {
+                IdDane = 4,
+                Haslo = "123456",
+                Uzytkownik = "RD321",
+                IdPracownik = 4
+            };
+            loginList.Add(Login4);
+            var Login5 = new Login()
+            {
+                IdDane = 5,
+                Haslo = "123456",
+                Uzytkownik = "EB987",
+                IdPracownik = 5
+            };
+            loginList.Add(Login5);
             return loginList;
         }
 
@@ -149,6 +259,46 @@ namespace WM.Data.Sql.Migrations
 
             };
             pracownikList.Add(Pracownik);
+            var Pracownik2 = new Pracownik()
+            {
+                IdPracownik = 2,
+                Nazwa = "Jane Smith",
+                Telefon = "555123456",
+                IsManager = false,
+                pIdMagazyn = 1
+
+            };
+            pracownikList.Add(Pracownik2);
+            var Pracownik3 = new Pracownik()
+            {
+                IdPracownik = 3,
+                Nazwa = "Alice Johnson",
+                Telefon = "789456123",
+                IsManager = true,
+                pIdMagazyn = 2
+
+            };
+            pracownikList.Add(Pracownik3);
+            var Pracownik4 = new Pracownik()
+            {
+                IdPracownik = 4,
+                Nazwa = "Robert Davis",
+                Telefon = "321654987",
+                IsManager = false,
+                pIdMagazyn = 2
+
+            };
+            pracownikList.Add(Pracownik4);
+            var Pracownik5 = new Pracownik()
+            {
+                IdPracownik = 5,
+                Nazwa = "Emily Brown",
+                Telefon = "987654321",
+                IsManager = true,
+                pIdMagazyn = 1
+
+            };
+            pracownikList.Add(Pracownik5);
             return pracownikList;
         }
 
@@ -165,6 +315,86 @@ namespace WM.Data.Sql.Migrations
                 pIdMagazyn =1, 
             };
             produktList.Add(Produkt);
+            var Produkt2 = new Produkt()
+            {
+                IdProd = 2,
+                Nazwa = "Papierowa torba",
+                Ilosc = 50,
+                LOT = "PT0001",
+                IsGood = true,
+                pIdMagazyn = 2,
+            };
+            produktList.Add(Produkt2);
+            var Produkt3 = new Produkt()
+            {
+                IdProd = 3,
+                Nazwa = "Ołówek HB",
+                Ilosc = 50,
+                LOT = "OH0001",
+                IsGood = true,
+                pIdMagazyn = 3,
+            };
+            produktList.Add(Produkt3);
+            var Produkt4 = new Produkt()
+            {
+                IdProd = 4,
+                Nazwa = "Zeszyt A4",
+                Ilosc = 50,
+                LOT = "ZA0001",
+                IsGood = true,
+                pIdMagazyn = 3,
+            };
+            produktList.Add(Produkt4);
+            var Produkt5 = new Produkt()
+            {
+                IdProd = 5,
+                Nazwa = "Długopis żelowy",
+                Ilosc = 50,
+                LOT = "DZ0001",
+                IsGood = true,
+                pIdMagazyn = 3,
+            };
+            produktList.Add(Produkt5);
+            var Produkt6 = new Produkt()
+            {
+                IdProd = 6,
+                Nazwa = "Latex",
+                Ilosc = 50,
+                LOT = "LA0001",
+                IsGood = true,
+                pIdMagazyn = 1,
+            };
+            produktList.Add(Produkt6);
+            var Produkt7 = new Produkt()
+            {
+                IdProd = 7,
+                Nazwa = "Podkładka biurkowa",
+                Ilosc = 50,
+                LOT = "PB0001",
+                IsGood = true,
+                pIdMagazyn = 2,
+            };
+            produktList.Add(Produkt7);
+            var Produkt8 = new Produkt()
+            {
+                IdProd = 8,
+                Nazwa = "Skrzynka na dokumenty",
+                Ilosc = 50,
+                LOT = "SD0001",
+                IsGood = true,
+                pIdMagazyn = 2,
+            };
+            produktList.Add(Produkt8);
+            var Produkt9 = new Produkt()
+            {
+                IdProd = 9,
+                Nazwa = "Taśma klejąca",
+                Ilosc = 50,
+                LOT = "TK0001",
+                IsGood = true,
+                pIdMagazyn = 1,
+            };
+            produktList.Add(Produkt9);
             return produktList;
         }
 

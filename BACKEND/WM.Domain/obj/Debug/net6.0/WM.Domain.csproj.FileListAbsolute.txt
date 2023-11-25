@@ -56,4 +56,8 @@ C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.
 C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.dll
 C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll
 C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
+<<<<<<< HEAD
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.AssemblyReference.cache
+=======
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.AssemblyReference.cache
+>>>>>>> 07d5479256f3bcb139d736311a230cb51ff62934
