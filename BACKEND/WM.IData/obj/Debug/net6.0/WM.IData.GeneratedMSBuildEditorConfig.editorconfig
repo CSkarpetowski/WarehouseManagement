@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WM.IData
+<<<<<<< HEAD
+build_property.ProjectDir = D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\
+=======
 build_property.ProjectDir = A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IData\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+>>>>>>> 07d5479256f3bcb139d736311a230cb51ff62934

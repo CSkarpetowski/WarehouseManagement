@@ -1,6 +1,22 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IData\\WM.IData.csproj": {}
+  },
+  "projects": {
+    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
+        "projectName": "WM.Domain",
+        "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
+        "packagesPath": "C:\\Users\\FrOzen\\.nuget\\packages\\",
+        "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\FrOzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
     "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj": {}
   },
   "projects": {
@@ -15,6 +31,7 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cezik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 07d5479256f3bcb139d736311a230cb51ff62934
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,6 +72,23 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IData\\WM.IData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IData\\WM.IData.csproj",
+        "projectName": "WM.IData",
+        "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IData\\WM.IData.csproj",
+        "packagesPath": "C:\\Users\\FrOzen\\.nuget\\packages\\",
+        "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IData\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\FrOzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
@@ -70,6 +104,7 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cezik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 07d5479256f3bcb139d736311a230cb51ff62934
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +118,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
+              "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
+                "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
+=======
               "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
                 "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
+>>>>>>> 07d5479256f3bcb139d736311a230cb51ff62934
               }
             }
           }
@@ -114,7 +154,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+>>>>>>> 07d5479256f3bcb139d736311a230cb51ff62934
         }
       }
     }
