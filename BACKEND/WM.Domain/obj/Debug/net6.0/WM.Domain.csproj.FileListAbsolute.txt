@@ -56,3 +56,4 @@ C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.
 C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.dll
 C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll
 C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
+A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.AssemblyReference.cache

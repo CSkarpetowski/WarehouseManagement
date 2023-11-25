@@ -4,12 +4,16 @@ import './OrderPage.css';
 import axios from 'axios';
 
 const OrderPage = () => {
+  const [checked, setChecked] = useState([]);
   const [tableData, setTableData] = useState([]);
+
+ // let KlientId = document.getElementById('KlientId').value;
+  //let idprod = document.getElementById('idprod').value;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://localhost:7099/api/produkt/all/1');
+        const response = await axios.get('https://localhost:7099/api/produkt/all');
         console.log(response.data);
         setTableData(response.data);
       } catch (error) {
@@ -25,6 +29,16 @@ const OrderPage = () => {
           console.error('Error setting up the request:', error.message);
         }
       }
+    };
+
+    const handleCheck = (event) => {
+      var updatedList = [...checked];
+      if (event.target.checked) {
+        updatedList = [...checked, event.target.value];
+      } else {
+        updatedList.splice(checked.indexOf(event.target.value), 1);
+      }
+      setChecked(updatedList);
     };
 
     fetchData();
@@ -48,22 +62,22 @@ const OrderPage = () => {
           <tbody className='table'>
             {tableData && tableData.map((row) => (
               <tr id='orderList' key={row.idProd}>
-                <td>
+                <td id='idprod' value={row.idProd} >
                   <input type='checkbox' />
                 </td>
-                <td>{row.nazwa}</td>
-                <td>{row.lot}</td>
-                <td>{row.ilosc}</td>
-                <td>{row.pIdMagazyn}</td>
+                <td id="nazwa" value={row.nazwa}>{row.nazwa}</td>
+                <td id="lot" value={row.lot}>{row.lot}</td>
+                <td id="ilosc" value={row.ilosc}>{row.ilosc}</td>
+                <td id="idmagazyn"value={row.pIdMagazyn}>{row.pIdMagazyn}</td>
               </tr>
             ))}
           </tbody>
         </table>
         <div className='buttonContainer'>
-          <select>
-            <option value='Magazyn 1'>Kierowca 1</option>
-            <option value='Magazyn 2'>Kierowca 2</option>
-            <option value='Magazyn 3'>Kierowca 3</option>
+          <select id='KlientId'>
+            <option value={1}>Kierowca 1</option>
+            <option value={2}>Kierowca 2</option>
+            <option value={3}>Kierowca 3</option>
           </select>
         </div>
       </div>

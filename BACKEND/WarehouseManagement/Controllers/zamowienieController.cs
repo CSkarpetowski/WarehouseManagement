@@ -8,6 +8,7 @@ using Warehouse_Management.Validation;
 using Microsoft.AspNetCore.SignalR;
 using WM.IServices;
 using WarehouseManagement.Mappers;
+using WarehouseManagement.BindingModel;
 
 
 namespace WarehouseManagement.Controllers
@@ -76,7 +77,31 @@ namespace WarehouseManagement.Controllers
             return Ok(details);
         }
 
-            
+        [HttpPost("add/order", Name ="AddOrderWithProd")]
+        public IActionResult AddZamowienie([FromBody] int klient)
+        {
+            Zamowienie zamowienie = new Zamowienie
+            {
+                IsOld = false,
+                zIdKlient = klient
+            };
+
+            return Ok();
+        }
+
+        [HttpPost("addList", Name ="AddList")]
+        public async Task<IActionResult> AddList([FromBody] addLista addLista)
+        {
+            var lista = new ZamowienieLista
+            {
+                zIdZamowienie = addLista.zIdZamowienie,
+                zIdProd = addLista.zIdProd,
+                ilosc = addLista.ilosc,
+                LOT = addLista.LOT
+            };
+            await _context.AddAsync(lista);
+            return Ok();
+        }
 
     }
     
