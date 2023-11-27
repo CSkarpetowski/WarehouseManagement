@@ -22,5 +22,13 @@ namespace WarehouseManagement.Controllers
             var Drivers = _context.Klient.Include(x => x.Zamowienia);
             return Ok(Drivers);
         }
+
+        [HttpGet("forlist", Name = "ForList") ]
+        public IActionResult GetForList() {
+
+            var clients = _context.Klient.GroupBy(x => x.Firma);
+
+            return Ok(clients);
+        }
     }
 }
