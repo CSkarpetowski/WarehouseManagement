@@ -5,20 +5,19 @@ import axios from 'axios';
 export default function OrderDetails(props) {
     const {orderId, handleClose} = props;
     const [orderDetails, setOrderDetails] = useState([]);
-    useEffect(() => {
-      axios.get(`https://localhost:7099/api/zamowienie/details/${orderId}`)
-        .then((response) => {
-    console.log("Response data:", response.data); // Log the received data structure
-    const orderDataArray = [response.data];
-    setOrderDetails(orderDataArray);
-    console.log(orderDataArray);
-  })
-        .catch((error) => {
-          console.error("Error fetching order details:", error);
+    useEffect( () =>{
+      try{
+        axios.get(`https://localhost:7099/api/zamowienie/details/${orderId}`)
+        .then( (response) => {
+          const orderDataArray = [response.data];
+          setOrderDetails(orderDataArray[0]);
+          console.log(orderDataArray);
         });
-    }, [orderId]);
-    
-
+      }
+      catch (err){
+          console.log(err);
+      }
+    },[orderId]);
   return (
     <div className='oderDetailsMain'>
         <h1 className='orderWindowBar'>
@@ -44,16 +43,14 @@ export default function OrderDetails(props) {
             </tr>
           </thead>
           <tbody>
-                {
-                  orderDetails.length > 0 && orderDetails.map((det) => (
-                    <tr key={det.lpZamowienie}>
-                      <td>{det.produkty.nazwa}</td>
-                      <td>{det.ilosc}</td>
-                      <td>{det.lot}</td>
-                      <td>{det.produkty.pIdMagazyn}</td>
-                    </tr>
-                  ))
-                }
+              { orderDetails.length > 0 && orderDetails.map((det) => (
+              <tr key={det.lpZamowienie}>
+                <td>{det.produkty.nazwa}</td>
+                <td>{det.ilosc}</td>
+                <td>{det.lot}</td>
+                <td>{det.produkty.pIdMagazyn}</td>
+              </tr>
+            ))}
             </tbody>
         </table>
         </div>

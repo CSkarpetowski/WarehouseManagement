@@ -12,17 +12,17 @@ export default function MainPage() {
     <div  className='warehouseAreaMain'>
       <div onClick={()=>navigate("/WarehouseOne")} id='warehouseOne'>
         <p className='warehouseTitle'>Magazyn 1</p>
-        <img src={warehouseIcon} width={250} />
+        <img src={warehouseIcon} style={{width:'15vw'}} />
           <progress value={80} max={100}></progress>
       </div>
       <div onClick={()=>navigate("/WarehouseTwo")} id='warehouseTwo'>
         <p className='warehouseTitle'>Magazyn 2</p>
-        <img src={warehouseIcon} width={250}/>
+        <img src={warehouseIcon} style={{width:'15vw'}} />
           <progress value={40} max={100}></progress>
       </div>
       <div onClick={()=>navigate("/WarehouseThree")} id='warehouseThree'>
         <p className='warehouseTitle'>Magazyn 3</p>
-        <img src={warehouseIcon} width={250}/>
+        <img src={warehouseIcon} style={{width:'15vw'}} />
           <progress value={20} max={100}></progress>
       </div>
     </div>

@@ -17,8 +17,10 @@ import WarehouseNote from './WarehouseNote'; //Import powiadomień
 export default function NavBar() {
   const navigate = useNavigate();
   const username = localStorage.getItem("username");
-  const isManager = localStorage.getItem("isManager");
+   const isManager = localStorage.getItem("isManager");
   const [showNote, setShowNote] = useState(false); // Stan do kontrolowania widoczności WarehouseNote
+
+
 
   function SignOut()
   {
@@ -49,7 +51,7 @@ export default function NavBar() {
 
         <div style={{display:'flex', alignItems:'center', justifyContent:'space-between'}}> 
           <BiUserCircle className='icon' size={25} color='#c87cfc'/>
-          <p style={{color: isManager ? 'gold' : 'white'}} id='userName'>{username}</p>
+          <p style={{color: isManager==='true' ? 'gold' : 'white'}} id='userName'>{username}</p>
         </div>
       
       </div>
