@@ -1,14 +1,15 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "pr7dyALkNqCd6Ahvq0uIHkyUzrvb7AZFb1wlUNK5B0Wb52eaNvSHBbsvcZfJIo51WHr2lffi0S+3tBDF0dziKw==",
   "success": true,
   "projectFilePath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
-=======
-  "dgSpecHash": "TXo6weyyIc0AohNBp5ybnTdBu2y3vwldBFW1JMp6yS9ul4O/vGug0jDjKy5wikebaVI9W8RWJAPKNcAvOfIAfQ==",
-  "success": true,
-  "projectFilePath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
->>>>>>> 07d5479256f3bcb139d736311a230cb51ff62934
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
