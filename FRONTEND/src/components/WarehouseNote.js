@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Modal from 'react-modal';
 import './WarehouseNote.css';
 import { RiAddLine } from 'react-icons/ri';
+import axios from 'axios';
 
 const WarehouseNote = ({ showNote, toggleNote }) => {
   const notes = [
@@ -9,21 +10,37 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
     { id: 2, text: 'Dnia 28.11.23 Odbędzie się Audyt na magazynie', timestamp: '14:29' },
   ];
 
-  const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [newNote, setNewNote] = useState('');
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentDateTime(new Date());
-    }, 1000);
+  function addNote() {
+    let queryFlag = false;
+    let Tresc = document.getElementById('addTresc').value;
+    let kIdMagazyn = document.getElementById('addkIdMagazyn').value;
 
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
+    const now = new Date();
+    const formattedDateTime = now.toLocaleString();
 
-  const formattedDateTime = currentDateTime.toLocaleString();
+    if (Tresc == null || kIdMagazyn == null) {
+      alert("Coś poszło nie tak!");
+      queryFlag = false;
+    } else {
+      queryFlag = true;
+    }
+
+    if (queryFlag) {
+      console.log(Tresc)
+      console.log(kIdMagazyn)
+      axios.post("https://localhost:7099/Note", {
+        "Tresc": Tresc,
+        "kIdMagazyn": kIdMagazyn,
+      })
+        .then((response) => {
+          alert("Dodano pomyślnie!");
+          window.location.reload();
+        })
+        .catch((err) => alert("Coś poszło nie tak!"));
+    }
+  }
 
   const handleAddNoteClick = () => {
     setIsModalOpen(true);
@@ -31,13 +48,11 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
 
   const handleCancelNoteClick = () => {
     setIsModalOpen(false);
-    setNewNote('');
   };
 
   const handleSaveNoteClick = () => {
-    console.log('Note saved:', newNote);
     setIsModalOpen(false);
-    setNewNote('');
+    addNote();
   };
 
   return (
@@ -60,22 +75,26 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
           </ul>
 
           <Modal
-  isOpen={isModalOpen}
-  onRequestClose={handleCancelNoteClick}
-  contentLabel="Add Note Modal"
->
-  <h2>Dodaj notatkę</h2>
-  <textarea
-    type="text"
-    placeholder="Dodaj notatkę..."
-    value={newNote}
-    onChange={(e) => setNewNote(e.target.value)}
-  />
-  <div className="modalButtons">
-    <button onClick={handleSaveNoteClick}>Zapisz</button>
-    <button onClick={handleCancelNoteClick}>Anuluj</button>
-  </div>
-</Modal>
+            isOpen={isModalOpen}
+            onRequestClose={handleCancelNoteClick}
+            contentLabel="Add Note Modal"
+          >
+            <h2>Dodaj notatkę</h2>
+            <textarea
+              type="text"
+              placeholder="Dodaj notatkę..."
+              id='addTresc'
+            />
+            <div className="modalButtons">
+              <button onClick={handleSaveNoteClick}>Zapisz</button>
+              <button onClick={handleCancelNoteClick}>Anuluj</button>
+              <select id='addkIdMagazyn' name='addkIdMagazyn'>
+                <option value={1}>Magazyn nr1</option>
+                <option value={2}>Magazyn nr2</option>
+                <option value={3}>Magazyn nr3</option>
+              </select>
+            </div>
+          </Modal>
         </div>
       )}
     </div>
