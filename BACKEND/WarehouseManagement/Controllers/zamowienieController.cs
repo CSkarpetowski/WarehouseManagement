@@ -106,6 +106,27 @@ namespace WarehouseManagement.Controllers
             return Ok();
         }
 
+        [HttpPost("addListTable", Name = "AddListTable")]
+        public async Task<IActionResult> AddListTable([FromBody] List<addLista> addLista)
+        {
+            List<ZamowienieLista> list = new List<ZamowienieLista>();
+            foreach (var item in addLista)
+            {
+                ZamowienieLista temp = new ZamowienieLista
+                {
+                    zIdZamowienie = item.zIdZamowienie,
+                    zIdProd = item.zIdProd,
+                    ilosc = item.ilosc,
+                    LOT = item.LOT
+                };
+
+                list.Add(temp);
+            }
+            
+            await _context.AddAsync(list);
+            return Ok();
+        }
+
     }
     
 }
