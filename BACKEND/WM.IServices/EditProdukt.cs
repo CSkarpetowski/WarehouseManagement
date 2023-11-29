@@ -16,6 +16,5 @@ namespace WM.IServices
 
         public int Ilosc { get; set; }
         public bool IsGood { get; set; }
-        public int pIdMagazyn { get; set; }
     }
 }

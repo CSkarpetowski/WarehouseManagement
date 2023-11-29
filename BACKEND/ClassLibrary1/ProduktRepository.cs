@@ -52,7 +52,6 @@ namespace WM.Data.Sql.ProduktRepository
             EditProdukt.LOT = Produkt.LOT;
             EditProdukt.Ilosc = Produkt.Ilosc;
             EditProdukt.IsGood = Produkt.IsGood;
-            EditProdukt.pIdMagazyn = Produkt.pIdMagazyn;
 
             await _context.SaveChangesAsync();
         }
