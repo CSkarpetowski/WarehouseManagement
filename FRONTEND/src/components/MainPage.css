@@ -25,6 +25,7 @@ body{
     display: flex;
     justify-content: center;
     width: 80vw;
+    height: 100vw;
     margin-left: 15vw;
     margin-right: auto;
     margin-top: 20vh;
@@ -39,6 +40,7 @@ body{
     margin: 2%;
     border: 2px solid #c87cfc;
     max-width: 20%;
+    max-height: 20%;
     margin: 0 auto;
 }
 #warehouseTwo
@@ -51,6 +53,7 @@ body{
     margin: 2%;
     border: 2px solid #c87cfc;
     max-width: 20%;
+    max-height: 20%;
     margin: 0 auto;
 }
 #warehouseThree
@@ -63,6 +66,7 @@ body{
     margin: 2%;
     border: 2px solid #c87cfc;
     max-width: 20%;
+    max-height: 20%;
     margin: 0 auto;
 }
 .warehouseTitle

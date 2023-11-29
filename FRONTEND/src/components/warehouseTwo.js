@@ -1,42 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
 import './WarehouseTwo.css';
+import { MdDelete } from "react-icons/md";
+import axios from 'axios';
 
 const WarehouseTwo = () => {
-  const initialOrderList = [
-    { idZamowienie: 5, IsOld: 'yes', zIdKlient: 54 },
-    { idZamowienie: 6, IsOld: 'no', zIdKlient: 87 },
-    { idZamowienie: 7, IsOld: 'no', zIdKlient: 86 },
-    { idZamowienie: 8, IsOld: 'yes', zIdKlient: 99 },
-  ];
+  const [tableData, setTableData] = useState([]);
 
-  const [orderList, setOrderList] = useState(initialOrderList);
-  const [selectedOrders, setSelectedOrders] = useState([]);
+ // let KlientId = document.getElementById('KlientId').value;
+  //let idprod = document.getElementById('idprod').value;
 
-  const handleCheckboxChange = (id) => {
-    setSelectedOrders((prevSelected) =>
-      prevSelected.includes(id)
-        ? prevSelected.filter((selectedId) => selectedId !== id)
-        : [...prevSelected, id]
-    );
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://localhost:7099/api/produkt/all/2');
+        console.log(response.data);
+        setTableData(response.data);
+      } catch (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          console.error('Server responded with a non-success status:', error.response.status);
+          console.error('Response data:', error.response.data);
+        } else if (error.request) {
+          // The request was made but no response was received
+          console.error('No response received from the server');
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.error('Error setting up the request:', error.message);
+        }
+      }
+    };
 
-  const onOrderClick = (order) => {
-    console.log('Order clicked:', order);
-  };
-
-  const handleDeleteSelectedOrders = () => {
-    setOrderList((prevOrderList) =>
-      prevOrderList.filter(
-        (order) => !selectedOrders.includes(order.idZamowienie)
-      )
-    );
-    setSelectedOrders([]);
-  };
-
-  const handleCancel = () => {
-    setSelectedOrders([]);
-  };
+    fetchData();
+  }, []);
 
   return (
     <div id='mainPage'>
@@ -46,36 +42,25 @@ const WarehouseTwo = () => {
         <table className='orderTable'>
           <thead>
             <tr>
-              <th>Wybór</th>
-              <th>ID</th>
-              <th>IsOld</th>
-              <th>ID Klienta</th>
+              <th>ID Prod</th>
+              <th>Produkty</th>
+              <th>LOT</th>
+              <th>Ilość palet</th>
+              <th></th>
             </tr>
           </thead>
           <tbody className='table'>
-            {orderList.map((order) => (
-              <tr
-                key={order.idZamowienie}
-                onClick={() => onOrderClick(order)}
-              >
-                <td>
-                  <input
-                    type='checkbox'
-                    checked={selectedOrders.includes(order.idZamowienie)}
-                    onChange={() => handleCheckboxChange(order.idZamowienie)}
-                  />
-                </td>
-                <td>{order.idZamowienie}</td>
-                <td>{order.IsOld}</td>
-                <td>{order.zIdKlient}</td>
+            {tableData && tableData.map((row) => (
+              <tr id='orderList' key={row.idProd}>
+                <td id='idprod' value={row.idProd}>{row.idProd}</td>
+                <td id="nazwa" value={row.nazwa}>{row.nazwa}</td>
+                <td id="lot" value={row.lot}>{row.lot}</td>
+                <td id="ilosc" value={row.ilosc}>{row.ilosc}</td>
+                <td style={{textAlign:'center'}}><MdDelete  size={25}  color='red'/></td>
               </tr>
             ))}
           </tbody>
         </table>
-        <div className='buttonContainer'>
-          <button onClick={handleDeleteSelectedOrders}>Usuń</button>
-          <button onClick={handleCancel}>Anuluj</button>
-        </div>
       </div>
     </div>
   );
