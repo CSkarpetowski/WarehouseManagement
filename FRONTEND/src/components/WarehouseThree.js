@@ -50,10 +50,6 @@ const alertValidationNOK = (event) =>{
        console.log(err);
    } 
 }
-
-
-
-
   return (
     <div id='mainPage'>
     <NavBar/>

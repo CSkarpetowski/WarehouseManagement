@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {}
+    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {}
   },
   "projects": {
-    "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
+    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
+        "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
         "projectName": "WM.Domain",
-        "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
-        "packagesPath": "C:\\Users\\cezik\\.nuget\\packages\\",
-        "outputPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\obj\\",
+        "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
+        "packagesPath": "C:\\Users\\FrOzen\\.nuget\\packages\\",
+        "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cezik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\FrOzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,21 +55,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {
+    "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
+        "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
         "projectName": "WM.IServices",
-        "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
-        "packagesPath": "C:\\Users\\cezik\\.nuget\\packages\\",
-        "outputPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\obj\\",
+        "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
+        "packagesPath": "C:\\Users\\FrOzen\\.nuget\\packages\\",
+        "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cezik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\FrOzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +83,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
-                "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
+              "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
+                "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
               }
             }
           }
@@ -114,7 +114,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

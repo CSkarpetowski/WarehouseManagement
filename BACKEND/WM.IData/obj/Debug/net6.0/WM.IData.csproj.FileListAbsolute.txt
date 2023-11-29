@@ -14,3 +14,18 @@ A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\refint\WM.IData.dll
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.pdb
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\ref\WM.IData.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\bin\Debug\net6.0\WM.IData.deps.json
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\bin\Debug\net6.0\WM.IData.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\bin\Debug\net6.0\WM.IData.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\bin\Debug\net6.0\WM.Domain.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\bin\Debug\net6.0\WM.Domain.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.csproj.AssemblyReference.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.GeneratedMSBuildEditorConfig.editorconfig
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.AssemblyInfoInputs.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.AssemblyInfo.cs
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.csproj.CoreCompileInputs.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.csproj.CopyComplete
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\refint\WM.IData.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\ref\WM.IData.dll
