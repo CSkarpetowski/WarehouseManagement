@@ -130,7 +130,6 @@ namespace WarehouseManagement.Controllers
             return Ok(products);
         }
 
-<<<<<<< HEAD
         [HttpGet("magStan/{IdMag}", Name = "magStan")]
         public IActionResult Getmagstan(int Idmag)
         {
@@ -153,7 +152,6 @@ namespace WarehouseManagement.Controllers
         return Ok(aktualny);
         }
 
-=======
         public class CzyOkModel
         {
             public bool isGood { get; set; }
@@ -179,7 +177,7 @@ namespace WarehouseManagement.Controllers
         }
 
 
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
+
     }
 
 

@@ -2741,16 +2741,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\cezik\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\FrOzen\\.nuget\\packages\\": {}
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Services\\WM.Services.csproj",
       "projectName": "WM.Services",
       "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Services\\WM.Services.csproj",
@@ -2759,16 +2754,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cezik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Services\\WM.Services.csproj",
-      "projectName": "WM.Services",
-      "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Services\\WM.Services.csproj",
-      "packagesPath": "C:\\Users\\FrOzen\\.nuget\\packages\\",
-      "outputPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Services\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\FrOzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2782,7 +2767,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-<<<<<<< HEAD
             "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj": {
               "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj"
             },
@@ -2794,19 +2778,6 @@
             },
             "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {
               "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj"
-=======
-            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj": {
-              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj"
-            },
-            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
-              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
-            },
-            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IData\\WM.IData.csproj": {
-              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IData\\WM.IData.csproj"
-            },
-            "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {
-              "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj"
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
             }
           }
         }
@@ -2836,11 +2807,7 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       }
     }
   },
@@ -2849,11 +2816,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
       "message": "Pakiet „Microsoft.AspNet.SignalR.Core 2.4.3” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
-=======
-      "message": "Package 'Microsoft.AspNet.SignalR.Core 2.4.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Microsoft.AspNet.SignalR.Core",
       "targetGraphs": [
         "net6.0"
@@ -2863,11 +2826,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
       "message": "Pakiet „Microsoft.AspNet.SignalR.SystemWeb 2.4.3” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
-=======
-      "message": "Package 'Microsoft.AspNet.SignalR.SystemWeb 2.4.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Microsoft.AspNet.SignalR.SystemWeb",
       "targetGraphs": [
         "net6.0"
@@ -2877,11 +2836,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
       "message": "Pakiet „Microsoft.Owin 2.1.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
-=======
-      "message": "Package 'Microsoft.Owin 2.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Microsoft.Owin",
       "targetGraphs": [
         "net6.0"
@@ -2891,11 +2846,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
       "message": "Pakiet „Microsoft.Owin.Host.SystemWeb 2.1.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
-=======
-      "message": "Package 'Microsoft.Owin.Host.SystemWeb 2.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Microsoft.Owin.Host.SystemWeb",
       "targetGraphs": [
         "net6.0"
@@ -2905,11 +2856,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
       "message": "Pakiet „Microsoft.Owin.Security 2.1.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
-=======
-      "message": "Package 'Microsoft.Owin.Security 2.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Microsoft.Owin.Security",
       "targetGraphs": [
         "net6.0"
@@ -2919,11 +2866,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
       "message": "Pakiet „Newtonsoft.Json 6.0.4” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
-=======
-      "message": "Package 'Newtonsoft.Json 6.0.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net6.0"
@@ -2933,11 +2876,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
       "message": "Pakiet „Owin 1.0.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
-=======
-      "message": "Package 'Owin 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
->>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Owin",
       "targetGraphs": [
         "net6.0"
