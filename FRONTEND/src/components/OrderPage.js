@@ -4,51 +4,76 @@ import './OrderPage.css';
 import axios from 'axios';
 
 const OrderPage = () => {
-  const [checked, setChecked] = useState([]);
   const [tableData, setTableData] = useState([]);
-
- // let KlientId = document.getElementById('KlientId').value;
-  //let idprod = document.getElementById('idprod').value;
+  const [tempTable, setTempTable] = useState([]);
+  const [tempTableVisible, setTempTableVisible] = useState(true);
+  const [selectedWarehouse, setSelectedWarehouse] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://localhost:7099/api/produkt/all');
+        if (selectedWarehouse == '') {const response = await axios.get(`https://localhost:7099/api/produkt/all`);
         console.log(response.data);
-        setTableData(response.data);
-      } catch (error) {
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          console.error('Server responded with a non-success status:', error.response.status);
-          console.error('Response data:', error.response.data);
-        } else if (error.request) {
-          // The request was made but no response was received
-          console.error('No response received from the server');
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.error('Error setting up the request:', error.message);
+        setTableData(response.data); }
+        if (selectedWarehouse) {
+          const response = await axios.get(`https://localhost:7099/api/produkt/all/${selectedWarehouse}`);
+          console.log(response.data);
+          setTableData(response.data);
         }
+      } catch (error) {
+        // Handle errors
       }
-    };
-
-    const handleCheck = (event) => {
-      var updatedList = [...checked];
-      if (event.target.checked) {
-        updatedList = [...checked, event.target.value];
-      } else {
-        updatedList.splice(checked.indexOf(event.target.value), 1);
-      }
-      setChecked(updatedList);
     };
 
     fetchData();
-  }, []);
+  }, [selectedWarehouse]);
+
+  const handleCheck = (event, row) => {
+    const updatedList = [...tempTable];
+
+    if (event.target.checked) {
+      updatedList.push(row);
+    } else {
+      const index = updatedList.findIndex(item => item.idProd === row.idProd);
+      if (index !== -1) {
+        updatedList.splice(index, 1);
+      }
+    }
+
+    setTempTable(updatedList);
+  };
+
+  const handleDodajZamowienie = () => {
+    console.log('Dodaj zamówienie:', {
+      warehouse: selectedWarehouse,
+      products: tempTable,
+    });
+  };
+
+  const handleWarehouseChange = (e) => {
+    console.log(e.target.value);
+    setSelectedWarehouse(e.target.value);
+    // No need to call fetchData here, as it's now handled by useEffect
+  };
 
   return (
     <div id='mainPage'>
       <NavBar />
       <h1 className='cardTitle'>Dodaj zamówienie</h1>
       <div className='warehouseArea'>
+        <div className='dropdown'>
+          <label>Wybierz magazyn:</label>
+          <select
+            value={selectedWarehouse}
+            onChange={handleWarehouseChange}
+          >
+            <option value=''>Wybierz magazyn</option>
+            <option value='1'>Magazyn 1</option>
+            <option value='2'>Magazyn 2</option>
+            <option value='3'>Magazyn 3</option>
+          </select>
+        </div>
+
         <table className='orderTable'>
           <thead>
             <tr>
@@ -62,23 +87,46 @@ const OrderPage = () => {
           <tbody className='table'>
             {tableData && tableData.map((row) => (
               <tr id='orderList' key={row.idProd}>
-                <td id='idprod' value={row.idProd} >
-                  <input type='checkbox' />
+                <td id='idprod' value={row.idProd}>
+                  <input
+                    type='checkbox'
+                    onChange={(e) => handleCheck(e, row)}
+                    checked={tempTable.some(item => item.idProd === row.idProd)}
+                  />
                 </td>
-                <td id="nazwa" value={row.nazwa}>{row.nazwa}</td>
-                <td id="lot" value={row.lot}>{row.lot}</td>
-                <td id="ilosc" value={row.ilosc}>{row.ilosc}</td>
-                <td id="idmagazyn"value={row.pIdMagazyn}>{row.pIdMagazyn}</td>
+                <td id="nazwa">{row.nazwa}</td>
+                <td id="lot">{row.lot}</td>
+                <td id="ilosc">{row.ilosc}</td>
+                <td id="idmagazyn">{row.pIdMagazyn}</td>
               </tr>
             ))}
           </tbody>
         </table>
-        <div className='buttonContainer'>
-          <select id='KlientId'>
-            <option value={1}>Kierowca 1</option>
-            <option value={2}>Kierowca 2</option>
-            <option value={3}>Kierowca 3</option>
-          </select>
+
+        <div className='tempTable' style={{ display: tempTableVisible ? 'block' : 'none' }}>
+          <h2>Tymczasowa Tabela</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Produkty</th>
+                <th>LOT</th>
+                <th>Ilość</th>
+                <th>Magazyn</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tempTable.map((element, index) => (
+                <tr key={index}>
+                  <td>{element.nazwa}</td>
+                  <td>{element.lot}</td>
+                  <td>{element.ilosc}</td>
+                  <td>{element.pIdMagazyn}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          
+          <button onClick={handleDodajZamowienie}>Dodaj zamówienie</button>
         </div>
       </div>
     </div>
