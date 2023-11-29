@@ -9,13 +9,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WarehouseManagement
 build_property.RootNamespace = WarehouseManagement
-<<<<<<< Updated upstream
-build_property.ProjectDir = D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WarehouseManagement\
-build_property.RazorLangVersion = 6.0
-build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WarehouseManagement
-=======
 build_property.ProjectDir = A:\Warehouse sprint3\warehouseman_v2\BACKEND\WarehouseManagement\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
@@ -23,5 +16,4 @@ build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = A:\Warehouse sprint3\warehouseman_v2\BACKEND\WarehouseManagement
->>>>>>> Stashed changes
 build_property._RazorSourceGeneratorDebug = 
