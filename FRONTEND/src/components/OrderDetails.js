@@ -18,6 +18,17 @@ export default function OrderDetails(props) {
           console.log(err);
       }
     },[orderId]);
+
+    const deleteOrder = () => {
+      try{
+        axios.delete(`https://localhost:7099/api/zamowienie/delete/${orderId}`)
+        .then(() => alert("Zamówienie usunięto"));
+      }
+      catch(err)
+      {
+        console.log(err);
+      }
+    };
   return (
     <div className='oderDetailsMain'>
         <h1 className='orderWindowBar'>
@@ -54,7 +65,7 @@ export default function OrderDetails(props) {
             </tbody>
         </table>
         </div>
-        <button className='orderDetailsDelete'>Delete Order</button>
+        <button className='orderDetailsDelete' onClick={deleteOrder}>Delete Order</button>
     </div>
   )
 }

@@ -1,43 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
+import axios from 'axios';
 import './WarehouseOne.css';
 
 const WarehouseOne = () => {
-  const initialOrderList = [
-    { idZamowienie: 1, IsOld: 'no', zIdKlient: 19 },
-    { idZamowienie: 2, IsOld: 'no', zIdKlient: 23 },
-    { idZamowienie: 3, IsOld: 'no', zIdKlient: 37 },
-    { idZamowienie: 4, IsOld: 'no', zIdKlient: 51 },
-  ];
-
-  const [orderList, setOrderList] = useState(initialOrderList);
-  const [selectedOrders, setSelectedOrders] = useState([]);
-
-  const handleCheckboxChange = (id) => {
-    setSelectedOrders((prevSelected) =>
-      prevSelected.includes(id)
-        ? prevSelected.filter((selectedId) => selectedId !== id)
-        : [...prevSelected, id]
-    );
-  };
-
-  const onOrderClick = (order) => {
-    console.log('Order clicked:', order);
-  };
-
-  const handleDeleteSelectedOrders = () => {
-    setOrderList((prevOrderList) =>
-      prevOrderList.filter(
-        (order) => !selectedOrders.includes(order.idZamowienie)
-      )
-    );
-    setSelectedOrders([]);
-  };
-
-  const handleCancel = () => {
-    setSelectedOrders([]);
-  };
-
+    useEffect(()=>{
+        try{
+            axios.get("https://localhost:7099/api/produkt/all/1")
+            .then((response) => {
+              console.log(response.data);
+            })
+        }
+        catch (err){
+            console.log(err);
+        }
+    },[]);
   return (
     <div id='mainPage'>
       <NavBar />
@@ -53,28 +30,20 @@ const WarehouseOne = () => {
             </tr>
           </thead>
           <tbody className='table'>
-            {orderList.map((order) => (
-              <tr
-                key={order.idZamowienie}
-                onClick={() => onOrderClick(order)}
-              >
+           
+              <tr>
                 <td>
                   <input
-                    type='checkbox'
-                    checked={selectedOrders.includes(order.idZamowienie)}
-                    onChange={() => handleCheckboxChange(order.idZamowienie)}
-                  />
+                    type='checkbox'/>
                 </td>
-                <td>{order.idZamowienie}</td>
-                <td>{order.IsOld}</td>
-                <td>{order.zIdKlient}</td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
-            ))}
           </tbody>
         </table>
         <div className='buttonContainer'>
-          <button onClick={handleDeleteSelectedOrders}>Usuń</button>
-          <button onClick={handleCancel}>Anuluj</button>
+          <button>Apply checkbox</button>
         </div>
       </div>
     </div>
