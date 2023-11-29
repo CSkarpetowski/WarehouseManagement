@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IServices\bin\Debug\net6.0\WM.IServices.deps.json
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IServices\bin\Debug\net6.0\WM.IServices.dll
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IServices\bin\Debug\net6.0\WM.IServices.pdb
@@ -14,21 +13,3 @@ D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IServices\obj\Debug\net6.0\refint\WM.IServices.dll
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IServices\obj\Debug\net6.0\WM.IServices.pdb
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IServices\obj\Debug\net6.0\ref\WM.IServices.dll
-=======
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\bin\Debug\net6.0\WM.IServices.deps.json
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\bin\Debug\net6.0\WM.IServices.dll
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\bin\Debug\net6.0\WM.IServices.pdb
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\bin\Debug\net6.0\WM.Domain.dll
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\bin\Debug\net6.0\WM.Domain.pdb
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\obj\Debug\net6.0\WM.IServices.csproj.AssemblyReference.cache
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\obj\Debug\net6.0\WM.IServices.GeneratedMSBuildEditorConfig.editorconfig
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\obj\Debug\net6.0\WM.IServices.AssemblyInfoInputs.cache
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\obj\Debug\net6.0\WM.IServices.AssemblyInfo.cs
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\obj\Debug\net6.0\WM.IServices.csproj.CoreCompileInputs.cache
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\obj\Debug\net6.0\WM.IServices.sourcelink.json
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\obj\Debug\net6.0\WM.IServices.csproj.CopyComplete
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\obj\Debug\net6.0\WM.IServices.dll
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\obj\Debug\net6.0\refint\WM.IServices.dll
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\obj\Debug\net6.0\WM.IServices.pdb
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.IServices\obj\Debug\net6.0\ref\WM.IServices.dll
->>>>>>> 8d47ea0b26f1acc128c31978790995af00074afc

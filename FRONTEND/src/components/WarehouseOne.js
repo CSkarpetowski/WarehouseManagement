@@ -20,22 +20,36 @@ export default function WarehouseOne() {
       }
   },[]);
 
-  const alertValidation = (event) =>{
-     let checkbox = event.target;
-     let productID = checkbox.id;
-     if(checkbox.checked)
-     {
+  const alertValidationOK = (event) =>{
+     let button = event.target;
+     let buttonID = button.id;
       try{
-        axios.patch(`https://localhost:7099/api/produkt/${productID}`, {isGood:true})
+        axios.patch(`https://localhost:7099/api/produkt/isGood/${buttonID}`, {isGood:true})
         .then(() => {
-          console.log("Pomyslnie zaktualizowano isGood");
+          console.log("Pomyslnie zaktualizowano isGood TRUE ");
+          window.location.reload();
         })
-      }
+         }
       catch (err){
           console.log(err);
       } 
-      }
 }
+
+const alertValidationNOK = (event) =>{
+  let button = event.target;
+  let buttonID = button.id;
+   try{
+     axios.patch(`https://localhost:7099/api/produkt/isGood/${buttonID}`, {isGood:false})
+     .then(() => {
+       console.log("Pomyslnie zaktualizowano isGood FALSE ");
+       window.location.reload();
+     })
+      }
+   catch (err){
+       console.log(err);
+   } 
+}
+
 
   return (
     <div id='mainPage'>
@@ -60,7 +74,10 @@ export default function WarehouseOne() {
                     <td>{val.nazwa}</td>
                     <td>{val.lot}</td>
                     <td>{val.ilosc}</td>
-                    <td><input id={val.idProd} type='checkbox' onClick={alertValidation} /></td>
+                    <td>
+                      <button style={{width:'25%', backgroundColor:'green', margin:'2px'}} id={val.idProd} onClick={alertValidationOK}></button>
+                      <button style={{width:'25%', backgroundColor:'tomato', margin:'2px'}} id={val.idProd} onClick={alertValidationNOK}></button>
+                    </td>
                   </tr>
               ))}
           </tbody>

@@ -5,64 +5,88 @@ import { MdDelete } from "react-icons/md";
 import axios from 'axios';
 
 const WarehouseThree = () => {
-  const [tableData, setTableData] = useState([]);
+  const[warehouseData, SetWarehouseData] = useState([]);
 
- // let KlientId = document.getElementById('KlientId').value;
-  //let idprod = document.getElementById('idprod').value;
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('https://localhost:7099/api/produkt/all/3');
-        console.log(response.data);
-        setTableData(response.data);
-      } catch (error) {
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          console.error('Server responded with a non-success status:', error.response.status);
-          console.error('Response data:', error.response.data);
-        } else if (error.request) {
-          // The request was made but no response was received
-          console.error('No response received from the server');
-        } else {
-          // Something happened in setting up the request that triggered an Error
-          console.error('Error setting up the request:', error.message);
-        }
+  useEffect(()=>{
+      try{
+        axios.get("https://localhost:7099/api/produkt/all/3")
+        .then((response) => {
+          SetWarehouseData(response.data);
+          console.log(warehouseData);
+        })
       }
-    };
+      catch (err)
+      {
+        console.log(err);
+      }
+  },[]);
 
-    fetchData();
-  }, []);
+  const alertValidationOK = (event) =>{
+     let button = event.target;
+     let buttonID = button.id;
+      try{
+        axios.patch(`https://localhost:7099/api/produkt/isGood/${buttonID}`, {isGood:true})
+        .then(() => {
+          console.log("Pomyslnie zaktualizowano isGood TRUE ");
+          window.location.reload();
+        })
+         }
+      catch (err){
+          console.log(err);
+      } 
+}
+
+const alertValidationNOK = (event) =>{
+  let button = event.target;
+  let buttonID = button.id;
+   try{
+     axios.patch(`https://localhost:7099/api/produkt/isGood/${buttonID}`, {isGood:false})
+     .then(() => {
+       console.log("Pomyslnie zaktualizowano isGood FALSE ");
+       window.location.reload();
+     })
+      }
+   catch (err){
+       console.log(err);
+   } 
+}
+
+
+
 
   return (
     <div id='mainPage'>
-      <NavBar />
-      <h1 className='cardTitle'>- Warehouse 3 -</h1>
-      <div className='warehouseArea'>
-        <table className='orderTable'>
-          <thead>
-            <tr>
-              <th>ID Prod</th>
-              <th>Produkty</th>
-              <th>LOT</th>
-              <th>Ilość palet</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody className='table'>
-            {tableData && tableData.map((row) => (
-              <tr id='orderList' key={row.idProd}>
-                <td id='idprod' value={row.idProd}>{row.idProd}</td>
-                <td id="nazwa" value={row.nazwa}>{row.nazwa}</td>
-                <td id="lot" value={row.lot}>{row.lot}</td>
-                <td id="ilosc" value={row.ilosc}>{row.ilosc}</td>
-                <td style={{textAlign:'center'}}><MdDelete  size={25}  color='red'/></td>
-              </tr>
+    <NavBar/>
+    <h1 className='cardTitle'>- Warehouse 3 -</h1>
+    <div className='warehouseArea'>
+      <table className='orderTable'>
+        <thead>
+          <tr style={{textAlign:'center'}}>
+            <th>ID Prod</th>
+            <th>Nazwa</th>
+            <th>LOT</th>
+            <th>Ilość palet</th>
+            <th>Alert</th>
+          </tr>
+        </thead>
+        <tbody className='table'>
+            {
+              warehouseData && warehouseData.map((val) =>(
+                <tr key={val.idProd} style={{backgroundColor: val.isGood ? 'white' : 'red'}}>
+                  <td>{val.idProd}</td>
+                  <td>{val.nazwa}</td>
+                  <td>{val.lot}</td>
+                  <td>{val.ilosc}</td>
+                  <td>
+                    <button style={{width:'25%', backgroundColor:'green', margin:'2px'}} id={val.idProd} onClick={alertValidationOK}></button>
+                    <button style={{width:'25%', backgroundColor:'tomato', margin:'2px'}} id={val.idProd} onClick={alertValidationNOK}></button>
+                  </td>
+                </tr>
             ))}
-          </tbody>
-        </table>
-      </div>
+        </tbody>
+      </table>
     </div>
+  </div>
   );
 };
 

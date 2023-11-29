@@ -129,6 +129,31 @@ namespace WarehouseManagement.Controllers
             return Ok(products);
         }
 
+        public class CzyOkModel
+        {
+            public bool isGood { get; set; }
+        }
+
+        [HttpPatch("isGood/{idProd}", Name = "isGoodEdit")]
+        public async Task<IActionResult> EditIsGood(int idProd, [FromBody] CzyOkModel model)
+        {
+            // Pobieranie produktu na podstawie ID
+            var prod = _context.Produkt.FirstOrDefault(x => x.IdProd == idProd);
+
+            if (prod == null)
+            {
+                return NotFound(); // Obsługa przypadku, gdy produkt o danym ID nie istnieje
+            }
+
+            prod.IsGood = model.isGood;
+
+            _context.Produkt.Update(prod);
+            await _context.SaveChangesAsync();
+
+            return Ok(prod);
+        }
+
+
     }
 
 
