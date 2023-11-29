@@ -102,3 +102,13 @@ progress
     box-shadow: 2px 14px 15px -7px rgba(30, 166, 250, 0.36);
     border-radius: 50px;
 }
+
+.red::-moz-progress-bar{
+    background-color: red;
+}
+.orange::-moz-progress-bar{
+    background-color: orange;
+}
+.green::-moz-progress-bar{
+    background-color: green;
+}

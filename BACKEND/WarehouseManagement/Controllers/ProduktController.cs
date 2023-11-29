@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Text;
 using Warehouse_Management.Validation;
 using Warehouse_Management.ViewModels;
 using WarehouseManagement.BindingModel;
@@ -129,6 +130,28 @@ namespace WarehouseManagement.Controllers
             return Ok(products);
         }
 
+        [HttpGet("magStan/{IdMag}", Name = "magStan")]
+        public IActionResult Getmagstan(int Idmag)
+        {
+            var stan = _context.Magazyn.FirstOrDefault(x => x.IdMagazyn == Idmag);
+            int pojemnosc = stan.Pojemnosc;
+            var ilosc = _context.Produkt.Where(x => x.pIdMagazyn == Idmag);
+            int ilenastanie = 0;
+            foreach (var item in ilosc)
+            {
+                ilenastanie += item.Ilosc;
+
+            }
+
+            StanGet aktualny = new StanGet
+            {
+                ilosc = ilenastanie,
+                pojemnosc = pojemnosc
+            };
+
+        return Ok(aktualny);
+        }
+
         public class CzyOkModel
         {
             public bool isGood { get; set; }
@@ -152,6 +175,7 @@ namespace WarehouseManagement.Controllers
 
             return Ok(prod);
         }
+
 
 
     }
