@@ -1,14 +1,12 @@
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WM.Data.Sql;
-using Warehouse_Management.ViewModels;
-using WM.Data.Sql.DAO;
-using Warehouse_Management.Validation;
-using Microsoft.AspNetCore.SignalR;
-using WM.IServices;
-using WarehouseManagement.BindingModel;
 using System.Diagnostics;
+using Warehouse_Management.Validation;
+using Warehouse_Management.ViewModels;
+using WarehouseManagement.BindingModel;
+using WM.Data.Sql;
+using WM.Data.Sql.DAO;
+using WM.IServices;
 
 namespace WarehouseManagement.Controllers
 {
@@ -97,12 +95,14 @@ namespace WarehouseManagement.Controllers
 
             return NoContent();
         }
+
+
         [ValidationModel]
         [HttpDelete("delete/{IdProd:min(1)}", Name = "DelByIdProd")]
         public async Task<IActionResult> DelByIdProd(int IdProd)
         {
             var produkt = await _context.Produkt.FirstOrDefaultAsync(x => x.IdProd == IdProd);
-            if (produkt!= null)
+            if (produkt != null)
             {
                 _context.Produkt.Remove(produkt);
                 await _context.SaveChangesAsync();
@@ -112,8 +112,9 @@ namespace WarehouseManagement.Controllers
             return NotFound();
         }
 
-        [HttpGet("all/{Idmag}", Name ="GetAllFromMag")]
-        public IActionResult GetAllFromMag(int Idmag) {
+        [HttpGet("all/{Idmag}", Name = "GetAllFromMag")]
+        public IActionResult GetAllFromMag(int Idmag)
+        {
 
             var products = _context.Produkt.Where(x => x.pIdMagazyn == Idmag);
 

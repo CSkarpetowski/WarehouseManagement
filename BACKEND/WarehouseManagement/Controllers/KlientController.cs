@@ -1,11 +1,8 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WM.Data.Sql;
-using Warehouse_Management.ViewModels;
-using WM.Data.Sql.DAO;
 using Warehouse_Management.Validation;
-using Microsoft.AspNetCore.SignalR;
+using WM.Data.Sql;
+using WM.Data.Sql.DAO;
 using WM.IServices;
 
 namespace WarehouseManagement.Controllers
@@ -23,8 +20,8 @@ namespace WarehouseManagement.Controllers
             _klientService = klientService;
         }
 
-         [HttpGet("{IdKlient:min(1)}", Name ="GetKlient")]
-        
+        [HttpGet("{IdKlient:min(1)}", Name = "GetKlient")]
+
 
         public async Task<IActionResult> GetKlientById(int IdKlient)
         {
@@ -69,10 +66,10 @@ namespace WarehouseManagement.Controllers
         }
 
     }
-       
-        
-        
 
 
-    
+
+
+
+
 }

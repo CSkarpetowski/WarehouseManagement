@@ -1,10 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using WM.Data.Sql.DAO;
 
 namespace WM.Data.Sql.DAOConfigurations
@@ -22,7 +17,7 @@ namespace WM.Data.Sql.DAOConfigurations
                 .WithOne(x => x.Pracownik)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasForeignKey<Login>(x => x.IdPracownik);
-            
+
             builder.ToTable("Pracownik");
         }
     }

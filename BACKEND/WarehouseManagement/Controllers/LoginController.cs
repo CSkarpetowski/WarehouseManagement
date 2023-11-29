@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using WM.Data.Sql;
 
 namespace WarehouseManagement.Controllers
@@ -9,7 +8,7 @@ namespace WarehouseManagement.Controllers
     [ApiController]
     public class LoginController : Controller
     {
-        
+
         private readonly WarehouseDbContext _context;
 
         public LoginController(WarehouseDbContext context)

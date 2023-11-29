@@ -41,9 +41,9 @@ namespace WarehouseManagement.Controllers
         // Funkcje do uwierzytelniania i generowania tokenów JWT
         private bool IsValidUser(string username, string password)
         {
-                var user = _dbContext.Login.FirstOrDefault(u => u.Uzytkownik == username && u.Haslo == password);
-                return user != null;
-        
+            var user = _dbContext.Login.FirstOrDefault(u => u.Uzytkownik == username && u.Haslo == password);
+            return user != null;
+
         }
 
         private string GenerateJwtToken(string username)

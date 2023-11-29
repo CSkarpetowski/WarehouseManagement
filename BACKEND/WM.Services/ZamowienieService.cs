@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WM.Data.Sql.ProduktRepository;
-using WM.Domain;
+﻿using WM.Domain;
 using WM.IData;
-using WM.IServices.Zamowienie;
 using WM.IServices;
+using WM.IServices.Zamowienie;
 
 namespace WM.Services
 {

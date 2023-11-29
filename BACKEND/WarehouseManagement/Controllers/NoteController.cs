@@ -4,7 +4,7 @@ using WM.Data.Sql;
 using WM.Data.Sql.DAO;
 
 namespace WarehouseManagement.Controllers
-{       
+{
 
     [Route("Note")]
     [ApiController]
@@ -29,8 +29,8 @@ namespace WarehouseManagement.Controllers
         {
             var komunikat = new Komunikat
             {
-                
-                Tresc = addNote.Tresc, 
+
+                Tresc = addNote.Tresc,
                 kIdMagazyn = addNote.kIdMagazyn,
                 data = addNote.data
             };

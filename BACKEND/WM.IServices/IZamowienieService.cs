@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WM.Domain;
-using WM.IServices.Zamowienie;
+﻿using WM.IServices.Zamowienie;
 
 
 namespace WM.IServices

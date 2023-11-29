@@ -1,6 +1,6 @@
-﻿using WM.IData;
+﻿using WM.Domain;
+using WM.IData;
 using WM.IServices;
-using WM.Domain;
 
 namespace WM.Services
 {
@@ -26,7 +26,7 @@ namespace WM.Services
         {
             var Produkt = await _produktRepository.GetProdukt(IdProd);
             //Produkt.EditProdukt(createProdukt.Nazwa, createProdukt.LOT, createProdukt.Ilosc, createProdukt.IsGood, createProdukt.pIdMagazyn);
-            Produkt.EditProdukt(createProdukt.Nazwa, createProdukt.LOT, createProdukt.Ilosc, createProdukt.IsGood, createProdukt.pIdMagazyn);
+            Produkt.EditProdukt(createProdukt.Nazwa, createProdukt.LOT, createProdukt.Ilosc, createProdukt.IsGood);
             await _produktRepository.EditProdukt(Produkt);
         }
     }

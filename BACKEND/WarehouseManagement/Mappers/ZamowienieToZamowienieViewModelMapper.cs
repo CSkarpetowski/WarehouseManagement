@@ -12,7 +12,7 @@ namespace WarehouseManagement.Mappers
                 IdZamowienie = Zamowienie.IdZamowienie,
                 IsOld = Zamowienie.IsOld,
                 zIdKlient = Zamowienie.zIdKlient
-    };
+            };
             return ZamowienieViewModel;
         }
     }

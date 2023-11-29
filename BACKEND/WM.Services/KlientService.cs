@@ -1,6 +1,6 @@
-﻿using WM.IData;
+﻿using WM.Domain;
+using WM.IData;
 using WM.IServices;
-using WM.Domain;
 
 namespace WM.Services
 {

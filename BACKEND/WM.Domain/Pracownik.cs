@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Intrinsics.X86;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WM.Domain
+﻿namespace WM.Domain
 {
     public class Pracownik
     {
@@ -24,8 +17,8 @@ namespace WM.Domain
             pIdMagazyn = idmag;
 
         }
-        public Pracownik( string nazwa, string telefon, bool manager, int idmag)
-        {         
+        public Pracownik(string nazwa, string telefon, bool manager, int idmag)
+        {
             Nazwa = nazwa;
             Telefon = telefon;
             IsManager = manager;
@@ -41,8 +34,8 @@ namespace WM.Domain
             pIdMagazyn = idmag;
 
         }
-        public void ChangeMag( int idmag)
-        {          
+        public void ChangeMag(int idmag)
+        {
             pIdMagazyn = idmag;
         }
 

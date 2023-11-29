@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WM.IData;
 
 namespace WM.Data.Sql.Repositories
@@ -33,7 +28,7 @@ namespace WM.Data.Sql.Repositories
 
         public async Task<Domain.Pracownik> GetPracownik(int idPracownik)
         {
-            var pracownik = await _context.Pracownik.FirstOrDefaultAsync(x=> x.IdPracownik == idPracownik);
+            var pracownik = await _context.Pracownik.FirstOrDefaultAsync(x => x.IdPracownik == idPracownik);
             return new Domain.Pracownik(
                 pracownik.IdPracownik,
                 pracownik.Nazwa,

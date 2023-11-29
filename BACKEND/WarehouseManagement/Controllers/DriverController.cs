@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WM.Data.Sql;
-using WM.Data.Sql.DAO;
 
 namespace WarehouseManagement.Controllers
 {
@@ -23,8 +22,9 @@ namespace WarehouseManagement.Controllers
             return Ok(Drivers);
         }
 
-        [HttpGet("forlist", Name = "ForList") ]
-        public IActionResult GetForList() {
+        [HttpGet("forlist", Name = "ForList")]
+        public IActionResult GetForList()
+        {
 
             var clients = _context.Klient.GroupBy(x => x.Firma);
 

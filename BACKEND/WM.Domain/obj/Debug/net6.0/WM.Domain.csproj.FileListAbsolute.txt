@@ -1,26 +1,3 @@
-A:\Warehouse Management v4\WM.Domain\bin\Debug\net6.0\WM.Domain.deps.json
-A:\Warehouse Management v4\WM.Domain\bin\Debug\net6.0\WM.Domain.dll
-A:\Warehouse Management v4\WM.Domain\bin\Debug\net6.0\WM.Domain.pdb
-A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.AssemblyReference.cache
-A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.GeneratedMSBuildEditorConfig.editorconfig
-A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfoInputs.cache
-A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfo.cs
-A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.CoreCompileInputs.cache
-A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.dll
-A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\refint\WM.Domain.dll
-A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
-A:\Warehouse Management v4\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\bin\Debug\net6.0\WM.Domain.deps.json
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\bin\Debug\net6.0\WM.Domain.dll
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\bin\Debug\net6.0\WM.Domain.pdb
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.GeneratedMSBuildEditorConfig.editorconfig
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfoInputs.cache
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfo.cs
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.CoreCompileInputs.cache
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.dll
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\refint\WM.Domain.dll
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\Projekt_WarehouseManager\Warehouse Management v5\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.deps.json
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.dll
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.pdb
@@ -32,32 +9,3 @@ D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Domain\obj\Debug\net6.0\refint\WM.Domain.dll
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.deps.json
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.dll
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.pdb
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.GeneratedMSBuildEditorConfig.editorconfig
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfoInputs.cache
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfo.cs
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.CoreCompileInputs.cache
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.sourcelink.json
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.dll
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\refint\WM.Domain.dll
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.deps.json
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.dll
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\ref\WM.Domain.dll
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.pdb
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.AssemblyReference.cache
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfoInputs.cache
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfo.cs
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.dll
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll
-C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
-<<<<<<< HEAD
-D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.AssemblyReference.cache
-=======
-A:\Warehouse sprint3\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.AssemblyReference.cache
->>>>>>> 07d5479256f3bcb139d736311a230cb51ff62934

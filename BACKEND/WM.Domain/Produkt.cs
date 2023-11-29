@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace WM.Domain
+﻿namespace WM.Domain
 {
-    public class Produkt 
+    public class Produkt
     {
         public int IdProd { get; set; }
         public string Nazwa { get; set; }

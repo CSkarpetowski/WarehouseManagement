@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WM.IServices
+﻿namespace WM.IServices
 {
-    public class AddProdukt 
+    public class AddProdukt
     {
         public int IdProd { get; set; }
         public string Nazwa { get; set; }

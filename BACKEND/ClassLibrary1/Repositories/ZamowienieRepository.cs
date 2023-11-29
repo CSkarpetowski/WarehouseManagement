@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WM.IData;
 
 namespace WM.Data.Sql.Repositories
@@ -23,7 +18,7 @@ namespace WM.Data.Sql.Repositories
             {
                 IsOld = zamowienie.IsOld,
                 zIdKlient = zamowienie.zIdKlient
-                
+
             };
             await _context.AddAsync(zamowienieDAO);
             await _context.SaveChangesAsync();
@@ -43,7 +38,7 @@ namespace WM.Data.Sql.Repositories
             var EditZamowienie = await _context.Zamowienie.FirstOrDefaultAsync(x => x.IdZamowienie == zamowienie.IdZamowienie);
             EditZamowienie.IsOld = zamowienie.IsOld;
             EditZamowienie.zIdKlient = zamowienie.zIdKlient;
-           
+
 
             await _context.SaveChangesAsync();
         }

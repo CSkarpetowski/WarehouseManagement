@@ -1,27 +1,20 @@
 ﻿using FluentValidation.AspNetCore;
-using FluentValidation;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using WM.Data.Sql.Migrations;
-using WM.Data.Sql;
-using Warehouse.Middlewares;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Warehouse.Middlewares;
 using WarehouseManagement.Hubs;
+using WM.Data.Sql;
 using WM.Data.Sql.KlientRepository;
+using WM.Data.Sql.Migrations;
 using WM.Data.Sql.ProduktRepository;
 using WM.Data.Sql.Repositories;
+using WM.IData;
 using WM.IServices;
 using WM.Services;
-using WM.IData;
 
 namespace WarehouseManagement;
 
@@ -43,7 +36,8 @@ public class Startup
         services.AddDbContext<WarehouseDbContext>(options => options
             .UseMySQL(Configuration.GetConnectionString("WarehouseDbContext")));
         services.AddTransient<DatabaseSeed>();
-        services.AddControllers().AddNewtonsoftJson(options => {
+        services.AddControllers().AddNewtonsoftJson(options =>
+        {
             options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
         })
@@ -105,7 +99,7 @@ public class Startup
             databaseSeed.Seed();
         }
 
-       
+
         app.UseCors("MyPolicy");
         app.UseMiddleware<ErrorHandlerMiddleware>();
         app.UseRouting();
@@ -115,7 +109,7 @@ public class Startup
             endpoints.MapHub<NotificationHub>("/productChanged");
             endpoints.MapControllers();
         });
-        
+
 
     }
 

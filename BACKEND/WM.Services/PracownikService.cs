@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using WM.Domain;
 using WM.IData;
 using WM.IServices;
 using WM.IServices.Pracownik;
-using WM.Domain;
-using WM.Data.Sql.Repositories;
 
 namespace WM.Services
 {
@@ -32,7 +26,7 @@ namespace WM.Services
         public async Task EditPracownik(EditPracownik editPracownik, int IdPracownik)
         {
             var zamowienie = await _pracownikRepository.GetPracownik(IdPracownik);
-            zamowienie.EditPracownik( editPracownik.Nazwa, editPracownik.Telefon, editPracownik.IsManager, editPracownik.pIdMagazyn);
+            zamowienie.EditPracownik(editPracownik.Nazwa, editPracownik.Telefon, editPracownik.IsManager, editPracownik.pIdMagazyn);
             await _pracownikRepository.EditPracownik(zamowienie);
         }
     }

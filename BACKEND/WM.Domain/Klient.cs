@@ -9,7 +9,7 @@
 
         public string NIP { get; set; }
 
-        public Klient(int idKlient, string kierowca, string firma , string telefon, string nip)
+        public Klient(int idKlient, string kierowca, string firma, string telefon, string nip)
         {
             IdKlient = idKlient;
             Kierowca = kierowca;

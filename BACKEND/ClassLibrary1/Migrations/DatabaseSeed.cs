@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Permissions;
-using System.Text;
-using System.Threading.Tasks;
-using WM.Data.Sql;
-using WM.Data.Sql.DAO;
+﻿using WM.Data.Sql.DAO;
 
 namespace WM.Data.Sql.Migrations
 {
@@ -33,9 +26,9 @@ namespace WM.Data.Sql.Migrations
             _context.SaveChanges();
             #endregion
 
-            
 
-           
+
+
 
             #region CreateZamowienie
             var zamowienieList = BuildZamowienie();
@@ -206,9 +199,9 @@ namespace WM.Data.Sql.Migrations
             {
                 IdDane = 1,
                 Haslo = "123456",
-                Uzytkownik = "JD123", 
-                IdPracownik =1
-             };
+                Uzytkownik = "JD123",
+                IdPracownik = 1
+            };
             loginList.Add(Login);
             var Login2 = new Login()
             {
@@ -245,7 +238,7 @@ namespace WM.Data.Sql.Migrations
             return loginList;
         }
 
-       
+
         private IEnumerable<Pracownik> BuildPracownik()
         {
             var pracownikList = new List<Pracownik>();
@@ -254,7 +247,7 @@ namespace WM.Data.Sql.Migrations
                 IdPracownik = 1,
                 Nazwa = "John Doe",
                 Telefon = "903922833",
-                IsManager= true,
+                IsManager = true,
                 pIdMagazyn = 1
 
             };
@@ -311,8 +304,8 @@ namespace WM.Data.Sql.Migrations
                 Nazwa = "Guma arabska",
                 Ilosc = 50,
                 LOT = "GA0001",
-                IsGood = true, 
-                pIdMagazyn =1, 
+                IsGood = true,
+                pIdMagazyn = 1,
             };
             produktList.Add(Produkt);
             var Produkt2 = new Produkt()
@@ -405,7 +398,7 @@ namespace WM.Data.Sql.Migrations
             {
                 IdZamowienie = 1,
                 IsOld = false,
-                zIdKlient = 1  
+                zIdKlient = 1
             };
             zamowienieList.Add(Zamowienie);
             return zamowienieList;
@@ -416,12 +409,12 @@ namespace WM.Data.Sql.Migrations
             var zamowienieListaList = new List<ZamowienieLista>();
             var ZamowienieLista = new ZamowienieLista()
             {
-                LpZamowienie =1,
-                zIdZamowienie =1,
-                zIdProd =1,
-                ilosc =1,
+                LpZamowienie = 1,
+                zIdZamowienie = 1,
+                zIdProd = 1,
+                ilosc = 1,
                 LOT = "GA0001"
-             };
+            };
             zamowienieListaList.Add(ZamowienieLista);
             return zamowienieListaList;
         }
