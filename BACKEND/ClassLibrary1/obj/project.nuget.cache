@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "q0nB/JQDQBl2bGB8yeAzWN85giX2+QcC/hwxqBa3guaONz1xt75uASEoMP8MW07Aaor1mC6b2dPp7Ud4RpwbLA==",
   "success": true,
   "projectFilePath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj",
@@ -66,13 +67,85 @@
     "C:\\Users\\cezik\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
     "C:\\Users\\cezik\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\cezik\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+=======
+  "dgSpecHash": "K65qlXx47RG+14SWunruiKKdrJQPhl70+UswCS0rlGeEeAyWuMj4dH45bWLyitI8DImbxrZGVh/+AV+HQp0kJg==",
+  "success": true,
+  "projectFilePath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\FrOzen\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\jquery\\1.6.4\\jquery.1.6.4.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\k4os.compression.lz4.streams\\1.2.6\\k4os.compression.lz4.streams.1.2.6.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\k4os.hash.xxhash\\1.0.6\\k4os.hash.xxhash.1.0.6.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.aspnet.signalr\\2.4.3\\microsoft.aspnet.signalr.2.4.3.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.aspnet.signalr.core\\2.4.3\\microsoft.aspnet.signalr.core.2.4.3.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.aspnet.signalr.js\\2.4.3\\microsoft.aspnet.signalr.js.2.4.3.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.aspnet.signalr.systemweb\\2.4.3\\microsoft.aspnet.signalr.systemweb.2.4.3.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.24\\microsoft.aspnetcore.authentication.jwtbearer.6.0.24.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\6.0.24\\microsoft.aspnetcore.connections.abstractions.6.0.24.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\6.0.24\\microsoft.aspnetcore.signalr.common.6.0.24.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0-preview.5.22302.2\\microsoft.entityframeworkcore.7.0.0-preview.5.22302.2.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0-preview.5.22302.2\\microsoft.entityframeworkcore.abstractions.7.0.0-preview.5.22302.2.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0-preview.5.22302.2\\microsoft.entityframeworkcore.analyzers.7.0.0-preview.5.22302.2.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.0-preview.5.22302.2\\microsoft.entityframeworkcore.relational.7.0.0-preview.5.22302.2.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0-preview.5.22301.12\\microsoft.extensions.caching.abstractions.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0-preview.5.22301.12\\microsoft.extensions.caching.memory.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0-preview.5.22301.12\\microsoft.extensions.configuration.abstractions.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0-preview.5.22301.12\\microsoft.extensions.dependencyinjection.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0-preview.5.22301.12\\microsoft.extensions.dependencyinjection.abstractions.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.extensions.features\\6.0.24\\microsoft.extensions.features.6.0.24.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0-preview.5.22301.12\\microsoft.extensions.logging.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0-preview.5.22301.12\\microsoft.extensions.logging.abstractions.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.extensions.options\\7.0.0-preview.5.22301.12\\microsoft.extensions.options.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0-preview.5.22301.12\\microsoft.extensions.primitives.7.0.0-preview.5.22301.12.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.33.0\\microsoft.identitymodel.abstractions.6.33.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.33.0\\microsoft.identitymodel.jsonwebtokens.6.33.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.identitymodel.logging\\6.33.0\\microsoft.identitymodel.logging.6.33.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.10.0\\microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.33.0\\microsoft.identitymodel.tokens.6.33.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.owin\\2.1.0\\microsoft.owin.2.1.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.owin.host.systemweb\\2.1.0\\microsoft.owin.host.systemweb.2.1.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.owin.security\\2.1.0\\microsoft.owin.security.2.1.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\mysql.data\\8.0.31\\mysql.data.8.0.31.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\mysql.entityframeworkcore\\7.0.0-preview5\\mysql.entityframeworkcore.7.0.0-preview5.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\newtonsoft.json\\6.0.4\\newtonsoft.json.6.0.4.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\owin\\1.0.0\\owin.1.0.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.33.0\\system.identitymodel.tokens.jwt.6.33.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.text.encoding.codepages\\4.4.0\\system.text.encoding.codepages.4.4.0.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
+    "C:\\Users\\FrOzen\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+>>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
   ],
   "logs": [
     {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Pakiet „Microsoft.AspNet.SignalR.Core 2.4.3” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+=======
+      "message": "Package 'Microsoft.AspNet.SignalR.Core 2.4.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+>>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Microsoft.AspNet.SignalR.Core",
       "targetGraphs": [
         "net6.0"
@@ -82,7 +155,11 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Pakiet „Microsoft.AspNet.SignalR.SystemWeb 2.4.3” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+=======
+      "message": "Package 'Microsoft.AspNet.SignalR.SystemWeb 2.4.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+>>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Microsoft.AspNet.SignalR.SystemWeb",
       "targetGraphs": [
         "net6.0"
@@ -92,7 +169,11 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Pakiet „Microsoft.Owin 2.1.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+=======
+      "message": "Package 'Microsoft.Owin 2.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+>>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Microsoft.Owin",
       "targetGraphs": [
         "net6.0"
@@ -102,7 +183,11 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Pakiet „Microsoft.Owin.Host.SystemWeb 2.1.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+=======
+      "message": "Package 'Microsoft.Owin.Host.SystemWeb 2.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+>>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Microsoft.Owin.Host.SystemWeb",
       "targetGraphs": [
         "net6.0"
@@ -112,7 +197,11 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Pakiet „Microsoft.Owin.Security 2.1.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+=======
+      "message": "Package 'Microsoft.Owin.Security 2.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+>>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Microsoft.Owin.Security",
       "targetGraphs": [
         "net6.0"
@@ -122,7 +211,11 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Pakiet „Newtonsoft.Json 6.0.4” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+=======
+      "message": "Package 'Newtonsoft.Json 6.0.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+>>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         "net6.0"
@@ -132,7 +225,11 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+<<<<<<< HEAD
       "message": "Pakiet „Owin 1.0.0” został przywrócony przy użyciu elementu „.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1” zamiast platformy docelowej projektu „net6.0”. Ten pakiet może nie być w pełni kompatybilny z Twoim projektem.",
+=======
+      "message": "Package 'Owin 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+>>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
       "libraryId": "Owin",
       "targetGraphs": [
         "net6.0"

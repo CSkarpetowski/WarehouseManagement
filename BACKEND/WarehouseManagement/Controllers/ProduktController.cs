@@ -130,6 +130,7 @@ namespace WarehouseManagement.Controllers
             return Ok(products);
         }
 
+<<<<<<< HEAD
         [HttpGet("magStan/{IdMag}", Name = "magStan")]
         public IActionResult Getmagstan(int Idmag)
         {
@@ -152,6 +153,33 @@ namespace WarehouseManagement.Controllers
         return Ok(aktualny);
         }
 
+=======
+        public class CzyOkModel
+        {
+            public bool isGood { get; set; }
+        }
+
+        [HttpPatch("isGood/{idProd}", Name = "isGoodEdit")]
+        public async Task<IActionResult> EditIsGood(int idProd, [FromBody] CzyOkModel model)
+        {
+            // Pobieranie produktu na podstawie ID
+            var prod = _context.Produkt.FirstOrDefault(x => x.IdProd == idProd);
+
+            if (prod == null)
+            {
+                return NotFound(); // Obsługa przypadku, gdy produkt o danym ID nie istnieje
+            }
+
+            prod.IsGood = model.isGood;
+
+            _context.Produkt.Update(prod);
+            await _context.SaveChangesAsync();
+
+            return Ok(prod);
+        }
+
+
+>>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
     }
 
 

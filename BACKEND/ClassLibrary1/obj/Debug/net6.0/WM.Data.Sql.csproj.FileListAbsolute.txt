@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.deps.json
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.dll
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.pdb
@@ -18,3 +19,24 @@ A:\Warehouse sprint3\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.D
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\refint\WM.Data.Sql.dll
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.pdb
 A:\Warehouse sprint3\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\ref\WM.Data.Sql.dll
+=======
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.deps.json
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Domain.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IData.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IServices.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Domain.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IData.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IServices.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.csproj.AssemblyReference.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.GeneratedMSBuildEditorConfig.editorconfig
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.AssemblyInfoInputs.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.AssemblyInfo.cs
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.csproj.CoreCompileInputs.cache
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.csproj.CopyComplete
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\refint\WM.Data.Sql.dll
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.pdb
+D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\ref\WM.Data.Sql.dll
+>>>>>>> 3a0ed48d59e1ae50027c5a99424de4ad8065e914
