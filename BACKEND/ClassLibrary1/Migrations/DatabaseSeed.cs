@@ -79,21 +79,21 @@ namespace WM.Data.Sql.Migrations
             var Magazyn = new Magazyn()
             {
                 IdMagazyn = 1,
-                Pojemnosc = 50,
+                Pojemnosc = 500,
                 Nazwa = "Magazyn pierwszy"
             };
             magazynList.Add(Magazyn);
             var Magazyn2 = new Magazyn()
             {
                 IdMagazyn = 2,
-                Pojemnosc = 50,
+                Pojemnosc = 200,
                 Nazwa = "Magazyn drugi"
             };
             magazynList.Add(Magazyn2);
             var Magazyn3 = new Magazyn()
             {
                 IdMagazyn = 3,
-                Pojemnosc = 50,
+                Pojemnosc = 160,
                 Nazwa = "Magazyn trzeci"
             };
             magazynList.Add(Magazyn3);
