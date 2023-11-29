@@ -28,13 +28,12 @@
             IsGood = isGood;
             pIdMagazyn = pidmagazyn;
         }
-        public void EditProdukt(string nazwa, string lot, int ilosc, bool isGood, int pidmagazyn)
+        public void EditProdukt(string nazwa, string lot, int ilosc, bool isGood)
         {
             Nazwa = nazwa;
             LOT = lot;
             Ilosc = ilosc;
             IsGood = isGood;
-            pIdMagazyn = pidmagazyn;
         }
     }
 }

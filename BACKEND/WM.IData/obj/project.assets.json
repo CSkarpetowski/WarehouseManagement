@@ -27,11 +27,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\FrOzen\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\cezik\\.nuget\\packages\\": {}
+>>>>>>> 8d47ea0b26f1acc128c31978790995af00074afc
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IData\\WM.IData.csproj",
       "projectName": "WM.IData",
       "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.IData\\WM.IData.csproj",
@@ -40,6 +45,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FrOzen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj",
+      "projectName": "WM.IData",
+      "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj",
+      "packagesPath": "C:\\Users\\cezik\\.nuget\\packages\\",
+      "outputPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IData\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\cezik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 8d47ea0b26f1acc128c31978790995af00074afc
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +68,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
             "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
               "projectPath": "D:\\STUDIA\\SEMESTR 5\\Projekt zespolowy systemu informatycznego\\WarehouseManager_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
+=======
+            "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
+              "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
+>>>>>>> 8d47ea0b26f1acc128c31978790995af00074afc
             }
           }
         }
@@ -84,7 +104,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+>>>>>>> 8d47ea0b26f1acc128c31978790995af00074afc
       }
     }
   }
