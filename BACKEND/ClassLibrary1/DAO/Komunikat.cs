@@ -10,7 +10,6 @@ namespace WM.Data.Sql.DAO
         public int IdKomunikat { get; set; }
         public string Tresc { get; set; }
         public int kIdMagazyn { get; set; }
-        public DateTime data { get; set; }
         public virtual Magazyn Magazyn { get; set; }
     }
 }

@@ -147,15 +147,14 @@ namespace WarehouseManagement.Controllers
                 toAdd.ilosc = item.Ilosc;
                 toAdd.LOT = item.LOT;
                 toAdd.zIdProd = item.IdProd;
+                var prod = _context.Produkt.FirstOrDefault(x => x.IdProd == item.IdProd);
+                prod.Ilosc -= item.Ilosc;
+                _context.Update(prod);
                 await _context.AddAsync(toAdd);
                 await _context.SaveChangesAsync();
                 
             }
             
-            
-            
-
-
             return Ok();
         }
 

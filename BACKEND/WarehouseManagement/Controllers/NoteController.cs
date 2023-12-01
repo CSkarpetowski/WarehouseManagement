@@ -24,19 +24,18 @@ namespace WarehouseManagement.Controllers
             return Ok(notes);
         }
 
-        [HttpPost]
+        [HttpPost("AddNote", Name = "AddNote")]
         public async Task<IActionResult> AddNote([FromBody] AddNote addNote)
         {
             var komunikat = new Komunikat
             {
 
                 Tresc = addNote.Tresc,
-                kIdMagazyn = addNote.kIdMagazyn,
-                data = addNote.data
+                kIdMagazyn = addNote.kIdMagazyn
             };
 
             await _context.AddAsync(komunikat);
-
+            await _context.SaveChangesAsync();
             return Ok(addNote);
         }
     }
