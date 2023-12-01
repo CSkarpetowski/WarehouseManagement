@@ -21,7 +21,6 @@ const OrderPage = () => {
           setTableData(response.data);
         }
       } catch (error) {
-        // Handle errors
       }
     };
 
@@ -38,23 +37,41 @@ const OrderPage = () => {
       if (index !== -1) {
         updatedList.splice(index, 1);
       }
+
+      
     }
 
     setTempTable(updatedList);
+
+    
   };
+
+  useEffect(()=> {
+    console.log(tempTable);
+  }, [tempTable])
 
   const handleDodajZamowienie = () => {
     console.log('Dodaj zamówienie:', {
       warehouse: selectedWarehouse,
       products: tempTable,
     });
+
+    axios.post("https://localhost:7099/api/zamowienie/addZamowienie",{
+          Produkty: tempTable,
+          Klient: 1 //Trzeba to przypisać do jakiegoś wyboru i zmienić!!!!!!!!!!!
+        })
+        .then((response) => {
+          alert("Zamowienie dodano pomyślnie !");
+          window.location.reload();
+        })
+        .catch((err)=> alert("Coś poszło nie tak!"));
   };
 
   const handleWarehouseChange = (e) => {
     console.log(e.target.value);
     setSelectedWarehouse(e.target.value);
-    // No need to call fetchData here, as it's now handled by useEffect
   };
+
 
   return (
     <div id='mainPage'>

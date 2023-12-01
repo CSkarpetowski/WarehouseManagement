@@ -125,6 +125,40 @@ namespace WarehouseManagement.Controllers
             return Ok();
         }
 
+        [HttpPost("addZamowienie", Name = "addZamowienie")]
+        public async Task<IActionResult> addZamowienie([FromBody] AddZamowienielista zamowienie)
+        {
+            Zamowienie main = new Zamowienie
+            {
+                zIdKlient = zamowienie.Klient,
+                IsOld = false
+            };
+            await _context.AddAsync(main);
+            await _context.SaveChangesAsync();
+            var list = zamowienie.Produkty;
+            
+
+            
+            foreach (var item in list )
+            {
+                ZamowienieLista toAdd = new ZamowienieLista();
+
+                toAdd.zIdZamowienie = main.IdZamowienie;
+                toAdd.ilosc = item.Ilosc;
+                toAdd.LOT = item.LOT;
+                toAdd.zIdProd = item.IdProd;
+                await _context.AddAsync(toAdd);
+                await _context.SaveChangesAsync();
+                
+            }
+            
+            
+            
+
+
+            return Ok();
+        }
+
     }
 
 }
