@@ -185,8 +185,7 @@ namespace WM.Data.Sql.Migrations
             {
                 IdKomunikat = 1,
                 Tresc = "Lorem ipsum",
-                kIdMagazyn = 1,
-                data = DateTime.Now
+                kIdMagazyn = 1
             };
             komunikatList.Add(Komunikat);
             return komunikatList;

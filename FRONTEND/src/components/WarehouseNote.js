@@ -30,13 +30,13 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
     if (queryFlag) {
       console.log(Tresc)
       console.log(kIdMagazyn)
-      axios.post("https://localhost:7099/Note", {
+      axios.post("https://localhost:7099/Note/AddNote", {
         "Tresc": Tresc,
         "kIdMagazyn": kIdMagazyn,
       })
         .then((response) => {
           alert("Dodano pomyślnie!");
-          window.location.reload();
+          //window.location.reload();
         })
         .catch((err) => alert("Coś poszło nie tak!"));
     }
