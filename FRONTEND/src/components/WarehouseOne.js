@@ -4,21 +4,19 @@ import NavBar from './NavBar';
 import axios from 'axios';
 export default function WarehouseOne() {
 
-    const[warehouseData, SetWarehouseData] = useState([]);
+  const [warehouseData, setWarehouseData] = useState([]);
 
-  useEffect(()=>{
-      try{
-        axios.get("https://localhost:7099/api/produkt/all/1")
+  useEffect(() => {
+    try {
+      axios.get("https://localhost:7099/api/produkt/all/1")
         .then((response) => {
-          SetWarehouseData(response.data);
-          console.log(warehouseData);
+          setWarehouseData(response.data);
+          console.log(response.data); // Logujemy dane, a nie stan przed aktualizacją
         })
-      }
-      catch (err)
-      {
-        console.log(err);
-      }
-  },[]);
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
 
   const alertValidationOK = (event) =>{
      let button = event.target;

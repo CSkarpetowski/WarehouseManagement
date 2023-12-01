@@ -29,3 +29,18 @@ D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\refint\WM.IData.dll
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.pdb
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\WM.IData\obj\Debug\net6.0\ref\WM.IData.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\bin\Debug\net6.0\WM.IData.deps.json
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\bin\Debug\net6.0\WM.IData.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\bin\Debug\net6.0\WM.IData.pdb
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\bin\Debug\net6.0\WM.Domain.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\bin\Debug\net6.0\WM.Domain.pdb
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.csproj.AssemblyReference.cache
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.AssemblyInfoInputs.cache
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.AssemblyInfo.cs
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.csproj.CoreCompileInputs.cache
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.csproj.CopyComplete
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\refint\WM.IData.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\WM.IData.pdb
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.IData\obj\Debug\net6.0\ref\WM.IData.dll

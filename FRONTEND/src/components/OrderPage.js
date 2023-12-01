@@ -8,24 +8,39 @@ const OrderPage = () => {
   const [tempTable, setTempTable] = useState([]);
   const [tempTableVisible, setTempTableVisible] = useState(true);
   const [selectedWarehouse, setSelectedWarehouse] = useState('');
+  const [selectedClient, setSelectedClient] = useState('');
+  const [klient, setKlient] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        if (selectedWarehouse == '') {const response = await axios.get(`https://localhost:7099/api/produkt/all`);
-        console.log(response.data);
-        setTableData(response.data); }
+        if (selectedWarehouse === '') {
+          const response = await axios.get(`https://localhost:7099/api/produkt/all`);
+          console.log(response.data);
+          setTableData(response.data);
+        }
         if (selectedWarehouse) {
           const response = await axios.get(`https://localhost:7099/api/produkt/all/${selectedWarehouse}`);
           console.log(response.data);
           setTableData(response.data);
         }
       } catch (error) {
+        console.error('Błąd pobierania danych:', error);
       }
     };
 
     fetchData();
   }, [selectedWarehouse]);
+
+  useEffect(() => {
+    axios.get('https://localhost:7099/Drivers')
+      .then((response) => {
+        setKlient(response.data);
+      })
+      .catch((error) => {
+        console.error('Błąd pobierania danych klientów:', error);
+      });
+  }, []);
 
   const handleCheck = (event, row) => {
     const updatedList = [...tempTable];
@@ -37,41 +52,42 @@ const OrderPage = () => {
       if (index !== -1) {
         updatedList.splice(index, 1);
       }
-
-      
     }
 
     setTempTable(updatedList);
-
-    
   };
-
-  useEffect(()=> {
-    console.log(tempTable);
-  }, [tempTable])
 
   const handleDodajZamowienie = () => {
     console.log('Dodaj zamówienie:', {
       warehouse: selectedWarehouse,
+      client: selectedClient,
       products: tempTable,
     });
 
-    axios.post("https://localhost:7099/api/zamowienie/addZamowienie",{
-          Produkty: tempTable,
-          Klient: 1 //Trzeba to przypisać do jakiegoś wyboru i zmienić!!!!!!!!!!!
-        })
+    const selectedClientObject = klient.find((client) => client.idKlient === parseInt(selectedClient));
+
+    if (selectedClientObject) {
+      axios.post("https://localhost:7099/api/zamowienie/addZamowienie", {
+        Produkty: tempTable,
+        Klient: selectedClientObject.idKlient
+      })
         .then((response) => {
-          alert("Zamowienie dodano pomyślnie !");
+          alert("Zamówienie dodano pomyślnie!");
           window.location.reload();
         })
-        .catch((err)=> alert("Coś poszło nie tak!"));
+        .catch((err) => alert("Coś poszło nie tak!"));
+    } else {
+      alert("Nie znaleziono wybranego klienta!");
+    }
   };
 
   const handleWarehouseChange = (e) => {
-    console.log(e.target.value);
     setSelectedWarehouse(e.target.value);
   };
 
+  const handleClientChange = (e) => {
+    setSelectedClient(e.target.value);
+  };
 
   return (
     <div id='mainPage'>
@@ -91,6 +107,21 @@ const OrderPage = () => {
           </select>
         </div>
 
+        <div className='dropdown'>
+          <label>Wybierz klienta:</label>
+          <select
+            value={selectedClient}
+            onChange={handleClientChange}
+          >
+            <option value=''>Wybierz klienta</option>
+            {klient.map((client) => (
+              <option key={client.idKlient} value={client.idKlient}>
+                {client.firma}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <table className='orderTable'>
           <thead>
             <tr>
@@ -102,21 +133,38 @@ const OrderPage = () => {
             </tr>
           </thead>
           <tbody className='table'>
-            {tableData && tableData.map((row) => (
-              <tr id='orderList' key={row.idProd}>
-                <td id='idprod' value={row.idProd}>
-                  <input
-                    type='checkbox'
-                    onChange={(e) => handleCheck(e, row)}
-                    checked={tempTable.some(item => item.idProd === row.idProd)}
-                  />
-                </td>
-                <td id="nazwa">{row.nazwa}</td>
-                <td id="lot">{row.lot}</td>
-                <td id="ilosc">{row.ilosc}</td>
-                <td id="idmagazyn">{row.pIdMagazyn}</td>
-              </tr>
-            ))}
+          {tableData && tableData.map((row) => (
+  <tr id='orderList' key={row.idProd}>
+    <td id='idprod' value={row.idProd}>
+      <input
+        type='checkbox'
+        onChange={(e) => handleCheck(e, row)}
+        checked={tempTable.some(item => item.idProd === row.idProd)}
+      />
+    </td>
+    <td id="nazwa">{row.nazwa}</td>
+    <td id="lot">{row.lot}</td>
+    <td>
+      {/* Input dla ilości palet */}
+      <input
+        type="number"
+        min="1"
+        max="50"
+        value={row.ilosc} // Początkowa wartość
+        onChange={(e) => {
+          const newTableData = tableData.map(item => {
+            if (item.idProd === row.idProd) {
+              return { ...item, ilosc: e.target.value };
+            }
+            return item;
+          });
+          setTableData(newTableData);
+        }}
+      />
+    </td>
+    <td id="idmagazyn">{row.pIdMagazyn}</td>
+  </tr>
+))}
           </tbody>
         </table>
 
@@ -142,7 +190,7 @@ const OrderPage = () => {
               ))}
             </tbody>
           </table>
-          
+
           <button onClick={handleDodajZamowienie}>Dodaj zamówienie</button>
         </div>
       </div>

@@ -37,3 +37,22 @@ D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\refint\WM.Data.Sql.dll
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.pdb
 D:\STUDIA\SEMESTR 5\Projekt zespolowy systemu informatycznego\WarehouseManager_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\ref\WM.Data.Sql.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.deps.json
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Data.Sql.pdb
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Domain.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IData.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IServices.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.Domain.pdb
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IData.pdb
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\bin\Debug\net6.0\WM.IServices.pdb
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.csproj.AssemblyReference.cache
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.AssemblyInfoInputs.cache
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.AssemblyInfo.cs
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.csproj.CoreCompileInputs.cache
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.csproj.CopyComplete
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\refint\WM.Data.Sql.dll
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\WM.Data.Sql.pdb
+C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\ClassLibrary1\obj\Debug\net6.0\ref\WM.Data.Sql.dll

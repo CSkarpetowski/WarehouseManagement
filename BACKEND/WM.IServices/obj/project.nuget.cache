@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TXo6weyyIc0AohNBp5ybnTdBu2y3vwldBFW1JMp6yS9ul4O/vGug0jDjKy5wikebaVI9W8RWJAPKNcAvOfIAfQ==",
+  "dgSpecHash": "gxkfVMywZ3uQPWcfAG4UoyjxE7a9m+c+GMmYCdzC9bOcl7+TRlDFAM7KNNuNHvVbf9/26PDJFrksBt0ZiIm6gg==",
   "success": true,
-  "projectFilePath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
+  "projectFilePath": "C:\\Users\\Cosy\\Documents\\GitHub\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
