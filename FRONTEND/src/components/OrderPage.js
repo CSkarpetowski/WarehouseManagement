@@ -121,7 +121,7 @@ const OrderPage = () => {
             ))}
           </select>
         </div>
-
+<div id="orderPageTable">
         <table className='orderTable'>
           <thead>
             <tr>
@@ -149,7 +149,7 @@ const OrderPage = () => {
       <input
         type="number"
         min="1"
-        max="50"
+        max={row.ilosc}
         value={row.ilosc} // Początkowa wartość
         onChange={(e) => {
           const newTableData = tableData.map(item => {
@@ -167,6 +167,7 @@ const OrderPage = () => {
 ))}
           </tbody>
         </table>
+        </div>
 
         <div className='tempTable' style={{ display: tempTableVisible ? 'block' : 'none' }}>
           <h2>Tymczasowa Tabela</h2>

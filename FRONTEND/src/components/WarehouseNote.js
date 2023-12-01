@@ -1,24 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import './WarehouseNote.css';
 import { RiAddLine } from 'react-icons/ri';
 import axios from 'axios';
 
 const WarehouseNote = ({ showNote, toggleNote }) => {
-  const notes = [
-    { id: 1, text: 'Zmiana nr 1 prosi o dokończenie załadunku DB Shenker', timestamp: '12:00' },
-    { id: 2, text: 'Dnia 28.11.23 Odbędzie się Audyt na magazynie', timestamp: '14:29' },
-  ];
-
+  const [notes, setNotes] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  function addNote() {
+  useEffect(() => {
+    // Fetch notes from the server when the component mounts
+    axios.get("https://localhost:7099/Note/all")
+      .then((response) => {
+        setNotes(response.data); // Assuming the response.data is an array of notes
+      })
+      .catch((err) => console.error("Error fetching notes:", err));
+  }, []); // Empty dependency array means this effect runs only once when the component mounts
+
+  const addNote = () => {
     let queryFlag = false;
     let Tresc = document.getElementById('addTresc').value;
     let kIdMagazyn = document.getElementById('addkIdMagazyn').value;
-
-    const now = new Date();
-    const formattedDateTime = now.toLocaleString();
 
     if (Tresc == null || kIdMagazyn == null) {
       alert("Coś poszło nie tak!");
@@ -28,19 +30,22 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
     }
 
     if (queryFlag) {
-      console.log(Tresc)
-      console.log(kIdMagazyn)
       axios.post("https://localhost:7099/Note/AddNote", {
         "Tresc": Tresc,
         "kIdMagazyn": kIdMagazyn,
       })
         .then((response) => {
           alert("Dodano pomyślnie!");
-          //window.location.reload();
+          // Refresh notes after successfully adding a new note
+          axios.get("https://localhost:7099/Note/all")  // Update the endpoint here
+            .then((response) => {
+              setNotes(response.data);
+            })
+            .catch((err) => console.error("Error fetching notes:", err));
         })
         .catch((err) => alert("Coś poszło nie tak!"));
     }
-  }
+  };
 
   const handleAddNoteClick = () => {
     setIsModalOpen(true);
@@ -68,8 +73,7 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
           <ul className='notification'>
             {notes.map((note) => (
               <li key={note.id} className="warehouse-note-item">
-                <div className="warehouse-note-text">{note.text}</div>
-                <div className="warehouse-note-timestamp">{note.timestamp}</div>
+                <div className="warehouse-note-text">{note.tresc}</div>
               </li>
             ))}
           </ul>

@@ -63,5 +63,11 @@ namespace WarehouseManagement.Controllers
 
             return NotFound();
         }
+        [HttpGet("all", Name ="GetAllPracownik")]
+        public IActionResult All()
+        {
+            var pracownicy = _context.Pracownik;
+            return Ok(pracownicy);
+        }
     }
 }
