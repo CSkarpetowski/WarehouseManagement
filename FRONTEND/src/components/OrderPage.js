@@ -16,23 +16,23 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
             <th>Wybór</th>
             <th>Produkty</th>
             <th>LOT</th>
-            <th>Ilość palet</th>
+            <th className='itemQuantity'>Ilość palet</th>
             <th>Magazyn</th>
           </tr>
         </thead>
         <tbody className='table'>
           {tableData && tableData.map((row) => (
-            <tr id='orderList' key={row.idProd} onClick={() => handleRowClick(row)}>
-              <td id='idprod' value={row.idProd}>
+            <tr id='orderList' key={row.idProd}>
+              <td id='idprod' value={row.idProd} onClick={() => handleRowClick(row)}>
                 <input
                   type='checkbox'
                   onChange={(e) => handleCheck(e, row)}
                   checked={tempTable.some(item => item.idProd === row.idProd)}
                 />
               </td>
-              <td id="nazwa">{row.nazwa}</td>
-              <td id="lot">{row.lot}</td>
-              <td>
+              <td id="nazwa" onClick={() => handleRowClick(row)}>{row.nazwa}</td>
+              <td id="lot" onClick={() => handleRowClick(row)}>{row.lot}</td>
+              <td className='itemQuantity'>
                 <input
                   type="number"
                   min="1"
@@ -40,8 +40,8 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
                   value={row.ilosc}
                   onChange={(e) => handleTableDataChange(e, row)}
                 />
-              </td>
-              <td id="idmagazyn">{row.pIdMagazyn}</td>
+              </td >
+              <td id="idmagazyn" onClick={() => handleRowClick(row)}>{row.pIdMagazyn}</td>
             </tr>
           ))}
         </tbody>
@@ -56,8 +56,8 @@ const RightPanel = ({ tempTable }) => {
       <table className='finalOrder'>
         <thead>
           <tr>
-            <th>Produkty</th>
-            <th>LOT</th>
+            <th className='productName'>Produkty</th>
+            <th className='tableLOT'>LOT</th>
             <th>Ilość</th>
             <th>Magazyn</th>
           </tr>
@@ -65,7 +65,7 @@ const RightPanel = ({ tempTable }) => {
         <tbody className='table'>
           {tempTable.map((element, index) => (
             <tr id='finalorderList' key={index}>
-              <td>{element.nazwa}</td>
+              <td className='productName'>{element.nazwa}</td>
               <td>{element.lot}</td>
               <td>{element.ilosc}</td>
               <td>{element.pIdMagazyn}</td>
