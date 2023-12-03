@@ -76,7 +76,7 @@ export default function NavBar() {
             <p>AddProduct</p>
             </div>
           </li>
-          <li className='listItem'>
+          <li className='listItem' style= {{display: isManager=== 'true' ? 'flex' : 'none'}}>
             <div onClick={navAddOrder}>
             <MdAssignmentAdd size={20}  color="#c87cfc" />
             <p>AddOrder</p>
@@ -89,7 +89,7 @@ export default function NavBar() {
             </div>
             </li> */}
 
-          <li className='listItem'>
+          <li className='listItem' style= {{display: isManager=== 'true' ? 'flex' : 'none'}}>
             <div onClick={navWorkers}>
             <GoPeople size={20} color="#c87cfc"/>
             <p>Workers</p>

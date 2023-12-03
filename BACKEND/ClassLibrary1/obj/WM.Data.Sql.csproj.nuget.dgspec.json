@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj": {}
+    "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj": {
+    "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj",
+        "projectUniqueName": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj",
         "projectName": "WM.Data.Sql",
-        "projectPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj",
-        "packagesPath": "C:\\Users\\Przemysław\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\ClassLibrary1\\obj\\",
+        "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\ClassLibrary1\\WM.Data.Sql.csproj",
+        "packagesPath": "C:\\Users\\cezik\\.nuget\\packages\\",
+        "outputPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\ClassLibrary1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Przemysław\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\cezik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,14 +28,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
-                "projectPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
+              "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
+                "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
               },
-              "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj": {
-                "projectPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj"
+              "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj": {
+                "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj"
               },
-              "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {
-                "projectPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj"
+              "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {
+                "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj"
               }
             }
           }
@@ -89,7 +85,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -98,25 +95,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
+    "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
+        "projectUniqueName": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
         "projectName": "WM.Domain",
-        "projectPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
-        "packagesPath": "C:\\Users\\Przemysław\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.Domain\\obj\\",
+        "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
+        "packagesPath": "C:\\Users\\cezik\\.nuget\\packages\\",
+        "outputPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Przemysław\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\cezik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -147,7 +140,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -156,25 +150,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj": {
+    "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj",
+        "projectUniqueName": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj",
         "projectName": "WM.IData",
-        "projectPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj",
-        "packagesPath": "C:\\Users\\Przemysław\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IData\\obj\\",
+        "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IData\\WM.IData.csproj",
+        "packagesPath": "C:\\Users\\cezik\\.nuget\\packages\\",
+        "outputPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IData\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Przemysław\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\cezik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -188,8 +178,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
-                "projectPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
+              "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
+                "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
               }
             }
           }
@@ -209,7 +199,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -218,25 +209,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {
+    "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
+        "projectUniqueName": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
         "projectName": "WM.IServices",
-        "projectPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
-        "packagesPath": "C:\\Users\\Przemysław\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.IServices\\obj\\",
+        "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\WM.IServices.csproj",
+        "packagesPath": "C:\\Users\\cezik\\.nuget\\packages\\",
+        "outputPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.IServices\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Przemysław\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\cezik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -250,8 +237,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
-                "projectPath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
+              "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj": {
+                "projectPath": "A:\\Warehouse sprint3\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj"
               }
             }
           }
@@ -271,7 +258,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -280,7 +268,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
