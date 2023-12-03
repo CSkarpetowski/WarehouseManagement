@@ -5,72 +5,116 @@
   background-color: #0F1A2B;
 }
 
-.warehouseArea {
-  display: flex;
-  justify-content: center;
-  margin-left: 15%;
-  margin-right: auto;
-  width: 80%;
-  margin-top: 20px;
-  padding-left: 5%;
+h2 {
+  color: white;
 }
 
 .table {
-  background-color: white;
-  height: 20px;
+  max-height: 400px;
+  border-collapse:collapse;
 }
-#orderPageTable {
-  max-height: 80vh;
-  max-width: 50vw;
-  padding-top: 12vh;
-  
+
+.warehouseArea {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  margin-left: 210px;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 20px;
+  padding-left: 5%;
   align-items: center;
-overflow: auto;
+}
 
+.tablesContainer {
+  gap: 20px;
+  display: flex;
+  align-content: center;
+}
 
+.leftPanel {
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 65vh;
+  overflow-y: scroll;
+  width: 60vh;
+}
+
+.leftPanel input[type="checkbox"] {
+  align-content: center;
+  width: 20px; 
+  height: 20px;
+  margin: auto; 
+  display: flex;
+}
+
+.rightPanel {
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 65vh;
+  overflow-y: scroll;
 }
 
 .orderTable {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
+}
+
+.itemQuantity {
+  justify-content: center;
+  width: 100px;
+  max-width: 100px;
+}
+
+.productName{
+  width: 100px;
+  max-width: 100px;
+}
+
+.tableLOT{
+  width: 100px;
+  max-width: 100px;
+}
+.finalOrder {
+  width: 100%;
 }
 
 .orderTable th,
-.orderTable td {
+.orderTable td,
+.finalOrder th,
+.finalOrder td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
   color: black;
-  width: 150px;
+  height: 30px;
 }
 
-.orderTable th {
+.orderTable th,
+.finalOrder th {
   background-color: #f2f2f2;
 }
 
-
 .buttonContainer {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  margin-left: 10px;
+  display: inline-flex;
+  gap: 10px;
   color: white;
   font-size: 14px;
   border-radius: 5px;
   margin-bottom: 10px;
-  align-items: center;
-  max-width: 20%;
-  gap: 10px;
+  align-items: first baseline;
+  max-width: 50%;
 }
 
 .buttonContainer select {
-  width: 200px; 
-  height: 55px; 
-  font-size: 14px; 
+  width: 200px;
+  height: 55px;
+  font-size: 14px;
   align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.buttonContainer button {
+  font-size: 14px;
 }
 
 #orderList:hover {

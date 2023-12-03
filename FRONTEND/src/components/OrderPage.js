@@ -3,6 +3,80 @@ import NavBar from './NavBar';
 import './OrderPage.css';
 import axios from 'axios';
 
+const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange }) => {
+  const handleRowClick = (row) => {
+    handleCheck({ target: { checked: !tempTable.some(item => item.idProd === row.idProd) } }, row);
+  };
+
+  return (
+    <div className="leftPanel">
+      <table className='orderTable'>
+        <thead>
+          <tr>
+            <th>Wybór</th>
+            <th>Produkty</th>
+            <th>LOT</th>
+            <th className='itemQuantity'>Ilość palet</th>
+            <th>Magazyn</th>
+          </tr>
+        </thead>
+        <tbody className='table'>
+          {tableData && tableData.map((row) => (
+            <tr id='orderList' key={row.idProd}>
+              <td id='idprod' value={row.idProd} onClick={() => handleRowClick(row)}>
+                <input
+                  type='checkbox'
+                  onChange={(e) => handleCheck(e, row)}
+                  checked={tempTable.some(item => item.idProd === row.idProd)}
+                />
+              </td>
+              <td id="nazwa" onClick={() => handleRowClick(row)}>{row.nazwa}</td>
+              <td id="lot" onClick={() => handleRowClick(row)}>{row.lot}</td>
+              <td className='itemQuantity'>
+                <input
+                  type="number"
+                  min="1"
+                  max={row.ilosc}
+                  value={row.ilosc}
+                  onChange={(e) => handleTableDataChange(e, row)}
+                />
+              </td >
+              <td id="idmagazyn" onClick={() => handleRowClick(row)}>{row.pIdMagazyn}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+const RightPanel = ({ tempTable }) => {
+  return (
+    <div className="rightPanel">
+      <table className='finalOrder'>
+        <thead>
+          <tr>
+            <th className='productName'>Produkty</th>
+            <th className='tableLOT'>LOT</th>
+            <th>Ilość</th>
+            <th>Magazyn</th>
+          </tr>
+        </thead>
+        <tbody className='table'>
+          {tempTable.map((element, index) => (
+            <tr id='finalorderList' key={index}>
+              <td className='productName'>{element.nazwa}</td>
+              <td>{element.lot}</td>
+              <td>{element.ilosc}</td>
+              <td>{element.pIdMagazyn}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
 const OrderPage = () => {
   const [tableData, setTableData] = useState([]);
   const [tempTable, setTempTable] = useState([]);
@@ -89,25 +163,32 @@ const OrderPage = () => {
     setSelectedClient(e.target.value);
   };
 
+  const handleTableDataChange = (e, row) => {
+    const newTableData = tableData.map(item => {
+      if (item.idProd === row.idProd) {
+        return { ...item, ilosc: e.target.value };
+      }
+      return item;
+    });
+    setTableData(newTableData);
+  };
+
   return (
     <div id='mainPage'>
       <NavBar />
       <h1 className='cardTitle'>Dodaj zamówienie</h1>
       <div className='warehouseArea'>
-        <div className='dropdown'>
+        <div className='buttonContainer'>
           <label>Wybierz magazyn:</label>
           <select
             value={selectedWarehouse}
             onChange={handleWarehouseChange}
           >
-            <option value=''>Wybierz magazyn</option>
+            <option value=''>Wszystkie</option>
             <option value='1'>Magazyn 1</option>
             <option value='2'>Magazyn 2</option>
             <option value='3'>Magazyn 3</option>
           </select>
-        </div>
-
-        <div className='dropdown'>
           <label>Wybierz klienta:</label>
           <select
             value={selectedClient}
@@ -120,79 +201,16 @@ const OrderPage = () => {
               </option>
             ))}
           </select>
-        </div>
-<div id="orderPageTable">
-        <table className='orderTable'>
-          <thead>
-            <tr>
-              <th>Wybór</th>
-              <th>Produkty</th>
-              <th>LOT</th>
-              <th>Ilość palet</th>
-              <th>Magazyn</th>
-            </tr>
-          </thead>
-          <tbody className='table'>
-          {tableData && tableData.map((row) => (
-  <tr id='orderList' key={row.idProd}>
-    <td id='idprod' value={row.idProd}>
-      <input
-        type='checkbox'
-        onChange={(e) => handleCheck(e, row)}
-        checked={tempTable.some(item => item.idProd === row.idProd)}
-      />
-    </td>
-    <td id="nazwa">{row.nazwa}</td>
-    <td id="lot">{row.lot}</td>
-    <td>
-      {/* Input dla ilości palet */}
-      <input
-        type="number"
-        min="1"
-        max={row.ilosc}
-        value={row.ilosc} // Początkowa wartość
-        onChange={(e) => {
-          const newTableData = tableData.map(item => {
-            if (item.idProd === row.idProd) {
-              return { ...item, ilosc: e.target.value };
-            }
-            return item;
-          });
-          setTableData(newTableData);
-        }}
-      />
-    </td>
-    <td id="idmagazyn">{row.pIdMagazyn}</td>
-  </tr>
-))}
-          </tbody>
-        </table>
-        </div>
-
-        <div className='tempTable' style={{ display: tempTableVisible ? 'block' : 'none' }}>
-          <h2>Tymczasowa Tabela</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Produkty</th>
-                <th>LOT</th>
-                <th>Ilość</th>
-                <th>Magazyn</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tempTable.map((element, index) => (
-                <tr key={index}>
-                  <td>{element.nazwa}</td>
-                  <td>{element.lot}</td>
-                  <td>{element.ilosc}</td>
-                  <td>{element.pIdMagazyn}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-
           <button onClick={handleDodajZamowienie}>Dodaj zamówienie</button>
+        </div>
+        <div className="tablesContainer">
+          <LeftPanel
+            tableData={tableData}
+            tempTable={tempTable}
+            handleCheck={handleCheck}
+            handleTableDataChange={handleTableDataChange}
+          />
+          <RightPanel tempTable={tempTable} />
         </div>
       </div>
     </div>

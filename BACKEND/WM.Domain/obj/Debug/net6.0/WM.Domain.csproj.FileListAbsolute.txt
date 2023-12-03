@@ -33,3 +33,15 @@ C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.
 C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\refint\WM.Domain.dll
 C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
 C:\Users\Cosy\Documents\GitHub\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.deps.json
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\ref\WM.Domain.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\bin\Debug\net6.0\WM.Domain.pdb
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.AssemblyReference.cache
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfoInputs.cache
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.AssemblyInfo.cs
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\ref\WM.Domain.dll
+C:\Users\Przemysław\Documents\warehouseman_v2\BACKEND\WM.Domain\obj\Debug\net6.0\WM.Domain.pdb
