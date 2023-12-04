@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5jYNxWnSAx9nWKWhY0CXF+l10yGxAYUBF6GCdq0vdUnbXG3iQbrwCYNgAJX+Y4BDocPQcXfv4w8NH66rSeA8qA==",
+  "dgSpecHash": "KXXyRE4Jwzxh22wxWNHD/FiIo7bPlcBQrWH1SWo+qJiBiCAtQ/3EZP5Gqp5aoFKoxjBYkijYFEw3atd1i8IrCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Przemysław\\Documents\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Cosy\\Documents\\GitHub\\warehouseman_v2\\BACKEND\\WM.Domain\\WM.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

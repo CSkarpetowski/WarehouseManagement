@@ -83,7 +83,7 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
             onRequestClose={handleCancelNoteClick}
             contentLabel="Add Note Modal"
           >
-            <h2>Dodaj notatkę</h2>
+            <h2 className='title'>Dodaj notatkę</h2>
             <textarea
               type="text"
               placeholder="Dodaj notatkę..."
