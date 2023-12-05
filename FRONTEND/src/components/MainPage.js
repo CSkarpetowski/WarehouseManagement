@@ -41,9 +41,9 @@ export default function MainPage() {
     
         function Progres({ stan }) {
           if (stan.ilosc / stan.pojemnosc >= 0.9) {
-            return <progress className="red" value={stan.ilosc} max={stan.pojemnosc}></progress>;
+            return <progress className="red"  value={stan.ilosc} max={stan.pojemnosc}>HI!</progress>;
           } else if (stan.ilosc / stan.pojemnosc >= 0.75) {
-            return <progress className="orange" value={stan.ilosc} max={stan.pojemnosc}></progress>;
+            return <progress className="orange"  value={stan.ilosc} max={stan.pojemnosc}></progress>;
           } else {
             return <progress className="green" value={stan.ilosc} max={stan.pojemnosc}></progress>;
           }
@@ -57,27 +57,26 @@ export default function MainPage() {
       <NavBar/>
     <h1  className='cardTitle'>Dashboard</h1>
     <div  className='warehouseAreaMain'>
-      <div onClick={()=>navigate("/WarehouseOne")} id='warehouseOne'>
+      <div onClick={()=>navigate("/WarehouseOne")} id='warehouseOne' style={{paddingBottom:'3%'}}>
         <p className='warehouseTitle'>Magazyn 1</p>
         <img src={warehouseIcon} style={{width:'15vw'}} />
+        <p style={{textAlign:'center'}}>{stanone.ilosc}/{stanone.pojemnosc}</p>
         <Progres stan={stanone} />
-        <p>{stanone.ilosc}/{stanone.pojemnosc}</p>
-
           
       </div>
-      <div onClick={()=>navigate("/WarehouseTwo")} id='warehouseTwo'>
+      <div onClick={()=>navigate("/WarehouseTwo")} id='warehouseTwo' style={{paddingBottom:'3%'}}>
         <p className='warehouseTitle'>Magazyn 2</p>
         <img src={warehouseIcon} style={{width:'15vw'}} />
+        <p style={{textAlign:'center'}}>{stantwo.ilosc}/{stantwo.pojemnosc}</p>
         <Progres stan={stantwo} />
-        <p>{stantwo.ilosc}/{stantwo.pojemnosc}</p>
           
       </div>
-      <div onClick={()=>navigate("/WarehouseThree")} id='warehouseThree'>
+      <div onClick={()=>navigate("/WarehouseThree")} id='warehouseThree' style={{paddingBottom:'3%'}}>
         <p className='warehouseTitle'>Magazyn 3</p>
         <img src={warehouseIcon} style={{width:'15vw'}} />
+        <p style={{textAlign:'center'}}>{stanthree.ilosc}/{stanthree.pojemnosc}</p>
         <Progres stan={stanthree} />
-        <p>{stanthree.ilosc}/{stanthree.pojemnosc}</p>
-          
+        
       </div>
     </div>
     </div>

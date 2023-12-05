@@ -32,42 +32,42 @@ body{
 }
 #warehouseOne
 {
-    background-color: #0F1A2B;
-    padding: 1%;
-    padding-left: 2%;
-    padding-right: 2%;
-    border-radius: 5%;
-    margin: 2%;
-    border: 2px solid #c87cfc;
-    max-width: 20%;
-    max-height: 20%;
-    margin: 0 auto;
+  max-height: 23%;
+  border: 2px solid #c87cfc;
+  padding: 3%;
+  padding-bottom: 8%;
 }
 #warehouseTwo
 {
-    background-color: #0F1A2B;
+    /* background-color: #0F1A2B;
     padding: 1%;
     padding-left: 2%;
     padding-right: 2%;
-    border-radius: 5%;
     margin: 2%;
     border: 2px solid #c87cfc;
     max-width: 20%;
     max-height: 20%;
-    margin: 0 auto;
+    margin: 0 auto; */
+    max-height: 23%;
+    border: 2px solid #c87cfc;
+    padding: 3%;
+    padding-bottom: 8%;
 }
 #warehouseThree
 {
-    background-color: #0F1A2B;
+    /* background-color: #0F1A2B;
     padding: 1%;
     padding-left: 2%;
     padding-right: 2%;
-    border-radius: 5%;
     margin: 2%;
     border: 2px solid #c87cfc;
     max-width: 20%;
     max-height: 20%;
-    margin: 0 auto;
+    margin: 0 auto; */
+    max-height: 23%;
+    border: 2px solid #c87cfc;
+    padding: 3%;
+    padding-bottom: 8%;
 }
 .warehouseTitle
 {
@@ -106,9 +106,18 @@ progress
 .red::-moz-progress-bar{
     background-color: red;
 }
+.red::-webkit-progress-value{
+    background-color: red;
+}
 .orange::-moz-progress-bar{
     background-color: orange;
 }
+.orange::-webkit-progress-value{
+    background-color: orange;
+}
 .green::-moz-progress-bar{
+    background-color: green;
+}
+.green::-webkit-progress-value{
     background-color: green;
 }

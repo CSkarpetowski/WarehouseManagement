@@ -49,7 +49,7 @@ function App() {
           <Route path='/WarehouseTwo' element={hasJWT() ? <WarehouseTwo/> : <LoginPage />} />
           <Route path='/WarehouseThree' element={hasJWT() ? <WarehouseThree/> : <LoginPage />} />
           <Route path='/Driver' element={hasJWT() ? <Order/> : <LoginPage />} />
-          <Route path='/Workers' element={hasJWT() ? <MainPage/> : <LoginPage />} />
+          <Route path='/Workers' element={hasJWT() ? <WorkersPage/> : <LoginPage />} />
         </Routes>
       </Router>
       )} 
