@@ -116,7 +116,7 @@ namespace WarehouseManagement.Controllers
         public IActionResult GetAllFromMag(int Idmag)
         {
 
-            var products = _context.Produkt.Where(x => x.pIdMagazyn == Idmag ).Where(x => x.Ilosc != 0);
+            var products = _context.Produkt.Where(x => x.pIdMagazyn == Idmag ).Where(x => x.Ilosc != 0).OrderBy(x => x.IdProd);
 
             return Ok(products);
         }
@@ -124,7 +124,7 @@ namespace WarehouseManagement.Controllers
         public IActionResult GetAll()
         {
 
-            var products = _context.Produkt.Where(x => x.Ilosc != 0);
+            var products = _context.Produkt.Where(x => x.Ilosc != 0).OrderBy(x => x.IdProd);
 
             return Ok(products);
         }
