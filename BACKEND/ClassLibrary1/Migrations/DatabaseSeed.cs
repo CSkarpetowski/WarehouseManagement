@@ -72,6 +72,9 @@ namespace WM.Data.Sql.Migrations
 
 
 
+
+
+
         }
         private IEnumerable<Magazyn> BuildMagazyn()
         {
@@ -397,11 +400,12 @@ namespace WM.Data.Sql.Migrations
             {
                 IdZamowienie = 1,
                 IsOld = false,
-                zIdKlient = 1
+                zIdKlient = 1,
             };
             zamowienieList.Add(Zamowienie);
             return zamowienieList;
         }
+
 
         private IEnumerable<ZamowienieLista> BuildZamowienieLista()
         {

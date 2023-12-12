@@ -16,6 +16,7 @@ namespace WM.Data.Sql
         public virtual DbSet<Produkt> Produkt { get; set; }
         public virtual DbSet<Pracownik> Pracownik { get; set; }
         public virtual DbSet<Login> Login { get; set; }
+        public virtual DbSet<Historia> Historia { get; set; }
 
         //przykład konfiguracji modeli/encji poprzez klasy konfiguracyjne z folderu DAOConfigurations
         protected override void OnModelCreating(ModelBuilder builder)
@@ -75,6 +76,7 @@ namespace WM.Data.Sql
             builder.ApplyConfiguration(new ProduktConfiguration());
             builder.ApplyConfiguration(new PracownikConfiguration());
             builder.ApplyConfiguration(new LoginConfiguration());
+            builder.ApplyConfiguration(new HistoriaConfiguration());
         }
 
     }

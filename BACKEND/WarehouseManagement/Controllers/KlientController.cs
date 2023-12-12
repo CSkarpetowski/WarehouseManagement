@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Warehouse_Management.Validation;
 using WM.Data.Sql;
-using WM.Data.Sql.DAO;
 using WM.IServices;
 
 namespace WarehouseManagement.Controllers
