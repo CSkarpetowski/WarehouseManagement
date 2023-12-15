@@ -36,6 +36,21 @@ export default function Order() {
     return <p>No data available</p>;
   }
 
+  function sendMail(mail,subject, body){
+
+    try {
+      // Replace the URL with your Postman data endpoint
+      axios.post('https://localhost:7099/api/pracownik/SendEmail',{
+        "Email": mail,
+        "Subject": subject,
+        "Body": body
+        
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   const MailPopUp = () => {
     return(
       <div style={{position:'absolute',
@@ -53,6 +68,7 @@ export default function Order() {
          cursor:'pointer',
           fontFamily:'system-ui'}} onClick={()=>setShowMailPopUp(false)}>X</p>
           <h3 style={{color:'white'}}>Napisz maila do :   {userMailId}</h3>
+          <input placeholder='Subject:' id="mailSubject"></input>
           <textarea id='mailContent' style={{width:'98%',
           marginLeft:'0 0 15px',
           height:'50%',
@@ -63,6 +79,8 @@ export default function Order() {
           fontSize:'20px'}}></textarea>
           <button onClick={async ()=>{
            const MailText = await String(document.getElementById('mailContent').value);
+           const MailSubject = await String(document.getElementById('mailSubject').value);
+           sendMail(userMailId, MailSubject, MailText);
            alert(MailText); // Gruby czarodzieju tu masz gotowca tylko w mail wyslac uzyj:
             // async await-> na gorze masz przyklad  O========3
           }}>Wyślij!</button>
@@ -102,7 +120,7 @@ export default function Order() {
                   {/* Add additional cells as needed */}
                   <td style={{ textAlign: 'center' }} onClick={() => {
                     setShowMailPopUp(true)
-                    setUserMailId(employee.nazwa)
+                    setUserMailId("cezaryjskarpetowski@gmail.com")
                     }}>
                       <RiMailAddFill size={30} color={'#0078a0c2'} /></td>
                 </tr>
