@@ -9,7 +9,7 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
   };
 
   return (
-    <div className="leftPanel">
+    <div className="orderleftPanel">
       <table className='orderTable'>
         <thead>
           <tr>
@@ -52,7 +52,7 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
 
 const RightPanel = ({ tempTable }) => {
   return (
-    <div className="rightPanel">
+    <div className="orderrightPanel">
       <table className='finalOrder'>
         <thead>
           <tr>
@@ -203,7 +203,7 @@ const OrderPage = () => {
           </select>
           <button onClick={handleDodajZamowienie}>Dodaj zamówienie</button>
         </div>
-        <div className="tablesContainer">
+        <div className="ordertablesContainer">
           <LeftPanel
             tableData={tableData}
             tempTable={tempTable}

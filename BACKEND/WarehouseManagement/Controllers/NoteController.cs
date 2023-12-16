@@ -31,7 +31,8 @@ namespace WarehouseManagement.Controllers
             {
 
                 Tresc = addNote.Tresc,
-                kIdMagazyn = addNote.kIdMagazyn
+                kIdMagazyn = addNote.kIdMagazyn,
+                Czas = DateTime.Now // Dodaj aktualną datę i godzinę
             };
 
             await _context.AddAsync(komunikat);
