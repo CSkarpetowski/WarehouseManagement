@@ -8,5 +8,10 @@ namespace WarehouseManagement.Hubs
         {
             await Clients.All.SendAsync("ProductChanged");
         }
+
+        public Task sendNotification()
+        {
+            return Clients.All.SendAsync("ProductChanged");
+        }
     }
 }
