@@ -72,6 +72,9 @@ namespace WM.Data.Sql.Migrations
 
 
 
+
+
+
         }
         private IEnumerable<Magazyn> BuildMagazyn()
         {
@@ -246,6 +249,7 @@ namespace WM.Data.Sql.Migrations
                 IdPracownik = 1,
                 Nazwa = "John Doe",
                 Telefon = "903922833",
+                Email = "kossakowskiprzemek@gmail.com",
                 IsManager = true,
                 pIdMagazyn = 1
 
@@ -256,6 +260,7 @@ namespace WM.Data.Sql.Migrations
                 IdPracownik = 2,
                 Nazwa = "Jane Smith",
                 Telefon = "555123456",
+                Email = "kossakowskiprzemek@gmail.com",
                 IsManager = false,
                 pIdMagazyn = 1
 
@@ -266,6 +271,7 @@ namespace WM.Data.Sql.Migrations
                 IdPracownik = 3,
                 Nazwa = "Alice Johnson",
                 Telefon = "789456123",
+                Email = "kossakowskiprzemek@gmail.com",
                 IsManager = true,
                 pIdMagazyn = 2
 
@@ -276,6 +282,7 @@ namespace WM.Data.Sql.Migrations
                 IdPracownik = 4,
                 Nazwa = "Robert Davis",
                 Telefon = "321654987",
+                Email = "cezaryjskarpetowski@gmail.com",
                 IsManager = false,
                 pIdMagazyn = 2
 
@@ -286,6 +293,7 @@ namespace WM.Data.Sql.Migrations
                 IdPracownik = 5,
                 Nazwa = "Emily Brown",
                 Telefon = "987654321",
+                Email = "cezaryjskarpetowski@gmail.com",
                 IsManager = true,
                 pIdMagazyn = 1
 
@@ -397,11 +405,12 @@ namespace WM.Data.Sql.Migrations
             {
                 IdZamowienie = 1,
                 IsOld = false,
-                zIdKlient = 1
+                zIdKlient = 1,
             };
             zamowienieList.Add(Zamowienie);
             return zamowienieList;
         }
+
 
         private IEnumerable<ZamowienieLista> BuildZamowienieLista()
         {

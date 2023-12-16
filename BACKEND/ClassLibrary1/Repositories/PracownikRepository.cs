@@ -17,6 +17,7 @@ namespace WM.Data.Sql.Repositories
             {
                 Nazwa = p.Nazwa,
                 Telefon = p.Telefon,
+                Email = p.Email,
                 IsManager = p.IsManager,
                 pIdMagazyn = p.pIdMagazyn
             };
@@ -33,6 +34,7 @@ namespace WM.Data.Sql.Repositories
                 pracownik.IdPracownik,
                 pracownik.Nazwa,
                 pracownik.Telefon,
+                pracownik.Email,
                 pracownik.IsManager,
                 pracownik.pIdMagazyn
                 );
@@ -43,6 +45,7 @@ namespace WM.Data.Sql.Repositories
             var EditPracownik = await _context.Pracownik.FirstOrDefaultAsync(x => x.IdPracownik == pracownik.IdPracownik);
             EditPracownik.Nazwa = pracownik.Nazwa;
             EditPracownik.Telefon = pracownik.Telefon;
+            EditPracownik.Email = pracownik.Email;
             EditPracownik.IsManager = pracownik.IsManager;
             EditPracownik.pIdMagazyn = pracownik.pIdMagazyn;
 

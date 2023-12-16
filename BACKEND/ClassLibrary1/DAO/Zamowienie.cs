@@ -11,8 +11,7 @@ namespace WM.Data.Sql.DAO
         public bool IsOld { get; set; }
 
         public int zIdKlient { get; set; }
-
-
+        public virtual Historia Historia { get; set; }
         public virtual Klient Klient { get; set; }
         public virtual ICollection<ZamowienieLista> ZamowienieListy { get; set; }
     }

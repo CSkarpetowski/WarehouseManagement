@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Warehouse_Management.Validation;
+using WarehouseManagement.BindingModel;
+using WarehouseManagement.Common;
 using WarehouseManagement.Mappers;
 using WM.Data.Sql;
 using WM.IServices;
@@ -68,6 +70,14 @@ namespace WarehouseManagement.Controllers
         {
             var pracownicy = _context.Pracownik;
             return Ok(pracownicy);
+        }
+
+        [HttpPost("SendEmail", Name = "SendEmail")]
+        public IActionResult SendEmailFromBody([FromBody] SendMailModel mail)
+        {
+            E_mailSender.SendEmail(mail);
+
+            return Ok();
         }
     }
 }

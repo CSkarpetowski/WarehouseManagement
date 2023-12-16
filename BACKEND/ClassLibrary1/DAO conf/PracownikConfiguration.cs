@@ -11,6 +11,7 @@ namespace WM.Data.Sql.DAOConfigurations
             builder.Property(c => c.IdPracownik).IsRequired();
             builder.Property(c => c.Telefon).IsRequired();
             builder.Property(c => c.Nazwa).IsRequired();
+            builder.Property(c => c.Email).IsRequired();
             builder.Property(c => c.IsManager).IsRequired();
             //builder.Property(c => c.IdLogin).IsRequired();
             builder.HasOne(x => x.Login)

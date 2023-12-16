@@ -1,5 +1,4 @@
-﻿using WM.Data.Sql.DAO;
-using WM.IServices;
+﻿using WM.IServices;
 
 namespace WarehouseManagement.BindingModel
 {
