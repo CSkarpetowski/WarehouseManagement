@@ -5,25 +5,26 @@ import { useState, useEffect } from 'react';
 
 export default function ConnectionTest() {
 
-  const signalRConnection = new signalR.HubConnectionBuilder()
-  .withUrl('/productChanged')
-  .build();
+  useEffect(() => {
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("https://localhost:7099/productChanged") // Replace with your SignalR endpoint
+        .build();
 
-signalRConnection.start().catch((error) => console.error(error));
+    connection.start()
+        .then(() => {
+            console.log("SignalR Connected!");
+        })
+        .catch(err => console.error(err));
 
-function checkSignalR()
-{
-  signalRConnection.on('ProductChanged')
-  {
-    alert("YES!");
-    signalRConnection.stop();
-  } 
-}
+    connection.on("ProductChanged",()=>{
+      console.log("Sachnik Kurwa !");
+    }) 
+}, []);
 
 
     var [connection, setConnection] = useState(null);
 
-    useEffect(() => {
+    const CheckOguem = () => {
         axios.get('https://localhost:7099/api/test')
           .then(response => {
             setConnection(response.data);
@@ -31,12 +32,12 @@ function checkSignalR()
           .catch(error => {
             console.error('Błąd:', error);
           });
-      }, []);
-
+    }
+  
   return (
     <>
+    <button onClick={CheckOguem}>Check SignalR</button>
     <div style={{color:'red',textAlign:'center'}}>{connection}</div>
-    <button onClick={checkSignalR}>Check SignalR</button>
     </>
   )
 }
