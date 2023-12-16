@@ -18,7 +18,7 @@ namespace WarehouseManagement.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var Drivers = _context.Klient.Include(x => x.Zamowienia);
+            var Drivers = _context.Klient.Include(x => x.Zamowienia.Where(x=> x.IsOld == false));
             return Ok(Drivers);
         }
 

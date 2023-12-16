@@ -76,7 +76,8 @@ public class Startup
         {
             builder.WithOrigins("http://localhost:3000")
                 .AllowAnyMethod()
-                .AllowAnyHeader();
+                .AllowAnyHeader()
+                .AllowCredentials();
         }));
 
         services.AddSignalR();

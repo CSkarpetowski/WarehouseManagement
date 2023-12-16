@@ -120,7 +120,7 @@ export default function Order() {
                   {/* Add additional cells as needed */}
                   <td style={{ textAlign: 'center' }} onClick={() => {
                     setShowMailPopUp(true)
-                    setUserMailId("cezaryjskarpetowski@gmail.com")
+                    setUserMailId(employee.email)
                     }}>
                       <RiMailAddFill size={30} color={'#0078a0c2'} /></td>
                 </tr>

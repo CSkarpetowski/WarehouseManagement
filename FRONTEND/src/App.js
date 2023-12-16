@@ -8,6 +8,7 @@ import AddProduct from './components/AddProduct';
 import WarehouseOne from './components/WarehouseOne';
 import WarehouseTwo from './components/WarehouseTwo';
 import WarehouseThree from './components/WarehouseThree';
+import ConnectionTest from './components/ConnectionTest'
 import Order from './components/Order';
 import WorkersPage from './components/WorkersPage';
 function App() {

@@ -2,9 +2,26 @@ import React from 'react';
 import './AddProduct.css';
 import NavBar from './NavBar';
 import formImage from '../img/addProductimg.jpg';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
+import * as signalR from '@microsoft/signalr';
 export default function AddProduct() {
 
+  useEffect(() => {
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("https://localhost:7099/productChanged") // Replace with your SignalR endpoint
+        .build();
+
+    connection.start()
+        .then(() => {
+            console.log("SignalR Connected!");
+        })
+        .catch(err => console.error(err));
+
+    connection.on("ProductChanged",()=>{
+      console.log("Sachnik Kurwa !");
+    }) 
+}, []);
 
   function addProductDB()
   {

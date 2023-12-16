@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using WarehouseManagement.Hubs;
+using System.Threading.Tasks;
 
 namespace WarehouseManagement.Controllers
 {
@@ -6,10 +9,20 @@ namespace WarehouseManagement.Controllers
     [ApiController]
     public class TestController : Controller
     {
-        [HttpGet]
-        public IActionResult Get()
+        private readonly IHubContext<NotificationHub> _hubContext;
+
+        public TestController(IHubContext<NotificationHub> hubContext)
         {
-            return Ok("Połączenie udane --->  React ASP.NET !");
+            _hubContext = hubContext;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            // Tutaj możesz wysłać powiadomienie do wszystkich klientów podłączonych do huba
+            await _hubContext.Clients.All.SendAsync("ProductChanged");
+
+            return Ok("Połączenie udane ---> React ASP.NET !");
         }
     }
 }

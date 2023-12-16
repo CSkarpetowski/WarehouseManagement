@@ -158,6 +158,13 @@ namespace WarehouseManagement.Controllers
             return Ok();
         }
 
+        [HttpGet("getAllOld", Name = "getAllOld")]
+        public IActionResult getAllOld()
+        {
+            var zamowienia = _context.Zamowienie.Where(x => x.IsOld == true).Include(x => x.Klient).ToList();
+            return Ok(zamowienia);
+        }
+
     }
 
 }

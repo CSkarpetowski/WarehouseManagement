@@ -19,14 +19,14 @@ namespace WM.Services
         }
         public async Task<Domain.Pracownik> CreatePracownik(AddPracownik addPracownik)
         {
-            var pracownik = new Pracownik(addPracownik.IdPracownik, addPracownik.Nazwa, addPracownik.Telefon, addPracownik.IsManager, addPracownik.pIdMagazyn);
+            var pracownik = new Pracownik(addPracownik.IdPracownik, addPracownik.Nazwa, addPracownik.Telefon,addPracownik.Email, addPracownik.IsManager, addPracownik.pIdMagazyn);
             pracownik.IdPracownik = await _pracownikRepository.AddPracownik(pracownik);
             return pracownik;
         }
         public async Task EditPracownik(EditPracownik editPracownik, int IdPracownik)
         {
             var zamowienie = await _pracownikRepository.GetPracownik(IdPracownik);
-            zamowienie.EditPracownik(editPracownik.Nazwa, editPracownik.Telefon, editPracownik.IsManager, editPracownik.pIdMagazyn);
+            zamowienie.EditPracownik(editPracownik.Nazwa, editPracownik.Telefon, editPracownik.Email, editPracownik.IsManager, editPracownik.pIdMagazyn);
             await _pracownikRepository.EditPracownik(zamowienie);
         }
     }
