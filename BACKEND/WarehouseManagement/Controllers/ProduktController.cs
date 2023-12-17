@@ -25,7 +25,7 @@ namespace WarehouseManagement.Controllers
             _hubContext = hub;
             _context = context;
             _produktService = produktService;
-            _hubContext = hubContext;
+          
         }
 
         [HttpGet("{IdProdukt:min(1)}", Name = "GetProdukt")]
