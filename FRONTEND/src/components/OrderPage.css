@@ -25,13 +25,13 @@ h2 {
   align-items: center;
 }
 
-.tablesContainer {
+.ordertablesContainer {
   gap: 20px;
   display: flex;
   align-content: center;
 }
 
-.leftPanel {
+.orderleftPanel {
   border: 1px solid #ccc;
   padding: 20px;
   height: 65vh;
@@ -39,7 +39,7 @@ h2 {
   width: 60vh;
 }
 
-.leftPanel input[type="checkbox"] {
+.orderleftPanel input[type="checkbox"] {
   align-content: center;
   width: 20px; 
   height: 20px;
@@ -47,7 +47,7 @@ h2 {
   display: flex;
 }
 
-.rightPanel {
+.orderrightPanel {
   border: 1px solid #ccc;
   padding: 20px;
   height: 65vh;
@@ -56,6 +56,7 @@ h2 {
 
 .orderTable {
   width: 100%;
+  border-collapse: collapse;
 }
 
 .itemQuantity {
@@ -75,12 +76,14 @@ h2 {
 }
 .finalOrder {
   width: 100%;
+  border-collapse: collapse;
 }
 
 .orderTable th,
 .orderTable td,
 .finalOrder th,
 .finalOrder td {
+  background-color: #f2f2f2;
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;

@@ -10,6 +10,8 @@ import WarehouseTwo from './components/WarehouseTwo';
 import WarehouseThree from './components/WarehouseThree';
 import Order from './components/Order';
 import WorkersPage from './components/WorkersPage';
+import {useGlobalState, setGlobalState} from '../src/components/NoteAlert';
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 

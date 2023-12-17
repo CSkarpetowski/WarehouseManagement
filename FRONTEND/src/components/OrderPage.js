@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
 import './OrderPage.css';
 import axios from 'axios';
+import {useGlobalState, setGlobalState} from './NoteAlert';
 
 const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange }) => {
   const handleRowClick = (row) => {
@@ -9,7 +10,7 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
   };
 
   return (
-    <div className="leftPanel">
+    <div className="orderleftPanel">
       <table className='orderTable'>
         <thead>
           <tr>
@@ -52,7 +53,7 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
 
 const RightPanel = ({ tempTable }) => {
   return (
-    <div className="rightPanel">
+    <div className="orderrightPanel">
       <table className='finalOrder'>
         <thead>
           <tr>
@@ -147,12 +148,16 @@ const OrderPage = () => {
       })
         .then((response) => {
           alert("Zamówienie dodano pomyślnie!");
-          window.location.reload();
+          setGlobalState('signalChange',true);
         })
         .catch((err) => alert("Coś poszło nie tak!"));
     } else {
       alert("Nie znaleziono wybranego klienta!");
     }
+  }
+  const resetProductAdded = () => {
+    // setNotification({ showNotification: false });
+    setGlobalState('signalChange',false);
   };
 
   const handleWarehouseChange = (e) => {
@@ -203,7 +208,7 @@ const OrderPage = () => {
           </select>
           <button onClick={handleDodajZamowienie}>Dodaj zamówienie</button>
         </div>
-        <div className="tablesContainer">
+        <div className="ordertablesContainer">
           <LeftPanel
             tableData={tableData}
             tempTable={tempTable}

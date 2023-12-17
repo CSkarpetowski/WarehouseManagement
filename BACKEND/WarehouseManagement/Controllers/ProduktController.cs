@@ -4,6 +4,8 @@ using System.Diagnostics;
 using Warehouse_Management.Validation;
 using Warehouse_Management.ViewModels;
 using WarehouseManagement.BindingModel;
+using Microsoft.AspNetCore.SignalR;
+using WarehouseManagement.Hubs;
 using WM.Data.Sql;
 using WM.Data.Sql.DAO;
 using WM.IServices;
@@ -16,11 +18,13 @@ namespace WarehouseManagement.Controllers
     {
         private readonly WarehouseDbContext _context;
         private readonly IProduktService _produktService;
-
-        public ProduktController(WarehouseDbContext context, IProduktService produktService)
+        private readonly IHubContext<NotificationHub> _hubContext;
+      
+        public ProduktController(WarehouseDbContext context, IProduktService produktService, IHubContext<NotificationHub> hubContext)
         {
             _context = context;
             _produktService = produktService;
+            _hubContext = hubContext;
         }
 
         [HttpGet("{IdProdukt:min(1)}", Name = "GetProdukt")]
@@ -70,9 +74,9 @@ namespace WarehouseManagement.Controllers
             };
             Debug.WriteLine("Dane, które próbujesz dodać do bazy: " + Newtonsoft.Json.JsonConvert.SerializeObject(product));
             await _context.AddAsync(product);
+            await _hubContext.Clients.All.SendAsync("ProductChanged");
             await _context.SaveChangesAsync();
-
-
+            
             return Created(product.IdProd.ToString(), new ProduktViewModel
             {
                 IdProd = product.IdProd,
