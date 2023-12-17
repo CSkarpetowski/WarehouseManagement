@@ -66,6 +66,11 @@ namespace WM.Data.Sql.Migrations
             _context.SaveChanges();
             #endregion
 
+            #region CreateHistoria
+            var historiaList = BuildHistoria();
+            _context.Historia.AddRange(historiaList);
+            _context.SaveChanges();
+            #endregion
 
 
 
@@ -408,6 +413,13 @@ namespace WM.Data.Sql.Migrations
                 zIdKlient = 1,
             };
             zamowienieList.Add(Zamowienie);
+            var Zamowienie1 = new Zamowienie()
+            {
+                IdZamowienie = 2,
+                IsOld = true,
+                zIdKlient = 1,
+            };
+            zamowienieList.Add(Zamowienie1);
             return zamowienieList;
         }
 
@@ -424,7 +436,30 @@ namespace WM.Data.Sql.Migrations
                 LOT = "GA0001"
             };
             zamowienieListaList.Add(ZamowienieLista);
+            var ZamowienieLista2 = new ZamowienieLista()
+            {
+                LpZamowienie = 2,
+                zIdZamowienie = 2,
+                zIdProd = 1,
+                ilosc = 1,
+                LOT = "GA0001"
+            };
+            zamowienieListaList.Add(ZamowienieLista2);
             return zamowienieListaList;
+        }
+
+        private IEnumerable<Historia> BuildHistoria()
+        {
+            var historiaList = new List<Historia>();
+            var Historia = new Historia()
+            {
+                IdHistoria = 1,
+                hIdZamowienie = 2,
+                Realizacja = DateTime.Now
+            };
+            historiaList.Add(Historia);
+            return historiaList;
+           
         }
 
     }

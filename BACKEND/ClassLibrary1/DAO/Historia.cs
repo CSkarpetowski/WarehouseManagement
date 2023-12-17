@@ -12,7 +12,7 @@ namespace WM.Data.Sql.DAO
     {
         [Key] public int IdHistoria { get; set; }
         [ForeignKey("Zamowienie")] public int hIdZamowienie { get; set; }
-        public DateOnly Realizacja { get; set; }
+        public DateTime Realizacja { get; set; }
         public virtual Zamowienie Zamowienie { get; set; }
     }
 }

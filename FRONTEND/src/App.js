@@ -10,6 +10,7 @@ import WarehouseTwo from './components/WarehouseTwo';
 import WarehouseThree from './components/WarehouseThree';
 import ConnectionTest from './components/ConnectionTest'
 import Order from './components/Order';
+import OrderHistory from './components/OrderHistory';
 import WorkersPage from './components/WorkersPage';
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -51,6 +52,7 @@ function App() {
           <Route path='/WarehouseThree' element={hasJWT() ? <WarehouseThree/> : <LoginPage />} />
           <Route path='/Driver' element={hasJWT() ? <Order/> : <LoginPage />} />
           <Route path='/Workers' element={hasJWT() ? <WorkersPage/> : <LoginPage />} />
+          <Route path='/History' element={hasJWT() ? <OrderHistory/> : <LoginPage />} />
         </Routes>
       </Router>
       )} 
