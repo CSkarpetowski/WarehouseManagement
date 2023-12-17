@@ -1,0 +1,104 @@
+#WarehousePage {
+  height: 100vh;
+  margin: 0 auto;
+  width: auto;
+  background-color: #0F1A2B;
+}
+
+h2 {
+  color: white;
+  font-size: 20px;
+}
+
+.warehousetable {
+  max-height: 400px;
+  border-collapse: collapse;
+}
+.warehousetable tr:hover {
+  background-color: #c87cfc;
+  cursor: pointer;
+}
+
+.warehousePageArea {
+  display: flex;
+  flex-direction: column;
+  margin-left: 14vw;
+  margin-right: auto;
+  max-width: 85vw;
+  margin-top: 20px;
+  align-items: center;
+  padding-left: 0px;
+}
+
+.warehousetablesContainer {
+  gap: 20px;
+  display: flex;
+  align-content: center;
+}
+
+.warehouseleftPanel {
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 65vh;
+  width: 35vh;
+  overflow: hidden;
+}
+
+.warehouserightpanel input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  display: flex;
+}
+
+.warehouserightPanel {
+  border: 1px solid #ccc;
+  padding: 20px;
+  height: 65vh;
+  overflow-y: scroll;
+}
+
+.qrCode {
+  border: 2px solid #ddd;
+  display: block;
+  margin: auto;
+}
+
+.qrInfo {
+  color: white;
+  font-size: 14px;
+}
+
+.qrTable {
+  width: 60vw;
+  border-collapse: collapse;
+}
+
+.itemQuantity {
+  justify-content: center;
+  width: 100px;
+  max-width: 100px;
+}
+
+.productName {
+  width: 100px;
+  max-width: 100px;
+}
+
+.tableLOT {
+  width: 100px;
+  max-width: 100px;
+}
+
+.qrTable th,
+.qrTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  color: black;
+  height: 30px;
+}
+
+.qrTable th {
+  background-color: #f2f2f2;
+}

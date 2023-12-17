@@ -10,6 +10,7 @@ namespace WM.Data.Sql.DAOConfigurations
         {
             builder.Property(c => c.IdKomunikat).IsRequired();
             builder.Property(c => c.Tresc).IsRequired();
+            builder.Property(c => c.Czas).IsRequired();
 
             builder.ToTable("Komunikat");
         }

@@ -56,12 +56,14 @@ export default function NavBar() {
     setShowNote(!showNote);
    
   };
-  const navDashboard = () => { navigate("/MainPage") };
-  const navAddProduct = () => { navigate("/AddProduct") };
-  const navAddOrder = () => { navigate("/AddOrder") };
-  const navWorkers = () => { navigate("/Workers") };
-  const navDriver = () => { navigate("/Driver") };
 
+
+  const navDashboard = () => {navigate("/MainPage")}
+  const navAddProduct = () => {navigate("/AddProduct")}
+  const navAddOrder = () => {navigate("/AddOrder")}
+  const navWorkers = () => {navigate("/Workers")}
+  const navDriver = () => {navigate("/Driver")}
+  const navHistory = () => {navigate("/History")}
   return (
     <nav>
       <div style={{ textAlign: 'end', padding: '10px' }}>
@@ -123,6 +125,12 @@ export default function NavBar() {
             <div onClick={navWorkers}>
             <GoPeople size={20} color="#c87cfc"/>
             <p>Workers</p>
+            </div>
+            </li>
+            <li className='listItem'>
+            <div onClick={navHistory}>
+            <GoPeople size={20} color="#c87cfc"/>
+            <p>History</p>
             </div>
             </li>
         </ul>

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using Microsoft.AspNetCore.SignalR;
 using Warehouse_Management.Validation;
 using Warehouse_Management.ViewModels;
 using WarehouseManagement.BindingModel;
@@ -19,9 +20,9 @@ namespace WarehouseManagement.Controllers
         private readonly WarehouseDbContext _context;
         private readonly IProduktService _produktService;
         private readonly IHubContext<NotificationHub> _hubContext;
-      
-        public ProduktController(WarehouseDbContext context, IProduktService produktService, IHubContext<NotificationHub> hubContext)
+        public ProduktController(WarehouseDbContext context, IProduktService produktService, IHubContext<NotificationHub> hub)
         {
+            _hubContext = hub;
             _context = context;
             _produktService = produktService;
             _hubContext = hubContext;
@@ -77,6 +78,7 @@ namespace WarehouseManagement.Controllers
             await _hubContext.Clients.All.SendAsync("ProductChanged");
             await _context.SaveChangesAsync();
             
+
             return Created(product.IdProd.ToString(), new ProduktViewModel
             {
                 IdProd = product.IdProd,

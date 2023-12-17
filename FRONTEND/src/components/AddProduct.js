@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './AddProduct.css';
 import NavBar from './NavBar';
 import formImage from '../img/addProductimg.jpg';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import {useGlobalState, setGlobalState} from './NoteAlert';
 

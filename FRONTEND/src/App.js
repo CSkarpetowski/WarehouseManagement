@@ -8,7 +8,9 @@ import AddProduct from './components/AddProduct';
 import WarehouseOne from './components/WarehouseOne';
 import WarehouseTwo from './components/WarehouseTwo';
 import WarehouseThree from './components/WarehouseThree';
+import ConnectionTest from './components/ConnectionTest'
 import Order from './components/Order';
+import OrderHistory from './components/OrderHistory';
 import WorkersPage from './components/WorkersPage';
 import {useGlobalState, setGlobalState} from '../src/components/NoteAlert';
 
@@ -52,6 +54,7 @@ function App() {
           <Route path='/WarehouseThree' element={hasJWT() ? <WarehouseThree/> : <LoginPage />} />
           <Route path='/Driver' element={hasJWT() ? <Order/> : <LoginPage />} />
           <Route path='/Workers' element={hasJWT() ? <WorkersPage/> : <LoginPage />} />
+          <Route path='/History' element={hasJWT() ? <OrderHistory/> : <LoginPage />} />
         </Routes>
       </Router>
       )} 

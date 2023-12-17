@@ -62,7 +62,17 @@ namespace WarehouseManagement.Controllers
             var zamowienie = await _context.Zamowienie.FirstOrDefaultAsync(x => x.IdZamowienie == IdZamowienie);
             if (zamowienie != null)
             {
-                _context.Zamowienie.Remove(zamowienie);
+                zamowienie.IsOld = true;
+                _context.Update(zamowienie);
+                _context.SaveChanges();
+
+                Historia historia = new Historia
+                {
+                    hIdZamowienie = zamowienie.IdZamowienie,
+                    Realizacja = DateTime.Now
+                };
+
+                _context.Historia.AddAsync(historia);
                 await _context.SaveChangesAsync();
                 return Ok();
             }
@@ -165,7 +175,13 @@ namespace WarehouseManagement.Controllers
         [HttpGet("getAllOld", Name = "getAllOld")]
         public IActionResult getAllOld()
         {
-            var zamowienia = _context.Zamowienie.Where(x => x.IsOld == true).Include(x => x.Klient).ToList();
+            var zamowienia = _context.Zamowienie.Where(x => x.IsOld == true).Include(x => x.Klient);
+            return Ok(zamowienia);
+        }
+        [HttpGet("getAllOld2", Name = "getAllOld2")]
+        public IActionResult getAllOld2()
+        {
+            var zamowienia = _context.Historia.Include(x => x.Zamowienie).ThenInclude(x => x.Klient).Where(x=> x.Zamowienie.IsOld == true);
             return Ok(zamowienia);
         }
 

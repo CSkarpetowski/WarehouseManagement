@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import './WarehouseNote.css';
 import { RiAddLine } from 'react-icons/ri';
+import { format } from 'date-fns';
 import axios from 'axios';
 
 const WarehouseNote = ({ showNote, toggleNote }) => {
@@ -74,6 +75,7 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
             {notes.map((note) => (
               <li key={note.id} className="warehouse-note-item">
                 <div className="warehouse-note-text">{note.tresc}</div>
+                <div className="warehouse-note-time">{format(new Date(note.czas), 'HH:mm dd-MM-yyyy')}</div>
               </li>
             ))}
           </ul>
