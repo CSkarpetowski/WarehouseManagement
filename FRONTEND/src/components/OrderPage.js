@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
 import './OrderPage.css';
 import axios from 'axios';
+import {useGlobalState, setGlobalState} from './NoteAlert';
 
 const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange }) => {
   const handleRowClick = (row) => {
@@ -147,12 +148,16 @@ const OrderPage = () => {
       })
         .then((response) => {
           alert("Zamówienie dodano pomyślnie!");
-          window.location.reload();
+          setGlobalState('signalChange',true);
         })
         .catch((err) => alert("Coś poszło nie tak!"));
     } else {
       alert("Nie znaleziono wybranego klienta!");
     }
+  }
+  const resetProductAdded = () => {
+    // setNotification({ showNotification: false });
+    setGlobalState('signalChange',false);
   };
 
   const handleWarehouseChange = (e) => {

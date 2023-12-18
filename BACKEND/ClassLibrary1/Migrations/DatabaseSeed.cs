@@ -254,7 +254,7 @@ namespace WM.Data.Sql.Migrations
                 IdPracownik = 1,
                 Nazwa = "John Doe",
                 Telefon = "903922833",
-                Email = "kossakowskiprzemek@gmail.com",
+                Email = "r.sachnik@student.po.edu.pl",
                 IsManager = true,
                 pIdMagazyn = 1
 

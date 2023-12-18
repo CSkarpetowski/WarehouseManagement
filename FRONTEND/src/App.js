@@ -12,6 +12,8 @@ import ConnectionTest from './components/ConnectionTest'
 import Order from './components/Order';
 import OrderHistory from './components/OrderHistory';
 import WorkersPage from './components/WorkersPage';
+import {useGlobalState, setGlobalState} from '../src/components/NoteAlert';
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 

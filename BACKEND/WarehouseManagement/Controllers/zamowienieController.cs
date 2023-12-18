@@ -6,6 +6,8 @@ using WarehouseManagement.Mappers;
 using WM.Data.Sql;
 using WM.Data.Sql.DAO;
 using WM.IServices;
+using Microsoft.AspNetCore.SignalR;
+using WarehouseManagement.Hubs;
 
 
 namespace WarehouseManagement.Controllers
@@ -16,11 +18,12 @@ namespace WarehouseManagement.Controllers
     {
         private readonly WarehouseDbContext _context;
         private readonly IZamowienieService _zamowienieService;
-
-        public ZamowienieController(WarehouseDbContext context, IZamowienieService zamowienieService)
+        private readonly IHubContext<NotificationHub> _hubContext;
+        public ZamowienieController(WarehouseDbContext context, IZamowienieService zamowienieService, IHubContext<NotificationHub> hubContext)
         {
             _context = context;
             _zamowienieService = zamowienieService;
+            _hubContext = hubContext;
         }
 
         [HttpGet("{IdZamowienie:min(1)}", Name = "GetZamowienie")]
@@ -144,6 +147,7 @@ namespace WarehouseManagement.Controllers
                 IsOld = false
             };
             await _context.AddAsync(main);
+            await _hubContext.Clients.All.SendAsync("ProductChanged");
             await _context.SaveChangesAsync();
             var list = zamowienie.Produkty;
             
