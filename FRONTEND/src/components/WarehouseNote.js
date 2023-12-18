@@ -21,7 +21,8 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
   const addNote = () => {
     let queryFlag = false;
     let Tresc = document.getElementById('addTresc').value;
-    let kIdMagazyn = document.getElementById('addkIdMagazyn').value;
+    let kIdMagazyn = (1);
+    // let kIdMagazyn = document.getElementById('addkIdMagazyn').value;
 
     if (Tresc == null || kIdMagazyn == null) {
       alert("Coś poszło nie tak!");
@@ -59,6 +60,7 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
   const handleSaveNoteClick = () => {
     setIsModalOpen(false);
     addNote();
+
   };
 
   return (
@@ -94,11 +96,6 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
             <div className="modalButtons">
               <button onClick={handleSaveNoteClick}>Zapisz</button>
               <button onClick={handleCancelNoteClick}>Anuluj</button>
-              <select id='addkIdMagazyn' name='addkIdMagazyn'>
-                <option value={1}>Magazyn nr1</option>
-                <option value={2}>Magazyn nr2</option>
-                <option value={3}>Magazyn nr3</option>
-              </select>
             </div>
           </Modal>
         </div>

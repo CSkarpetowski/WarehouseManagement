@@ -18,6 +18,7 @@ import { MdAssignmentAdd } from "react-icons/md";
 import WarehouseNote from './WarehouseNote'; //Import powiadomień
 import {useGlobalState, setGlobalState} from './NoteAlert';
 import * as signalR from '@microsoft/signalr';
+import { LiaHistorySolid } from "react-icons/lia";
 export default function NavBar() {
   const [bellGreen,setBellGreen] = useState();
   useEffect(() => {
@@ -129,7 +130,7 @@ export default function NavBar() {
             </li>
             <li className='listItem'>
             <div onClick={navHistory}>
-            <GoPeople size={20} color="#c87cfc"/>
+            <LiaHistorySolid size={20} color="#c87cfc" />
             <p>History</p>
             </div>
             </li>
