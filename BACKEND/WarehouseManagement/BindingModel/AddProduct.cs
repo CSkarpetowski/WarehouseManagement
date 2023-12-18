@@ -9,4 +9,6 @@
         public int pIdMagazyn { get; set; }
 
     }
+
+
 }

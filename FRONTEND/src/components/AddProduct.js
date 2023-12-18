@@ -59,6 +59,35 @@ export default function AddProduct() {
       }
       
   }
+
+  function generateLOT()
+  {
+    
+    if (document.getElementById('addProductName').value == undefined || document.getElementById('addProductName').value == null || document.getElementById('addProductName').value == ""){
+      return;
+    } else{
+      var prod = document.getElementById('addProductName').value;
+    var lot = "";
+      if (prod.split(' ').length > 1) {
+  
+     prod.split(' ').map((word) => {
+      if (word[0] == null) return;
+        word[0].toUpperCase();
+        lot += word[0];
+     });
+     }else if(prod.length > 1) {
+       lot += prod[0].toUpperCase();
+       lot += prod[1].toUpperCase();
+     }else{
+        lot += prod[0].toUpperCase();
+     }
+    lot += Math.floor((Math.random()*1000) + 1000);
+
+    document.getElementById('addProductLOT').value = lot.toUpperCase();
+    }
+    
+    
+  }    
   return (
     <>
     <div className='addProductPage'>
@@ -68,9 +97,9 @@ export default function AddProduct() {
       <div className='leftSideForm'><img src={formImage} style={{width:'160%'}}/></div>
           <div className='addProductForm'>
           <h2 style={{textAlign:'center'}} >Wprowadź dane produktu</h2>
-          <div><input type='text' placeholder='Nazwa' id='addProductName'/></div>
-          <div><input type='number' placeholder='Ilosc' id='addProductQuantity'/></div>
-          <div><input type='text' placeholder='LOT' id='addProductLOT'/></div>
+          <div><input type='text' placeholder='Nazwa' id='addProductName' /></div>
+          <div><input type='number' placeholder='Ilosc' id='addProductQuantity' onFocus={generateLOT}/></div>
+          <div><input type='text' placeholder='LOT' id='addProductLOT' disabled/></div>
           <div>
             <select id='addProductIdWarehouse' name='addProductIdWarehouse'>
               <option value={1}>Magazyn nr1</option>
