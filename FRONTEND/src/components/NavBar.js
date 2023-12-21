@@ -6,6 +6,7 @@ import {AiOutlineIdcard} from 'react-icons/ai';
 import {AiOutlineDashboard} from 'react-icons/ai';
 import {LiaClipboardListSolid} from 'react-icons/lia';
 import {GoPeople} from 'react-icons/go';
+import ReactWeather, { useVisualCrossing } from 'react-open-weather';
 import {BsTruck} from 'react-icons/bs';
 import { FaDatabase } from 'react-icons/fa';
 import {FaSignOutAlt} from 'react-icons/fa';
@@ -37,6 +38,13 @@ export default function NavBar() {
       setBellGreen(true);
     });
   }, []);
+  const { data, isLoading, errorMessage } = useVisualCrossing({
+    key: '24ACX68MVGMUUKAFVR5CUHNNQ',
+    lat: '50.76844',
+    lon: '17.84652',
+    lang: 'pl',
+    unit: 'metric', // values are (metric,us,uk)
+  });
   
   const navigate = useNavigate();
   const username = localStorage.getItem("username");
@@ -68,6 +76,7 @@ export default function NavBar() {
   return (
     <nav>
       <div style={{ textAlign: 'end', padding: '10px' }}>
+     
         <FiAlignLeft
         className='noteBell'
           size={25}
@@ -95,6 +104,15 @@ export default function NavBar() {
              <div>
             <AiOutlineDashboard size={20} color='#c87cfc'/>
             Dashboard
+            <ReactWeather
+      isLoading={isLoading}
+      errorMessage={errorMessage}
+      data={data}
+      lang="en"
+      locationLabel="Dobrzeń Wielki"
+      unitsLabels={{ temperature: 'C', windSpeed: 'Km/h' }}
+      showForecast
+    />
              </div>
             </li>
             <li className='listItem'>
