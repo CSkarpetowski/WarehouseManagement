@@ -102,3 +102,37 @@ h2 {
 .qrTable th {
   background-color: #f2f2f2;
 }
+
+.printButton {
+  display: block;
+  background-color: #252424;
+  border: none;
+  border-radius: 50%;
+  padding: 15px 15px;
+  cursor: pointer;
+}
+
+.printButton:hover {
+  background-color: #c97cfc5c;
+}
+
+@media print {
+  .qrInfo {
+    color:black;
+  }
+  .warehouseleftPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3cm;
+    height: 100%;
+    width: 100%;
+    page-break-after: always;
+    overflow: hidden;
+    border: none;
+  }
+  .printButton{
+    display: none;
+  }
+}
