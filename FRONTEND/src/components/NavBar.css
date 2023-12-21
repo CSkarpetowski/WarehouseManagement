@@ -56,6 +56,7 @@ p
 #appMenu
 {
     margin-top: 20%;
+    overflow: hidden;
 }
 #appMenu::before
 {
@@ -69,6 +70,7 @@ p
     list-style-type: none;
     color: white;
     font-size: 25px;
+    overflow-x: hidden;
     
 }
 .listItem
