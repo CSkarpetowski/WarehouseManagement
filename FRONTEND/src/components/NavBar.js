@@ -5,6 +5,8 @@ import {BiBell} from "react-icons/bi";
 import {AiOutlineIdcard} from 'react-icons/ai';
 import {AiOutlineDashboard} from 'react-icons/ai';
 import {LiaClipboardListSolid} from 'react-icons/lia';
+import langPL from '../img/langPL.png';
+import langEN from '../img/langEN.png';
 import {GoPeople} from 'react-icons/go';
 import {BsTruck} from 'react-icons/bs';
 import { FaDatabase } from 'react-icons/fa';
@@ -16,11 +18,14 @@ import AddProduct from './AddProduct';
 import OrderPage from './OrderPage';
 import { MdAssignmentAdd } from "react-icons/md";
 import WarehouseNote from './WarehouseNote'; //Import powiadomień
-import {useGlobalState, setGlobalState} from './NoteAlert';
+import {useGlobalState, setGlobalState} from './GlobalVariables';
 import * as signalR from '@microsoft/signalr';
 import { LiaHistorySolid } from "react-icons/lia";
 export default function NavBar() {
   const [bellGreen,setBellGreen] = useState();
+  const [language,setLanguage] = useGlobalState('language');
+
+
   useEffect(() => {
     const connection = new signalR.HubConnectionBuilder()
       .withUrl("https://localhost:7099/productChanged") // Replace with your SignalR endpoint
@@ -67,6 +72,20 @@ export default function NavBar() {
   const navHistory = () => {navigate("/History")}
   return (
     <nav>
+      <div>
+
+      <img alt="Polish"
+        style={{margin:'5px',borderBottom: language==='PL' ? '2px solid green' : 'none'}}
+        onClick={()=>{setLanguage('PL')}}
+        width={25} src={langPL}/>
+
+      <img alt="English"
+       style={{margin:'5px',borderBottom: language==='EN' ? '2px solid green' : 'none'}}
+       onClick={()=>{setLanguage('EN')}}
+       width={25} src={langEN}/>
+
+      </div>
+
       <div style={{ textAlign: 'end', padding: '10px' }}>
         <FiAlignLeft
         className='noteBell'

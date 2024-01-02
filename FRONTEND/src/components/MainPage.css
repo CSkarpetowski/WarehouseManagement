@@ -121,3 +121,14 @@ progress
 .green::-webkit-progress-value{
     background-color: green;
 }
+
+.clockBox{
+    background-color: #033e91c2;
+    text-align: center;
+    padding: 1%;
+    position:fixed;
+    top: 10%;
+    border: 3px solid #c87cfc;
+    border-radius: 5px;
+    left: 90%;
+}

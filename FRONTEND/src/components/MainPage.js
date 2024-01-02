@@ -3,6 +3,7 @@ import './MainPage.css';
 import NavBar from './NavBar';
 import axios from 'axios';
 import warehouseIcon from '../img/warehouse.png';
+import Clock from 'react-live-clock';
 import { useNavigate } from 'react-router-dom';
 export default function MainPage() {
   var stan1;
@@ -11,6 +12,7 @@ export default function MainPage() {
   const [stanone, setstanone] = useState({ ilosc: 0, pojemnosc: 0 });
   const [stantwo, setstantwo] = useState({ ilosc: 0, pojemnosc: 0 });
   const [stanthree, setstanthree] = useState({ ilosc: 0, pojemnosc: 0 });
+ 
     useEffect(() => {
       const fetchData = async () => {
         try {
@@ -55,6 +57,13 @@ export default function MainPage() {
   return (
     <div id='mainPage'>
       <NavBar/>
+      <div className='clockBox'>
+      <Clock
+          format={'HH:mm:ss  DD.MM.YYYY'}
+          ticking={true}
+          style={{color:'white', fontSize:'20px'}}
+          />
+      </div>
     <h1  className='cardTitle'>Dashboard</h1>
     <div  className='warehouseAreaMain'>
       <div onClick={()=>navigate("/WarehouseOne")} id='warehouseOne' style={{paddingBottom:'3%'}}>

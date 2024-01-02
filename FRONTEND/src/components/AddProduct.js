@@ -3,7 +3,7 @@ import './AddProduct.css';
 import NavBar from './NavBar';
 import formImage from '../img/addProductimg.jpg';
 import axios from 'axios';
-import {useGlobalState, setGlobalState} from './NoteAlert';
+import {useGlobalState, setGlobalState} from './GlobalVariables';
 
 export default function AddProduct() {
   

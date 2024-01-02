@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
 import './OrderPage.css';
 import axios from 'axios';
-import {useGlobalState, setGlobalState} from './NoteAlert';
+import {useGlobalState, setGlobalState} from './GlobalVariables';
 
 const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange }) => {
   const handleRowClick = (row) => {
