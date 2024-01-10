@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./NavBar.css";
+import WarehouseWeather from './WarehouseWeather';
 import {BiUserCircle} from "react-icons/bi";
 import {BiBell} from "react-icons/bi";
 import {AiOutlineIdcard} from 'react-icons/ai';
@@ -8,12 +9,12 @@ import {LiaClipboardListSolid} from 'react-icons/lia';
 import langPL from '../img/langPL.png';
 import langEN from '../img/langEN.png';
 import {GoPeople} from 'react-icons/go';
-import ReactWeather, { useVisualCrossing } from 'react-open-weather';
 import {BsTruck} from 'react-icons/bs';
 import { FaDatabase } from 'react-icons/fa';
 import {FaSignOutAlt} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { FiAlignLeft } from "react-icons/fi";
+import { PiCloudSunBold } from "react-icons/pi";
 import LoginPage from './LoginPage';
 import AddProduct from './AddProduct';
 import OrderPage from './OrderPage';
@@ -43,18 +44,13 @@ export default function NavBar() {
       setBellGreen(true);
     });
   }, []);
-  const { data, isLoading, errorMessage } = useVisualCrossing({
-    key: '24ACX68MVGMUUKAFVR5CUHNNQ',
-    lat: '50.76844',
-    lon: '17.84652',
-    lang: 'pl',
-    unit: 'metric', // values are (metric,us,uk)
-  });
+  
   
   const navigate = useNavigate();
   const username = localStorage.getItem("username");
   const isManager = localStorage.getItem("isManager");
   const [showNote, setShowNote] = useState(false);
+  const [Weather, setWeather] = useState(false);
 
   function SignOut() {
     localStorage.removeItem("token");
@@ -68,6 +64,10 @@ export default function NavBar() {
 
   const toggleNote = () => {
     setShowNote(!showNote);
+   
+  };
+  const toggleWeather = () => {
+    setWeather(!Weather);
    
   };
 
@@ -101,13 +101,21 @@ export default function NavBar() {
           size={25}
           color={bellGreen ? "red" : "gold"}
           onClick={NoteOff}
-    />
+    />  
+      
           <BiBell
           className='noteBell'
           size={25}
           color={ "gold"}
           onClick={toggleNote}
         />
+        <PiCloudSunBold 
+        className='noteBell'
+        size={25}
+        color={ "gold"}
+        onClick={toggleWeather}
+        />
+        {Weather && <WarehouseWeather Wheater={Weather} />}
         <WarehouseNote {...{ showNote, toggleNote }} />
       </div>
       <h2 id='barTitle'>Warehouse Management</h2>
@@ -123,15 +131,7 @@ export default function NavBar() {
              <div>
             <AiOutlineDashboard size={20} color='#c87cfc'/>
             Dashboard
-            <ReactWeather
-      isLoading={isLoading}
-      errorMessage={errorMessage}
-      data={data}
-      lang="en"
-      locationLabel="Dobrzeń Wielki"
-      unitsLabels={{ temperature: 'C', windSpeed: 'Km/h' }}
-      showForecast
-    />
+            
              </div>
             </li>
             <li className='listItem'>
@@ -176,6 +176,7 @@ export default function NavBar() {
           <FaSignOutAlt size={20} color="white" />
           SignOut
         </button>
+        
       </div>
     </nav>
   );
