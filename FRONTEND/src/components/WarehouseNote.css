@@ -7,7 +7,7 @@
   top: 10px;
   left: 1vw;
   right: 0;
-  background-color: #f9f9f9;
+  background-color: #0F1A2B;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 5px 20px 20px 20px;
@@ -19,9 +19,15 @@
   transition: ease-in-out 0.3s;
 }
 .title {
-  color: black;
+  color: white;
+  justify-content: left;
+  flex: 1; /* Added to make the title take up all available space */
+  
 }
-
+.addContainer {
+  display: flex;
+  align-items: center;
+}
 
 .warehouse-note-item {
   margin-bottom: 10px;
@@ -56,32 +62,37 @@ display: flex;
   padding: 8px 0 0 12%;
   border-bottom: 1px solid #ccc;
   margin-bottom: 10px;
+  position: relative; 
 }
 
 .notification
 {
   list-style-type: none;
+  
   display: flex;
   justify-content: center;
   flex-direction: column;
 justify-content: center;
   padding: 0px;
 }
-.addButton
-{
-  margin: auto 15% auto 5px;
+.addContainer .addButton {
+  margin: auto 5px;
   height: 30px;
   width: 30px;
   padding: 2px;
+  background-color: #0078a0c2; 
+
 }
 
 .ReactModal__Overlay {
   background-color: rgba(0, 0, 0, 0.5);
+  
 }
 
 .ReactModal__Content {
   width: 30%;
   height: 40%;
+  color: #0F1A2B;
   margin: auto;
   margin-top: 100px; 
 }

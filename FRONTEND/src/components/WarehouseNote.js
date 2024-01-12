@@ -114,9 +114,11 @@ const renderEnglish = () => {
         <div className="warehouse-note-list">
           <div className='noteHeader'>
             <h2 className='title'>Notes</h2>
+            <div class="addContainer"> 
             <button className='addButton' onClick={handleAddNoteClick}>
               <RiAddLine />
             </button>
+          </div>
           </div>
           <ul className='notification'>
             {notes.map((note) => (
