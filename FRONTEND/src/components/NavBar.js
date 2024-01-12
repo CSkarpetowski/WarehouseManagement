@@ -26,6 +26,7 @@ import { LiaHistorySolid } from "react-icons/lia";
 export default function NavBar() {
   const [bellGreen,setBellGreen] = useState();
   const [language,setLanguage] = useGlobalState('language');
+  console.log(language);
 
 
   useEffect(() => {
@@ -78,6 +79,8 @@ export default function NavBar() {
   const navWorkers = () => {navigate("/Workers")}
   const navDriver = () => {navigate("/Driver")}
   const navHistory = () => {navigate("/History")}
+
+  const renderPolish = () => {
   return (
     <nav>
       <div>
@@ -130,26 +133,26 @@ export default function NavBar() {
         <li onClick={navDashboard} className='listItem'>
              <div>
             <AiOutlineDashboard size={20} color='#c87cfc'/>
-            Dashboard
+            Główna
             
              </div>
             </li>
             <li className='listItem'>
             <div onClick={navDriver}>
             <BsTruck size={20} color="#c87cfc"/>
-            <p>Order</p>
+            <p>Zamówienia</p>
             </div>
           </li> 
             <li className='listItem'>
             <div onClick={navAddProduct}>
             <FaDatabase size={20} color="#c87cfc"/>
-            <p>AddProduct</p>
+            <p>Dodaj Produkt</p>
             </div>
           </li>
           <li className='listItem'>
             <div onClick={navAddOrder}>
             <MdAssignmentAdd size={20}  color="#c87cfc" />
-            <p>AddOrder</p>
+            <p>Dodaj Zam.</p>
             </div>
           </li>
            {/* <li className='listItem'>
@@ -162,22 +165,132 @@ export default function NavBar() {
           <li className='listItem'>
             <div onClick={navWorkers}>
             <GoPeople size={20} color="#c87cfc"/>
-            <p>Workers</p>
+            <p>Pracownicy</p>
             </div>
             </li>
             <li className='listItem'>
             <div onClick={navHistory}>
             <LiaHistorySolid size={20} color="#c87cfc" />
-            <p>History</p>
+            <p>Historia</p>
             </div>
             </li>
         </ul>
         <button className='signOut' onClick={SignOut} >
           <FaSignOutAlt size={20} color="white" />
-          SignOut
+          Wyloguj się
         </button>
         
       </div>
     </nav>
-  );
+  );}
+  const renderEnglish = () => {
+    return (
+      <nav>
+        <div>
+  
+        <img alt="Polish"
+          style={{margin:'5px',borderBottom: language==='PL' ? '2px solid green' : 'none'}}
+          onClick={()=>{setLanguage('PL')}}
+          width={25} src={langPL}/>
+  
+        <img alt="English"
+         style={{margin:'5px',borderBottom: language==='EN' ? '2px solid green' : 'none'}}
+         onClick={()=>{setLanguage('EN')}}
+         width={25} src={langEN}/>
+  
+        </div>
+  
+        <div style={{ textAlign: 'end', padding: '10px' }}>
+       
+          <FiAlignLeft
+          className='noteBell'
+            size={25}
+            color={bellGreen ? "red" : "gold"}
+            onClick={NoteOff}
+      />  
+        
+            <BiBell
+            className='noteBell'
+            size={25}
+            color={ "gold"}
+            onClick={toggleNote}
+          />
+          <PiCloudSunBold 
+          className='noteBell'
+          size={25}
+          color={ "gold"}
+          onClick={toggleWeather}
+          />
+          {Weather && <WarehouseWeather Wheater={Weather} />}
+          <WarehouseNote {...{ showNote, toggleNote }} />
+        </div>
+        <h2 id='barTitle'>Warehouse Management</h2>
+        <div id='userDetail'>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <BiUserCircle className='icon' size={25} color='#c87cfc' />
+            <p style={{ color: isManager === 'true' ? 'gold' : 'white' }} id='userName'>{username}</p>
+          </div>
+        </div>
+        <div id='appMenu'>
+          <ul id='listMenu'>
+          <li onClick={navDashboard} className='listItem'>
+               <div>
+              <AiOutlineDashboard size={20} color='#c87cfc'/>
+              Dashboard
+              
+               </div>
+              </li>
+              <li className='listItem'>
+              <div onClick={navDriver}>
+              <BsTruck size={20} color="#c87cfc"/>
+              <p>Order</p>
+              </div>
+            </li> 
+              <li className='listItem'>
+              <div onClick={navAddProduct}>
+              <FaDatabase size={20} color="#c87cfc"/>
+              <p>AddProduct</p>
+              </div>
+            </li>
+            <li className='listItem'>
+              <div onClick={navAddOrder}>
+              <MdAssignmentAdd size={20}  color="#c87cfc" />
+              <p>AddOrder</p>
+              </div>
+            </li>
+             {/* <li className='listItem'>
+              <div onClick={navOrders}>
+                <LiaClipboardListSolid size={20} color="#c87cfc"/>
+                <p></p> Orders
+              </div>
+              </li> */}
+  
+            <li className='listItem'>
+              <div onClick={navWorkers}>
+              <GoPeople size={20} color="#c87cfc"/>
+              <p>Workers</p>
+              </div>
+              </li>
+              <li className='listItem'>
+              <div onClick={navHistory}>
+              <LiaHistorySolid size={20} color="#c87cfc" />
+              <p>History</p>
+              </div>
+              </li>
+          </ul>
+          <button className='signOut' onClick={SignOut} >
+            <FaSignOutAlt size={20} color="white" />
+            SignOut
+          </button>
+          
+        </div>
+      </nav>
+    );}
+    return (
+      <>
+      {language == "PL" ? renderPolish() : renderEnglish()}
+    
+      </>
+    );
+
 }

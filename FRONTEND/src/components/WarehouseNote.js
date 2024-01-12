@@ -4,10 +4,14 @@ import './WarehouseNote.css';
 import { RiAddLine } from 'react-icons/ri';
 import { format } from 'date-fns';
 import axios from 'axios';
+import {useGlobalState, setGlobalState} from './GlobalVariables';
+
 
 const WarehouseNote = ({ showNote, toggleNote }) => {
   const [notes, setNotes] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [language,setLanguage] = useGlobalState('language');
+  console.log(language);
 
   useEffect(() => {
     // Fetch notes from the server when the component mounts
@@ -62,7 +66,7 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
     addNote();
 
   };
-
+  const renderPolish = () => {
   return (
     <div className="warehouse-note-container">
       {showNote && (
@@ -102,6 +106,53 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
       )}
     </div>
   );
-};
+  }
+const renderEnglish = () => {
+  return (
+    <div className="warehouse-note-container">
+      {showNote && (
+        <div className="warehouse-note-list">
+          <div className='noteHeader'>
+            <h2 className='title'>Notes</h2>
+            <button className='addButton' onClick={handleAddNoteClick}>
+              <RiAddLine />
+            </button>
+          </div>
+          <ul className='notification'>
+            {notes.map((note) => (
+              <li key={note.id} className="warehouse-note-item">
+                <div className="warehouse-note-text">{note.tresc}</div>
+                <div className="warehouse-note-time">{format(new Date(note.czas), 'HH:mm dd-MM-yyyy')}</div>
+              </li>
+            ))}
+          </ul>
+
+          <Modal
+            isOpen={isModalOpen}
+            onRequestClose={handleCancelNoteClick}
+            contentLabel="Add Note Modal"
+          >
+            <h2 className='title'>Add note</h2>
+            <textarea
+              type="text"
+              placeholder="Dodaj notatkę..."
+              id='addTresc'
+            />
+            <div className="modalButtons">
+              <button onClick={handleSaveNoteClick}>Save</button>
+              <button onClick={handleCancelNoteClick}>Cancel</button>
+            </div>
+          </Modal>
+        </div>
+      )}
+    </div>
+  );
+ }
+  return (
+  <>
+  {language == "PL" ? renderPolish() : renderEnglish()}
+
+  </>
+);}
 
 export default WarehouseNote;

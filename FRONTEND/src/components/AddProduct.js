@@ -5,6 +5,7 @@ import formImage from '../img/addProductimg.jpg';
 import axios from 'axios';
 import {useGlobalState, setGlobalState} from './GlobalVariables';
 
+
 export default function AddProduct() {
   
   function addProductDB() {
@@ -65,36 +66,70 @@ export default function AddProduct() {
     }
     
     
-  }    
+  } 
+  const [language,setLanguage] = useGlobalState('language');
+   console.log(language);
   const resetProductAdded = () => {
    // setNotification({ showNotification: false });
    setGlobalState('signalChange',false);
   };
 
-  return (
-    <>
+  const renderPolish = () => {
+    return(
       <div className='addProductPage'>
-        <h1 className='cardTitle'>AddProduct</h1>
-        {/* Pass the callback function to reset productAdded to NavBar */}
-        <NavBar />
-        <div className='addProductArea'>
-          <div className='leftSideForm'><img src={formImage} style={{ width: '160%' }} /></div>
-          <div className='addProductForm'>
-          <h2 style={{textAlign:'center'}} >Wprowadź dane produktu</h2>
-          <div><input type='text' placeholder='Nazwa' id='addProductName' /></div>
-          <div><input type='number' placeholder='Ilosc' id='addProductQuantity' onFocus={generateLOT}/></div>
-          <div><input type='text' placeholder='LOT' id='addProductLOT' disabled/></div>
-          <div>
-            <select id='addProductIdWarehouse' name='addProductIdWarehouse'>
-              <option value={1}>Magazyn nr1</option>
-              <option value={2}>Magazyn nr2</option>
-              <option value={3}>Magazyn nr3</option>
-            </select>
-          </div>
-          <button id='productButton' onClick={addProductDB}>Dodaj produkt</button>
-          </div>
+      <h1 className='cardTitle'>Dodaj Produkt</h1>
+      {/* Pass the callback function to reset productAdded to NavBar */}
+      <NavBar />
+      <div className='addProductArea'>
+        <div className='leftSideForm'><img src={formImage} style={{ width: '160%' }} /></div>
+        <div className='addProductForm'>
+        <h2 style={{textAlign:'center'}} >Wprowadź dane produktu</h2>
+        <div><input type='text' placeholder='Nazwa' id='addProductName' /></div>
+        <div><input type='number' placeholder='Ilosc' id='addProductQuantity' onFocus={generateLOT}/></div>
+        <div><input type='text' placeholder='LOT' id='addProductLOT' disabled/></div>
+        <div>
+          <select id='addProductIdWarehouse' name='addProductIdWarehouse'>
+            <option value={1}>Magazyn nr1</option>
+            <option value={2}>Magazyn nr2</option>
+            <option value={3}>Magazyn nr3</option>
+          </select>
+        </div>
+        <button id='productButton' onClick={addProductDB}>Dodaj produkt</button>
         </div>
       </div>
+    </div>
+    )
+  }
+  const renderEnglish = () => {
+    return(
+      <div className='addProductPage'>
+      <h1 className='cardTitle'>Add Product</h1>
+      {/* Pass the callback function to reset productAdded to NavBar */}
+      <NavBar />
+      <div className='addProductArea'>
+        <div className='leftSideForm'><img src={formImage} style={{ width: '160%' }} /></div>
+        <div className='addProductForm'>
+        <h2 style={{textAlign:'center'}} >Insert product data</h2>
+        <div><input type='text' placeholder='Name' id='addProductName' /></div>
+        <div><input type='number' placeholder='Quantity' id='addProductQuantity' onFocus={generateLOT}/></div>
+        <div><input type='text' placeholder='LOT' id='addProductLOT' disabled/></div>
+        <div>
+          <select id='addProductIdWarehouse' name='addProductIdWarehouse'>
+            <option value={1}>Warehouse nr1</option>
+            <option value={2}>Warehouse nr2</option>
+            <option value={3}>Warehouse nr3</option>
+          </select>
+        </div>
+        <button id='productButton' onClick={addProductDB}>Add Product</button>
+        </div>
+      </div>
+    </div>
+    )
+  }
+
+  return (
+    <>
+    {language == "PL" ? renderPolish() : renderEnglish()}
+
     </>
-  );
-}
+  );}

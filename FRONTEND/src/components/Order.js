@@ -4,11 +4,14 @@ import axios from 'axios';
 import "./Order.css";
 import { MdDelete } from "react-icons/md";
 import OrderDetails from './OrderDetails';
+import {useGlobalState, setGlobalState} from './GlobalVariables';
 
 export default function Order() {
   const [clientsData, setClientsData] = useState([]);
   const [showDetails, setShowDetails] = useState(false);
   const [orderId, setOrderId] = useState(0);
+  const [language,setLanguage] = useGlobalState('language');
+  console.log(language);
 
   useEffect(() => {
     try {
@@ -32,46 +35,102 @@ export default function Order() {
   if (!Array.isArray(clientsData)) {
     return <p>No data available</p>;
   }
+  const renderPolish = () => {
+    return (
+      <>
+        {showDetails && <OrderDetails orderId={orderId} handleClose={closeOrderDetails} />}
+        <div className='driverPage'>
+          <NavBar />
+          <h1 className='cardTitle'>Zamówienia</h1>
+          <div className='tableDriver'>
+            <table className='driverTable'>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>ID_Zam</th>
+                  <th>Imie</th>
+                  <th>Firma</th>
+                  <th>Telefon</th>
+                  <th>NIP</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {clientsData.map((client) => (
+                  <tr key={client.idKlient}>
+                    <td>{client.idKlient}</td>
+                    <td style={{ display: 'flex' }} >{client.zamowienia.map((order) => (
+                      <li key={order.idZamowienie}>
+                        <button onClick={() => openOrderDetails(order.idZamowienie)} className='orderButton'>{order.idZamowienie}</button>
+                      </li>
+                    ))}</td>
+                    <td>{client.kierowca}</td>
+                    <td>{client.firma}</td>
+                    <td>{client.telefon}</td>
+                    <td>{client.nip}</td>
+                    <td style={{ textAlign: 'center' }}><MdDelete size={25} color='red' /></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </>
+    );
+  }
+  const renderEnglish = () => {
+    return (
+      <>
+        {showDetails && <OrderDetails orderId={orderId} handleClose={closeOrderDetails} />}
+        <div className='driverPage'>
+          <NavBar />
+          <h1 className='cardTitle'>Orders</h1>
+          <div className='tableDriver'>
+            <table className='driverTable'>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>ID_Order</th>
+                  <th>Name</th>
+                  <th>Company</th>
+                  <th>Phone</th>
+                  <th>NIP</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {clientsData.map((client) => (
+                  <tr key={client.idKlient}>
+                    <td>{client.idKlient}</td>
+                    <td style={{ display: 'flex' }} >{client.zamowienia.map((order) => (
+                      <li key={order.idZamowienie}>
+                        <button onClick={() => openOrderDetails(order.idZamowienie)} className='orderButton'>{order.idZamowienie}</button>
+                      </li>
+                    ))}</td>
+                    <td>{client.kierowca}</td>
+                    <td>{client.firma}</td>
+                    <td>{client.telefon}</td>
+                    <td>{client.nip}</td>
+                    <td style={{ textAlign: 'center' }}><MdDelete size={25} color='red' /></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </>
+    );
+  }
+  
+  
 
   return (
     <>
-      {showDetails && <OrderDetails orderId={orderId} handleClose={closeOrderDetails} />}
-      <div className='driverPage'>
-        <NavBar />
-        <h1 className='cardTitle'>Orders</h1>
-        <div className='tableDriver'>
-          <table className='driverTable'>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>ID_zam</th>
-                <th>Name</th>
-                <th>Company</th>
-                <th>Phone</th>
-                <th>NIP</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              {clientsData.map((client) => (
-                <tr key={client.idKlient}>
-                  <td>{client.idKlient}</td>
-                  <td style={{ display: 'flex' }} >{client.zamowienia.map((order) => (
-                    <li key={order.idZamowienie}>
-                      <button onClick={() => openOrderDetails(order.idZamowienie)} className='orderButton'>{order.idZamowienie}</button>
-                    </li>
-                  ))}</td>
-                  <td>{client.kierowca}</td>
-                  <td>{client.firma}</td>
-                  <td>{client.telefon}</td>
-                  <td>{client.nip}</td>
-                  <td style={{ textAlign: 'center' }}><MdDelete size={25} color='red' /></td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
+    {language == "PL" ? renderPolish() : renderEnglish()}
+
     </>
-  );
-}
+  );}
+  
+
+
+

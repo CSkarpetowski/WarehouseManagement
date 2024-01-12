@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import ReactToPrint from 'react-to-print';
 import './OrderDetails.css';
 import axios from 'axios';
+import {useGlobalState, setGlobalState} from './GlobalVariables';
 
 class ComponentToPrint extends React.Component {
   render() {
     const { orderDetails, orderId } = this.props;
+ 
 
     return (
       <div>
@@ -37,6 +39,8 @@ class ComponentToPrint extends React.Component {
 }
 
 export default function OrderDetails(props) {
+  const [language,setLanguage] = useGlobalState('language');
+  console.log(language);
   const { orderId, handleClose } = props;
   const [orderDetails, setOrderDetails] = useState([]);
   const componentRef = React.createRef();
@@ -59,14 +63,14 @@ export default function OrderDetails(props) {
       console.log(err);
     }
   };
-
+  const renderPolish = () => {
   return (
     <div className="orderDetailsMain">
       <h1 className="orderWindowBar">
         <p onClick={handleClose} className="closeButton">
           X
         </p>
-        Client ID : {orderId}
+        ID Klienta : {orderId}
       </h1>
       <div className="orderDetailsTableArea">
         <p
@@ -78,17 +82,55 @@ export default function OrderDetails(props) {
             margin: '0',
           }}
         >
-          Order details
+          szczegóły zamowienia
         </p>
         <ComponentToPrint orderDetails={orderDetails} orderId={orderId} ref={componentRef} />
       </div>
       <ReactToPrint
-        trigger={() => <button className="orderDetailsPrint">Print Order</button>}
+        trigger={() => <button className="orderDetailsPrint">Drukuj Zamówienie</button>}
         content={() => componentRef.current}
       />
       <button className="orderDetailsDelete" onClick={deleteOrder}>
-        Delete Order
+        Usuń Zamówienie
       </button>
     </div>
-  );
+  );}
+  const renderEnglish = () => {
+    return (
+      <div className="orderDetailsMain">
+        <h1 className="orderWindowBar">
+          <p onClick={handleClose} className="closeButton">
+            X
+          </p>
+          Client ID : {orderId}
+        </h1>
+        <div className="orderDetailsTableArea">
+          <p
+            style={{
+              color: 'white',
+              fontSize: '30px',
+              textAlign: 'center',
+              fontFamily: 'Roboto, Helvetica, sans-serif',
+              margin: '0',
+            }}
+          >
+            Order details
+          </p>
+          <ComponentToPrint orderDetails={orderDetails} orderId={orderId} ref={componentRef} />
+        </div>
+        <ReactToPrint
+          trigger={() => <button className="orderDetailsPrint">Print Order</button>}
+          content={() => componentRef.current}
+        />
+        <button className="orderDetailsDelete" onClick={deleteOrder}>
+          Delete Order
+        </button>
+      </div>
+    );}
+    return (
+      <>
+      {language == "PL" ? renderPolish() : renderEnglish()}
+    
+      </>
+    );
 }

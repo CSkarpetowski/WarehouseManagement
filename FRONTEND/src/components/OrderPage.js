@@ -4,11 +4,13 @@ import './OrderPage.css';
 import axios from 'axios';
 import {useGlobalState, setGlobalState} from './GlobalVariables';
 
+
 const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange }) => {
   const handleRowClick = (row) => {
     handleCheck({ target: { checked: !tempTable.some(item => item.idProd === row.idProd) } }, row);
   };
-
+ 
+   
   return (
     <div className="orderleftPanel">
       <table className='orderTable'>
@@ -51,6 +53,7 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
   );
 };
 
+
 const RightPanel = ({ tempTable }) => {
   return (
     <div className="orderrightPanel">
@@ -85,6 +88,8 @@ const OrderPage = () => {
   const [selectedWarehouse, setSelectedWarehouse] = useState('');
   const [selectedClient, setSelectedClient] = useState('');
   const [klient, setKlient] = useState([]);
+  const [language, setLanguage] = useGlobalState('language');
+  console.log(language);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -178,48 +183,111 @@ const OrderPage = () => {
     setTableData(newTableData);
   };
 
-  return (
-    <div id='mainPage'>
-      <NavBar />
-      <h1 className='cardTitle'>Dodaj zamówienie</h1>
-      <div className='warehouseArea'>
-        <div className='buttonContainer'>
-          <label>Wybierz magazyn:</label>
-          <select
-            value={selectedWarehouse}
-            onChange={handleWarehouseChange}
-          >
-            <option value=''>Wszystkie</option>
-            <option value='1'>Magazyn 1</option>
-            <option value='2'>Magazyn 2</option>
-            <option value='3'>Magazyn 3</option>
-          </select>
-          <label>Wybierz klienta:</label>
-          <select
-            value={selectedClient}
-            onChange={handleClientChange}
-          >
-            <option value=''>Wybierz klienta</option>
-            {klient.map((client) => (
-              <option key={client.idKlient} value={client.idKlient}>
-                {client.firma}
-              </option>
-            ))}
-          </select>
-          <button onClick={handleDodajZamowienie}>Dodaj zamówienie</button>
-        </div>
-        <div className="ordertablesContainer">
-          <LeftPanel
-            tableData={tableData}
-            tempTable={tempTable}
-            handleCheck={handleCheck}
-            handleTableDataChange={handleTableDataChange}
-          />
-          <RightPanel tempTable={tempTable} />
+  const renderPolish = () => {
+    return (
+      <div id='mainPage'>
+        <NavBar />
+        <h1 className='cardTitle'>Dodaj zamówienie</h1>
+        <div className='warehouseArea'>
+          <div className='buttonContainer'>
+            <label>Wybierz magazyn:</label>
+            <select
+              value={selectedWarehouse}
+              onChange={handleWarehouseChange}
+            >
+              <option value=''>Wszystkie</option>
+              <option value='1'>Magazyn 1</option>
+              <option value='2'>Magazyn 2</option>
+              <option value='3'>Magazyn 3</option>
+            </select>
+            <label>Wybierz klienta:</label>
+            <select
+              value={selectedClient}
+              onChange={handleClientChange}
+            >
+              <option value=''>Wybierz klienta</option>
+              {klient.map((client) => (
+                <option key={client.idKlient} value={client.idKlient}>
+                  {client.firma}
+                </option>
+              ))}
+            </select>
+            <button onClick={handleDodajZamowienie}>Dodaj zamówienie</button>
+          </div>
+          <div className="ordertablesContainer">
+            <LeftPanel
+              tableData={tableData}
+              tempTable={tempTable}
+              handleCheck={handleCheck}
+              handleTableDataChange={handleTableDataChange}
+            />
+            <RightPanel tempTable={tempTable} />
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+  const renderEnglish = () => {
+    return (
+      <div id='mainPage'>
+        <NavBar />
+        <h1 className='cardTitle'>Add Order</h1>
+        <div className='warehouseArea'>
+          <div className='buttonContainer'>
+            <label>Choose Warehouse:</label>
+            <select
+              value={selectedWarehouse}
+              onChange={handleWarehouseChange}
+            >
+              <option value=''>All</option>
+              <option value='1'>Warehouse 1</option>
+              <option value='2'>Warehouse 2</option>
+              <option value='3'>Warehouse 3</option>
+            </select>
+            <label>Choose client:</label>
+            <select
+              value={selectedClient}
+              onChange={handleClientChange}
+            >
+              <option value=''>Choose client</option>
+              {klient.map((client) => (
+                <option key={client.idKlient} value={client.idKlient}>
+                  {client.firma}
+                </option>
+              ))}
+            </select>
+            <button onClick={handleDodajZamowienie}>Add Order</button>
+          </div>
+          <div className="ordertablesContainer">
+            <LeftPanel
+              tableData={tableData}
+              tempTable={tempTable}
+              handleCheck={handleCheck}
+              handleTableDataChange={handleTableDataChange}
+            />
+            <RightPanel tempTable={tempTable} />
+          </div>
+        </div>
+      </div>
+    );
+  }
+  
+  
+
+  return (
+    <>
+    {language == "PL" ? renderPolish() : renderEnglish()}
+
+    </>
+  );}
+
 
 export default OrderPage;
+
+
+
+
+
+
+
+
