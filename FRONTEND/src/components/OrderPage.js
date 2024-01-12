@@ -9,8 +9,10 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
   const handleRowClick = (row) => {
     handleCheck({ target: { checked: !tempTable.some(item => item.idProd === row.idProd) } }, row);
   };
+  const [language, setLanguage] = useGlobalState('language');
+  console.log(language);
  
-   
+  const renderPolish = () => {
   return (
     <div className="orderleftPanel">
       <table className='orderTable'>
@@ -50,11 +52,61 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
         </tbody>
       </table>
     </div>
-  );
+  );}
+  const renderEnglish = () => {
+    return (
+      <div className="orderleftPanel">
+        <table className='orderTable'>
+          <thead>
+            <tr>
+              <th>Choose</th>
+              <th>Products</th>
+              <th>LOT</th>
+              <th className='itemQuantity'>Quantity</th>
+              <th>Warehouse</th>
+            </tr>
+          </thead>
+          <tbody className='table'>
+            {tableData && tableData.map((row) => (
+              <tr id='orderList' key={row.idProd}>
+                <td id='idprod' value={row.idProd} onClick={() => handleRowClick(row)}>
+                  <input
+                    type='checkbox'
+                    onChange={(e) => handleCheck(e, row)}
+                    checked={tempTable.some(item => item.idProd === row.idProd)}
+                  />
+                </td>
+                <td id="nazwa" onClick={() => handleRowClick(row)}>{row.nazwa}</td>
+                <td id="lot" onClick={() => handleRowClick(row)}>{row.lot}</td>
+                <td className='itemQuantity'>
+                  <input
+                    type="number"
+                    min="1"
+                    max={row.ilosc}
+                    value={row.ilosc}
+                    onChange={(e) => handleTableDataChange(e, row)}
+                  />
+                </td >
+                <td id="idmagazyn" onClick={() => handleRowClick(row)}>{row.pIdMagazyn}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );}
+    return (
+      <>
+      {language == "PL" ? renderPolish() : renderEnglish()}
+    
+      </>
+    );
 };
 
 
 const RightPanel = ({ tempTable }) => {
+  const [language, setLanguage] = useGlobalState('language');
+  console.log(language);
+  const renderPolish = () => {
   return (
     <div className="orderrightPanel">
       <table className='finalOrder'>
@@ -78,7 +130,38 @@ const RightPanel = ({ tempTable }) => {
         </tbody>
       </table>
     </div>
-  );
+  );}
+  const renderEnglish = () => {
+    return (
+      <div className="orderrightPanel">
+        <table className='finalOrder'>
+          <thead>
+            <tr>
+              <th className='productName'>Products</th>
+              <th className='tableLOT'>LOT</th>
+              <th>Quantity</th>
+              <th>Warehouse</th>
+            </tr>
+          </thead>
+          <tbody className='table'>
+            {tempTable.map((element, index) => (
+              <tr id='finalorderList' key={index}>
+                <td className='productName'>{element.nazwa}</td>
+                <td>{element.lot}</td>
+                <td>{element.ilosc}</td>
+                <td>{element.pIdMagazyn}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );}
+    return (
+      <>
+      {language == "PL" ? renderPolish() : renderEnglish()}
+    
+      </>
+    );
 };
 
 const OrderPage = () => {

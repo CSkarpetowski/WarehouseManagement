@@ -5,11 +5,15 @@ import NavBar from './NavBar';
 import QRCode from 'qrcode.react';
 import { useReactToPrint } from 'react-to-print';
 import { PiPrinter } from "react-icons/pi";
+import {useGlobalState, setGlobalState} from './GlobalVariables';
+
 
 const WarehouseThree = () => {
   const [selectedRow, setSelectedRow] = useState(null);
   const [warehouseData, setWarehouseData] = useState([]);
   const leftPanelRef = useRef();
+  const [language,setLanguage] = useGlobalState('language');
+  console.log(language);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -76,7 +80,7 @@ const WarehouseThree = () => {
         )}
         {decodedInfo && (
           <div className='qrInfo'>
-            <h2>Informacje w kodzie QR:</h2>
+            <h2>Info QR:</h2>
             <pre>{JSON.stringify(decodedInfo, null, 2)}</pre>
           </div>
         )}
@@ -85,16 +89,17 @@ const WarehouseThree = () => {
   });
 
   const RightPanel = ({ warehouseData, setSelectedRow }) => {
-    return (
-      <div className="warehouserightPanel">
-        <table className='qrTable'>
-          <thead>
-            <tr style={{ textAlign: 'center' }}>
-              <th>ID Prod</th>
-              <th>Nazwa</th>
-              <th>LOT</th>
-              <th className="itemQuantity">Ilość palet</th>
-              <th>Alert</th>
+    const renderEnglish = () => {
+      return (
+        <div className="warehouserightPanel">
+          <table className='qrTable'>
+            <thead>
+              <tr style={{ textAlign: 'center' }}>
+                <th>ID Prod</th>
+                <th>Name</th>
+                <th>LOT</th>
+                <th className="itemQuantity">Quantity</th>
+                <th>Alert</th>
             </tr>
           </thead>
           <tbody className='warehousetable'>
@@ -115,17 +120,55 @@ const WarehouseThree = () => {
           </tbody>
         </table>
       </div>
+    );}
+    const renderPolish = () => {
+      return (
+        <div className="warehouserightPanel">
+          <table className='qrTable'>
+            <thead>
+              <tr style={{ textAlign: 'center' }}>
+                <th>ID Prod</th>
+                <th>Nazwa</th>
+                <th>LOT</th>
+                <th className="itemQuantity">Ilość palet</th>
+                <th>Alert</th>
+            </tr>
+          </thead>
+          <tbody className='warehousetable'>
+            {warehouseData.map((val) => (
+              <tr key={val.idProd}
+                style={{ backgroundColor: val.isGood ? 'white' : 'red', }}
+                onClick={() => setSelectedRow(val)}>
+                <td>{val.idProd}</td>
+                <td>{val.nazwa}</td>
+                <td>{val.lot}</td>
+                <td>{val.ilosc}</td>
+                <td>
+                  <button style={{ width: '25%', backgroundColor: 'green', margin: '2px' }} id={val.idProd} onClick={alertValidationOK}></button>
+                  <button style={{ width: '25%', backgroundColor: 'tomato', margin: '2px' }} id={val.idProd} onClick={alertValidationNOK}></button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );}
+    return (
+      <>
+      {language == "PL" ? renderPolish() : renderEnglish()}
+    
+      </>
     );
   };
 
   const handlePrintLeftPanel = useReactToPrint({
     content: () => leftPanelRef.current,
   });
-
+  const renderPolish = () => {
   return (
     <div id='WarehousePage'>
       <NavBar />
-      <h1 className='cardTitle'>- Warehouse 3 -</h1>
+      <h1 className='cardTitle'>- Magazyn 3 -</h1>
       <div className='warehousePageArea'>
         <div className="warehousetablesContainer">
           <LeftPanel selectedRow={selectedRow} ref={leftPanelRef} />
@@ -133,7 +176,27 @@ const WarehouseThree = () => {
         </div>
       </div>
     </div>
-  );
+  );}
+  const renderEnglish = () => {
+    return (
+      <div id='WarehousePage'>
+        <NavBar />
+        <h1 className='cardTitle'>- Warehouse 3 -</h1>
+        <div className='warehousePageArea'>
+          <div className="warehousetablesContainer">
+            <LeftPanel selectedRow={selectedRow} ref={leftPanelRef} />
+            <RightPanel warehouseData={warehouseData} setSelectedRow={setSelectedRow} />
+          </div>
+        </div>
+      </div>
+    );}
+    return (
+      <>
+      {language == "PL" ? renderPolish() : renderEnglish()}
+    
+      </>
+    );  
+
 };
 
 export default WarehouseThree;
