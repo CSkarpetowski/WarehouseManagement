@@ -182,8 +182,8 @@ namespace WarehouseManagement.Controllers
         }
 
 
-        [HttpGet("GetAllLot", Name = "GetAllLot")]
-        public IActionResult TryLot(string lot = "GA0001")
+        [HttpPost("GetAllLot/{lot}", Name = "GetAllLot")]
+        public IActionResult TryLot(string lot)
 
         {
             var lotInBase = _context.Produkt.Where(x => x.LOT == lot);

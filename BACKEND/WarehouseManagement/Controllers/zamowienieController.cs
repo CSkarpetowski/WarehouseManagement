@@ -159,10 +159,24 @@ namespace WarehouseManagement.Controllers
 
                 toAdd.zIdZamowienie = main.IdZamowienie;
                 toAdd.ilosc = item.Ilosc;
+                int ilosctocheck = checkIlosc(item.IdProd);
                 toAdd.LOT = item.LOT;
+                if (item.Ilosc > ilosctocheck)
+                {
+                    toAdd.ilosc = ilosctocheck;
+                }
                 toAdd.zIdProd = item.IdProd;
                 var prod = _context.Produkt.FirstOrDefault(x => x.IdProd == item.IdProd);
-                prod.Ilosc -= item.Ilosc;
+                
+                if (item.Ilosc > ilosctocheck)
+                {
+                    prod.Ilosc -= ilosctocheck;
+                }
+                else
+                {
+                    prod.Ilosc -= item.Ilosc;
+                }
+                
                 _context.Update(prod);
                 await _context.AddAsync(toAdd);
                 await _context.SaveChangesAsync();
@@ -172,6 +186,11 @@ namespace WarehouseManagement.Controllers
             return Ok();
         }
 
+        public int checkIlosc(int idProd)
+        {
+            var prod = _context.Produkt.FirstOrDefault(x => x.IdProd == idProd);
+            return prod.Ilosc;
+        }
         [HttpGet("getAllOld", Name = "getAllOld")]
         public IActionResult getAllOld()
         {

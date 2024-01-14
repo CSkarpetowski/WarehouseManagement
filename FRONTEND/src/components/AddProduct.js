@@ -7,6 +7,7 @@ import {useGlobalState, setGlobalState} from './GlobalVariables';
 import { add } from 'date-fns';
 import {jwtDecode} from "jwt-decode";
 import checkjwt from './CheckJwt.js';
+import { FaLessThanEqual } from 'react-icons/fa';
 
 export default function AddProduct() {
   
@@ -74,6 +75,25 @@ export default function AddProduct() {
     
     
   } 
+
+  function checkLotinbase(lot){
+    axios.get(`https://localhost:7099/api/produkt/GetAllLot/${lot}`)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((err) => alert("Coś poszło nie tak!"));
+  }
+
+  function lot(){
+    let lot = false;
+    while(lot == false){
+      
+    generateLOT();
+    let lotToCheck = document.getElementById('addProductLOT').value;
+    lot = checkLotinbase(lotToCheck);
+    }
+  }
+
   const [language,setLanguage] = useGlobalState('language');
    console.log(language);
   const resetProductAdded = () => {
@@ -118,7 +138,7 @@ export default function AddProduct() {
         <div className='addProductForm'>
         <h2 style={{textAlign:'center'}} >Insert product data</h2>
         <div><input type='text' placeholder='Name' id='addProductName' /></div>
-        <div><input type='number' placeholder='Quantity' id='addProductQuantity' onFocus={generateLOT}/></div>
+        <div><input type='number' placeholder='Quantity' id='addProductQuantity' onFocus={lot}/></div>
         <div><input type='text' placeholder='LOT' id='addProductLOT' disabled/></div>
         <div>
           <select id='addProductIdWarehouse' name='addProductIdWarehouse'>

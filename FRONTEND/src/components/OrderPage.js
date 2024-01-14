@@ -12,7 +12,7 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
   };
   const [language, setLanguage] = useGlobalState('language');
   console.log(language);
- 
+
   const renderPolish = () => {
   return (
     <div className="orderleftPanel">
@@ -45,6 +45,7 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
                   max={row.ilosc}
                   value={row.ilosc}
                   onChange={(e) => handleTableDataChange(e, row)}
+                  
                 />
               </td >
               <td id="idmagazyn" onClick={() => handleRowClick(row)}>{row.pIdMagazyn}</td>
@@ -86,6 +87,7 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
                     max={row.ilosc}
                     value={row.ilosc}
                     onChange={(e) => handleTableDataChange(e, row)}
+                    
                   />
                 </td >
                 <td id="idmagazyn" onClick={() => handleRowClick(row)}>{row.pIdMagazyn}</td>
@@ -130,6 +132,7 @@ const RightPanel = ({ tempTable }) => {
           ))}
         </tbody>
       </table>
+      <p style={{margin: 15}}>Dodanie ilości poza ilością maksymalną doda do zamówienia tylko tyle ile jest na stanie!</p>
     </div>
   );}
   const renderEnglish = () => {
