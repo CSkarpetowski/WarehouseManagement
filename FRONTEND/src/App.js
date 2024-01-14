@@ -12,6 +12,8 @@ import ConnectionTest from './components/ConnectionTest'
 import Order from './components/Order';
 import OrderHistory from './components/OrderHistory';
 import WorkersPage from './components/WorkersPage';
+import {jwtDecode} from "jwt-decode";
+import { el } from 'date-fns/locale';
 
 
 function App() {
@@ -38,6 +40,9 @@ function App() {
     localStorage.getItem("token") ? (flag = true) : (flag = false);
     return flag;
   }
+
+ 
+
   return (
     <div className='App'>
        {isLoading ? ( // Wyświetl loader, jeśli isLoading jest true

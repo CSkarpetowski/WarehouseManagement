@@ -15,7 +15,7 @@ export default function Order() {
 
   useEffect(() => {
     try {
-      axios.get('https://localhost:7099/Drivers').then((Response) => {
+      axios.get('https://localhost:7099/Drivers/ForDrivers').then((Response) => {
         setClientsData(Response.data);
       });
     } catch (err) {

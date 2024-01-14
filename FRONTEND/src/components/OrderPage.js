@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import './OrderPage.css';
 import axios from 'axios';
 import {useGlobalState, setGlobalState} from './GlobalVariables';
+import checkjwt from './CheckJwt';
 
 
 const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange }) => {
@@ -226,7 +227,7 @@ const OrderPage = () => {
       client: selectedClient,
       products: tempTable,
     });
-
+    checkjwt();
     const selectedClientObject = klient.find((client) => client.idKlient === parseInt(selectedClient));
 
     if (selectedClientObject) {

@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.IdentityModel.Tokens;
 using WM.Data.Sql;
+using WM.Data.Sql.DAO;
 
 namespace WarehouseManagement.Controllers
 {
@@ -19,6 +22,13 @@ namespace WarehouseManagement.Controllers
         public IActionResult GetAll()
         {
             var Drivers = _context.Klient.Include(x => x.Zamowienia.Where(x=> x.IsOld == false));
+            return Ok(Drivers);
+        }
+
+        [HttpGet("ForDrivers", Name = "ForDrivers")]
+        public IActionResult GetAllForDrivers()
+        {
+            var Drivers = _context.Klient.Include(x => x.Zamowienia.Where(x => x.IsOld == false)).Where(x => !x.Zamowienia.Count().Equals(0));
             return Ok(Drivers);
         }
 

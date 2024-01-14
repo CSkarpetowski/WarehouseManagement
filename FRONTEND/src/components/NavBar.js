@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./NavBar.css";
 import WarehouseWeather from './WarehouseWeather';
+import {jwtDecode} from "jwt-decode";
 import {BiUserCircle} from "react-icons/bi";
 import {BiBell} from "react-icons/bi";
 import {AiOutlineIdcard} from 'react-icons/ai';
@@ -23,6 +24,8 @@ import WarehouseNote from './WarehouseNote'; //Import powiadomień
 import {useGlobalState, setGlobalState} from './GlobalVariables';
 import * as signalR from '@microsoft/signalr';
 import { LiaHistorySolid } from "react-icons/lia";
+import checkjwt from './CheckJwt';
+
 export default function NavBar() {
   const [bellGreen,setBellGreen] = useState();
   const [language,setLanguage] = useGlobalState('language');
@@ -73,12 +76,12 @@ export default function NavBar() {
   };
 
 
-  const navDashboard = () => {navigate("/MainPage")}
-  const navAddProduct = () => {navigate("/AddProduct")}
-  const navAddOrder = () => {navigate("/AddOrder")}
-  const navWorkers = () => {navigate("/Workers")}
-  const navDriver = () => {navigate("/Driver")}
-  const navHistory = () => {navigate("/History")}
+  const navDashboard = () => {checkjwt(); navigate("/MainPage")}
+  const navAddProduct = () => {checkjwt(); navigate("/AddProduct")}
+  const navAddOrder = () => {checkjwt(); navigate("/AddOrder")}
+  const navWorkers = () => {checkjwt(); navigate("/Workers")}
+  const navDriver = () => {checkjwt(); navigate("/Driver")}
+  const navHistory = () => {checkjwt(); navigate("/History")}
 
   const renderPolish = () => {
   return (

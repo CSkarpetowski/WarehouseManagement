@@ -6,6 +6,7 @@ import warehouseIcon from '../img/warehouse.png';
 import Clock from 'react-live-clock';
 import { useNavigate } from 'react-router-dom';
 import {useGlobalState, setGlobalState} from './GlobalVariables';
+import checkjwt from './CheckJwt';
 
 export default function MainPage() {
   var stan1;
@@ -56,7 +57,10 @@ export default function MainPage() {
         }
 
     
-
+  function navigateTo(warehouse){
+    checkjwt();
+    navigate(warehouse);
+  }
   const navigate = useNavigate();
   const renderPolish = () => {
     return (
@@ -71,21 +75,21 @@ export default function MainPage() {
         </div>
       <h1  className='cardTitle'>Strona Główna</h1>
       <div  className='warehouseAreaMain'>
-        <div onClick={()=>navigate("/WarehouseOne")} id='warehouseOne' style={{paddingBottom:'3%'}}>
+        <div onClick={()=>navigateTo("/WarehouseOne")} id='warehouseOne' style={{paddingBottom:'3%'}}>
           <p className='warehouseTitle'>Magazyn 1</p>
           <img src={warehouseIcon} style={{width:'15vw'}} />
           <p style={{textAlign:'center'}}>{stanone.ilosc}/{stanone.pojemnosc}</p>
           <Progres stan={stanone} />
             
         </div>
-        <div onClick={()=>navigate("/WarehouseTwo")} id='warehouseTwo' style={{paddingBottom:'3%'}}>
+        <div onClick={()=>navigateTo("/WarehouseTwo")} id='warehouseTwo' style={{paddingBottom:'3%'}}>
           <p className='warehouseTitle'>Magazyn 2</p>
           <img src={warehouseIcon} style={{width:'15vw'}} />
           <p style={{textAlign:'center'}}>{stantwo.ilosc}/{stantwo.pojemnosc}</p>
           <Progres stan={stantwo} />
             
         </div>
-        <div onClick={()=>navigate("/WarehouseThree")} id='warehouseThree' style={{paddingBottom:'3%'}}>
+        <div onClick={()=>navigateTo("/WarehouseThree")} id='warehouseThree' style={{paddingBottom:'3%'}}>
           <p className='warehouseTitle'>Magazyn 3</p>
           <img src={warehouseIcon} style={{width:'15vw'}} />
           <p style={{textAlign:'center'}}>{stanthree.ilosc}/{stanthree.pojemnosc}</p>
@@ -109,21 +113,21 @@ export default function MainPage() {
         </div>
       <h1  className='cardTitle'>Dashboard</h1>
       <div  className='warehouseAreaMain'>
-        <div onClick={()=>navigate("/WarehouseOne")} id='warehouseOne' style={{paddingBottom:'3%'}}>
+        <div onClick={()=>navigateTo("/WarehouseOne")} id='warehouseOne' style={{paddingBottom:'3%'}}>
           <p className='warehouseTitle'>Warehouse 1</p>
           <img src={warehouseIcon} style={{width:'15vw'}} />
           <p style={{textAlign:'center'}}>{stanone.ilosc}/{stanone.pojemnosc}</p>
           <Progres stan={stanone} />
             
         </div>
-        <div onClick={()=>navigate("/WarehouseTwo")} id='warehouseTwo' style={{paddingBottom:'3%'}}>
+        <div onClick={()=>navigateTo("/WarehouseTwo")} id='warehouseTwo' style={{paddingBottom:'3%'}}>
           <p className='warehouseTitle'>Warehouse 2</p>
           <img src={warehouseIcon} style={{width:'15vw'}} />
           <p style={{textAlign:'center'}}>{stantwo.ilosc}/{stantwo.pojemnosc}</p>
           <Progres stan={stantwo} />
             
         </div>
-        <div onClick={()=>navigate("/WarehouseThree")} id='warehouseThree' style={{paddingBottom:'3%'}}>
+        <div onClick={()=>navigateTo("/WarehouseThree")} id='warehouseThree' style={{paddingBottom:'3%'}}>
           <p className='warehouseTitle'>Warehouse 3</p>
           <img src={warehouseIcon} style={{width:'15vw'}} />
           <p style={{textAlign:'center'}}>{stanthree.ilosc}/{stanthree.pojemnosc}</p>

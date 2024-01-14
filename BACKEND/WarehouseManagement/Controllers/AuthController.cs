@@ -58,7 +58,7 @@ namespace WarehouseManagement.Controllers
                 {
                 new Claim(ClaimTypes.Name, username),
                 },
-                expires: DateTime.Now.AddHours(1),
+                expires: DateTime.Now.AddHours(8), //Czas ważności tokenu/czas sesji
                 signingCredentials: credentials
             );
 

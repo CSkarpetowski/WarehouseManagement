@@ -4,11 +4,15 @@ import NavBar from './NavBar';
 import formImage from '../img/addProductimg.jpg';
 import axios from 'axios';
 import {useGlobalState, setGlobalState} from './GlobalVariables';
-
+import { add } from 'date-fns';
+import {jwtDecode} from "jwt-decode";
+import checkjwt from './CheckJwt.js';
 
 export default function AddProduct() {
   
+
   function addProductDB() {
+    checkjwt();
     let queryFlag = false;
     let productMame = document.getElementById('addProductName').value;
     let productQuantity = document.getElementById('addProductQuantity').value;
@@ -39,10 +43,13 @@ export default function AddProduct() {
     }
   }
 
+
+
+
   function generateLOT()
   {
     
-    if (document.getElementById('addProductName').value == undefined || document.getElementById('addProductName').value == null || document.getElementById('addProductName').value == ""){
+    if (document.getElementById('addProductName').value === undefined || document.getElementById('addProductName').value === null || document.getElementById('addProductName').value == ""){
       return;
     } else{
       var prod = document.getElementById('addProductName').value;
