@@ -52,7 +52,7 @@ export default function Order() {
                   <th>Firma</th>
                   <th>Telefon</th>
                   <th>NIP</th>
-                  <th></th>
+                  
                 </tr>
               </thead>
               <tbody>
@@ -68,7 +68,7 @@ export default function Order() {
                     <td>{client.firma}</td>
                     <td>{client.telefon}</td>
                     <td>{client.nip}</td>
-                    <td style={{ textAlign: 'center' }}><MdDelete size={25} color='red' /></td>
+                    
                   </tr>
                 ))}
               </tbody>
@@ -95,7 +95,7 @@ export default function Order() {
                   <th>Company</th>
                   <th>Phone</th>
                   <th>NIP</th>
-                  <th></th>
+                  
                 </tr>
               </thead>
               <tbody>
@@ -111,7 +111,7 @@ export default function Order() {
                     <td>{client.firma}</td>
                     <td>{client.telefon}</td>
                     <td>{client.nip}</td>
-                    <td style={{ textAlign: 'center' }}><MdDelete size={25} color='red' /></td>
+                    
                   </tr>
                 ))}
               </tbody>
