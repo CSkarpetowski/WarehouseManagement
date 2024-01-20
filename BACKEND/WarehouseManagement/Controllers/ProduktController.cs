@@ -74,6 +74,38 @@ namespace WarehouseManagement.Controllers
                 pIdMagazyn = addProduct.pIdMagazyn
             };
             Debug.WriteLine("Dane, które próbujesz dodać do bazy: " + Newtonsoft.Json.JsonConvert.SerializeObject(product));
+
+            if (product.Ilosc == 0)
+            {
+                return BadRequest("Ilość nie może być równa 0");
+            }
+
+            if (product.Ilosc < 0)
+            {
+                return BadRequest("Ilość nie może być mniejsza od 0");
+            }
+
+            var stan = _context.Magazyn.FirstOrDefault(x => x.IdMagazyn == product.pIdMagazyn);
+            int pojemnosc = stan.Pojemnosc;
+            var ilosc = _context.Produkt.Where(x => x.pIdMagazyn == product.pIdMagazyn);
+            int ilenastanie = 0;
+            foreach (var item in ilosc)
+            {
+                ilenastanie += item.Ilosc;
+
+            }
+
+            StanGet aktualny = new StanGet
+            {
+                ilosc = ilenastanie,
+                pojemnosc = pojemnosc
+            };
+
+            if (aktualny.ilosc + product.Ilosc > aktualny.pojemnosc)
+            {
+                return BadRequest("Nie można dodać więcej produktów, ponieważ przekroczono pojemność magazynu, zmień magazyn albo rozłóż na dwa magazyny");
+            }   
+
             await _context.AddAsync(product);
             await _hubContext.Clients.All.SendAsync("ProductChanged");
             await _context.SaveChangesAsync();

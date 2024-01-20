@@ -8,6 +8,7 @@ export default function ProductPage() {
     axios.get("https://localhost:7099/api/produkt/1")
     .then((response) => {
         const data = response.data;
+        console.log(data);
         document.getElementById('productName').value = data.nazwa || '';
         document.getElementById('productQuantity').value = data.ilosc || '';
         document.getElementById('productLOT').value = data.lot || '';

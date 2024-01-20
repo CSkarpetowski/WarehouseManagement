@@ -37,10 +37,11 @@ export default function AddProduct() {
       })
         .then((response) => {
           alert("Produkt dodano pomyślnie !");
+         
          // setNotification({ showNotification: true }); // Set productAdded to true when product is added
          setGlobalState('signalChange',true);
         })
-        .catch((err) => alert("Coś poszło nie tak!"));
+        .catch((error) => alert(error.response.data));
     }
   }
 

@@ -56,6 +56,8 @@ export default function NavBar() {
   const [showNote, setShowNote] = useState(false);
   const [Weather, setWeather] = useState(false);
 
+  
+
   function SignOut() {
     localStorage.removeItem("token");
     navigate("/");
