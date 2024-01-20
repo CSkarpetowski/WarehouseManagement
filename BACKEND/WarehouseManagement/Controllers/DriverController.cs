@@ -28,7 +28,9 @@ namespace WarehouseManagement.Controllers
         [HttpGet("ForDrivers", Name = "ForDrivers")]
         public IActionResult GetAllForDrivers()
         {
-            var Drivers = _context.Klient.Include(x => x.Zamowienia.Where(x => x.IsOld == false)).Where(x => !x.Zamowienia.Count().Equals(0));
+            var Drivers = _context.Klient.Where(klient => klient.Zamowienia.Any(zamowienie => !zamowienie.IsOld))
+                .Where(klient => klient.Zamowienia.Any())
+                .Include(klient => klient.Zamowienia.Where(zamowienie => !zamowienie.IsOld));
             return Ok(Drivers);
         }
 
@@ -41,4 +43,4 @@ namespace WarehouseManagement.Controllers
             return Ok(clients);
         }
     }
-}
+} 

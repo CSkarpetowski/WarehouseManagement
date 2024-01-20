@@ -17,6 +17,7 @@ export default function Order() {
     try {
       axios.get('https://localhost:7099/Drivers/ForDrivers').then((Response) => {
         setClientsData(Response.data);
+        console.log(Response.data);
       });
     } catch (err) {
       console.log(err);
@@ -56,21 +57,31 @@ export default function Order() {
                 </tr>
               </thead>
               <tbody>
-                {clientsData.map((client) => (
-                  <tr key={client.idKlient}>
-                    <td>{client.idKlient}</td>
-                    <td style={{ display: 'flex' }} >{client.zamowienia.map((order) => (
-                      <li key={order.idZamowienie}>
-                        <button onClick={() => openOrderDetails(order.idZamowienie)} className='orderButton'>{order.idZamowienie}</button>
-                      </li>
-                    ))}</td>
-                    <td>{client.kierowca}</td>
-                    <td>{client.firma}</td>
-                    <td>{client.telefon}</td>
-                    <td>{client.nip}</td>
-                    
-                  </tr>
-                ))}
+                {console.log("Data.length" + clientsData.length)}
+              {clientsData.length > 0 ? (
+  clientsData.map((client) => (
+    <tr key={client.idKlient}>
+      <td>{client.idKlient}</td>
+      <td style={{ display: 'flex' }}>
+        {client.zamowienia.map((order) => (
+          <li key={order.idZamowienie}>
+            <button onClick={() => openOrderDetails(order.idZamowienie)} className='orderButton'>
+              {order.idZamowienie}
+            </button>
+          </li>
+        ))}
+      </td>
+      <td>{client.kierowca}</td>
+      <td>{client.firma}</td>
+      <td>{client.telefon}</td>
+      <td>{client.nip}</td>
+    </tr>
+  ))
+) : (
+  <tr>
+    <td colSpan="6">Brak danych</td>
+  </tr>
+)}
               </tbody>
             </table>
           </div>
