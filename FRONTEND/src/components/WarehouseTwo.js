@@ -81,7 +81,7 @@ const WarehouseTwo = () => {
         {decodedInfo && (
           <div className='qrInfo'>
             <h2>Info QR:</h2>
-            <pre>{JSON.stringify(decodedInfo, null, 2)}</pre>
+            <pre>{JSON.stringify(decodedInfo, null, 2).slice(1, -1)}</pre>
           </div>
         )}
       </div>

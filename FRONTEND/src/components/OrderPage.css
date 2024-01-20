@@ -21,7 +21,6 @@ h2 {
   margin-right: auto;
   width: 90%;
   margin-top: 20px;
-  padding-left: 5%;
   align-items: center;
 }
 
@@ -52,6 +51,8 @@ h2 {
   padding: 20px;
   height: 65vh;
   overflow-y: scroll;
+  width: 30vw;
+  max-width: 30vw;
 }
 
 .orderTable {

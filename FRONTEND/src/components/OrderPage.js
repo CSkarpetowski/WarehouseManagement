@@ -132,7 +132,7 @@ const RightPanel = ({ tempTable }) => {
           ))}
         </tbody>
       </table>
-      <p style={{margin: 15}}>Dodanie ilości poza ilością maksymalną doda do zamówienia tylko tyle ile jest na stanie!</p>
+      <p style={{margin: 15}}>Jeśli ilość dodana do zamówienia przekracza ilość dostępną na stanie, dodawana jest tylko dostępna ilość.</p>
     </div>
   );}
   const renderEnglish = () => {
@@ -158,6 +158,7 @@ const RightPanel = ({ tempTable }) => {
             ))}
           </tbody>
         </table>
+        <p style={{margin: 15}}>If the quantity added to the order exceeds the quantity available in stock, only the available quantity is added.</p>
       </div>
     );}
     return (
