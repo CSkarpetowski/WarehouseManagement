@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import axios from 'axios';
 import "./Order.css";
-import { MdDelete } from "react-icons/md";
+import { format } from 'date-fns';
 import OrderDetailsForHistory from './OrderDetailsForHistory';
 import {useGlobalState, setGlobalState} from './GlobalVariables';
 
@@ -54,7 +54,6 @@ export default function Order() {
                 <th>Firma</th>
                 <th>NIP</th>
                 <th>Kierowca</th>
-                {/* Add additional headers as needed */}
                 <th></th>
               </tr>
             </thead>
@@ -62,14 +61,13 @@ export default function Order() {
             {History.map((his) => (
                 <tr key={his.idHistoria}>
                   <td>{his.hIdZamowienie}</td>
-                  <td>{his.realizacja}</td>
+                  <td>{format(new Date(his.realizacja), 'HH:mm dd-MM-yyyy')}</td>
                   <td>{his.zamowienie.klient.firma}</td>
                   <td>{his.zamowienie.klient.nip}</td>
                   <td>{his.zamowienie.klient.kierowca}</td>
-                  {/* Add additional cells as needed */}
                   <td>
                     
-                      <button onClick={() => openOrderDetails(his.zamowienie.idZamowienie)} className='orderButton'>szczegóły</button>
+                      <button onClick={() => openOrderDetails(his.zamowienie.idZamowienie)} className='orderButton'>Szczegóły</button>
                     
                   </td>                 
                 </tr>
@@ -96,7 +94,6 @@ export default function Order() {
                   <th>Company</th>
                   <th>NIP</th>
                   <th>Driver</th>
-                  {/* Add additional headers as needed */}
                   <th></th>
                 </tr>
               </thead>
@@ -104,14 +101,13 @@ export default function Order() {
               {History.map((his) => (
                   <tr key={his.idHistoria}>
                     <td>{his.hIdZamowienie}</td>
-                    <td>{his.realizacja}</td>
+                    <td>{format(new Date(his.realizacja), 'HH:mm dd-MM-yyyy')}</td>
                     <td>{his.zamowienie.klient.firma}</td>
                     <td>{his.zamowienie.klient.nip}</td>
                     <td>{his.zamowienie.klient.kierowca}</td>
-                    {/* Add additional cells as needed */}
                     <td>
                       
-                        <button onClick={() => openOrderDetails(his.zamowienie.idZamowienie)} className='orderButton'>details</button>
+                        <button onClick={() => openOrderDetails(his.zamowienie.idZamowienie)} className='orderButton'>Details</button>
                       
                     </td>                 
                   </tr>

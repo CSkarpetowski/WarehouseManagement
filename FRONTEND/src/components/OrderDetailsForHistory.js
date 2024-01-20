@@ -32,7 +32,7 @@ export default function OrderDetailsForHistory(props) {
           textAlign:'center',
            fontFamily:'Roboto, Helvetica, sans-serif',
            margin:'0'}} >
-            Oder details</p>
+            Order details</p>
 
         <table className='orderDetailsTable'>
           <thead>

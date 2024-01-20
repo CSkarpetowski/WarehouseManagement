@@ -92,13 +92,13 @@
     background-color: #08b90b;
 
   }
-.printClient
-{
-    display: none;
-}
+  .printOrder
+  {
+      display: none;
+  }
 
   @media print {
-    .printClient {
+    .printOrder {
       display: block;
     }
   }

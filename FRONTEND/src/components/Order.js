@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import axios from 'axios';
 import "./Order.css";
-import { MdDelete } from "react-icons/md";
 import OrderDetails from './OrderDetails';
-import {useGlobalState, setGlobalState} from './GlobalVariables';
+import { useGlobalState, setGlobalState } from './GlobalVariables';
 
 export default function Order() {
   const [clientsData, setClientsData] = useState([]);
   const [showDetails, setShowDetails] = useState(false);
   const [orderId, setOrderId] = useState(0);
-  const [language,setLanguage] = useGlobalState('language');
+  const [companyName, setCompanyName] = useState(null);  // Change to companyName
+  const [language, setLanguage] = useGlobalState('language');
   console.log(language);
 
   useEffect(() => {
@@ -24,9 +24,10 @@ export default function Order() {
     }
   }, []);
 
-  function openOrderDetails(idZam) {
+  function openOrderDetails(idZam, companyName) {
     setShowDetails(true);
     setOrderId(idZam);
+    setCompanyName(companyName);  // Update to pass company name
   }
 
   function closeOrderDetails() {
@@ -36,10 +37,11 @@ export default function Order() {
   if (!Array.isArray(clientsData)) {
     return <p>No data available</p>;
   }
+
   const renderPolish = () => {
     return (
       <>
-        {showDetails && <OrderDetails orderId={orderId} handleClose={closeOrderDetails} />}
+        {showDetails && <OrderDetails orderId={orderId} companyName={companyName} handleClose={closeOrderDetails} />}
         <div className='driverPage'>
           <NavBar />
           <h1 className='cardTitle'>Zamówienia</h1>
@@ -53,46 +55,45 @@ export default function Order() {
                   <th>Firma</th>
                   <th>Telefon</th>
                   <th>NIP</th>
-                  
                 </tr>
               </thead>
               <tbody>
-                {console.log("Data.length" + clientsData.length)}
-              {clientsData.length > 0 ? (
-  clientsData.map((client) => (
-    <tr key={client.idKlient}>
-      <td>{client.idKlient}</td>
-      <td style={{ display: 'flex' }}>
-        {client.zamowienia.map((order) => (
-          <li key={order.idZamowienie}>
-            <button onClick={() => openOrderDetails(order.idZamowienie)} className='orderButton'>
-              {order.idZamowienie}
-            </button>
-          </li>
-        ))}
-      </td>
-      <td>{client.kierowca}</td>
-      <td>{client.firma}</td>
-      <td>{client.telefon}</td>
-      <td>{client.nip}</td>
-    </tr>
-  ))
-) : (
-  <tr>
-    <td colSpan="6">Brak danych</td>
-  </tr>
-)}
+                {clientsData.length > 0 ? (
+                  clientsData.map((client) => (
+                    <tr key={client.idKlient}>
+                      <td>{client.idKlient}</td>
+                      <td style={{ display: 'flex' }}>
+                        {client.zamowienia.map((order) => (
+                          <li key={order.idZamowienie}>
+                            <button onClick={() => openOrderDetails(order.idZamowienie, client.firma)} className='orderButton'>
+                              {order.idZamowienie}
+                            </button>
+                          </li>
+                        ))}
+                      </td>
+                      <td>{client.kierowca}</td>
+                      <td>{client.firma}</td>
+                      <td>{client.telefon}</td>
+                      <td>{client.nip}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="6">Brak danych</td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
         </div>
       </>
     );
-  }
+  };
+
   const renderEnglish = () => {
     return (
       <>
-        {showDetails && <OrderDetails orderId={orderId} handleClose={closeOrderDetails} />}
+        {showDetails && <OrderDetails orderId={orderId} companyName={companyName} handleClose={closeOrderDetails} />}
         <div className='driverPage'>
           <NavBar />
           <h1 className='cardTitle'>Orders</h1>
@@ -106,52 +107,44 @@ export default function Order() {
                   <th>Company</th>
                   <th>Phone</th>
                   <th>NIP</th>
-                  
                 </tr>
               </thead>
               <tbody>
-              {console.log("Data.length" + clientsData.length)}
-              {clientsData.length > 0 ? (
-  clientsData.map((client) => (
-    <tr key={client.idKlient}>
-      <td>{client.idKlient}</td>
-      <td style={{ display: 'flex' }}>
-        {client.zamowienia.map((order) => (
-          <li key={order.idZamowienie}>
-            <button onClick={() => openOrderDetails(order.idZamowienie)} className='orderButton'>
-              {order.idZamowienie}
-            </button>
-          </li>
-        ))}
-      </td>
-      <td>{client.kierowca}</td>
-      <td>{client.firma}</td>
-      <td>{client.telefon}</td>
-      <td>{client.nip}</td>
-    </tr>
-  ))
-) : (
-  <tr>
-    <td colSpan="6">No data</td>
-  </tr>
-)}
+                {clientsData.length > 0 ? (
+                  clientsData.map((client) => (
+                    <tr key={client.idKlient}>
+                      <td>{client.idKlient}</td>
+                      <td style={{ display: 'flex' }}>
+                        {client.zamowienia.map((order) => (
+                          <li key={order.idZamowienie}>
+                            <button onClick={() => openOrderDetails(order.idZamowienie, client.firma)} className='orderButton'>
+                              {order.idZamowienie}
+                            </button>
+                          </li>
+                        ))}
+                      </td>
+                      <td>{client.kierowca}</td>
+                      <td>{client.firma}</td>
+                      <td>{client.telefon}</td>
+                      <td>{client.nip}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="6">No data</td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
         </div>
       </>
     );
-  }
-  
-  
+  };
 
   return (
     <>
-    {language == "PL" ? renderPolish() : renderEnglish()}
-
+      {language === "PL" ? renderPolish() : renderEnglish()}
     </>
-  );}
-  
-
-
-
+  );
+}
