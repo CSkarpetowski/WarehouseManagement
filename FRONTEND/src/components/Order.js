@@ -110,21 +110,31 @@ export default function Order() {
                 </tr>
               </thead>
               <tbody>
-                {clientsData.map((client) => (
-                  <tr key={client.idKlient}>
-                    <td>{client.idKlient}</td>
-                    <td style={{ display: 'flex' }} >{client.zamowienia.map((order) => (
-                      <li key={order.idZamowienie}>
-                        <button onClick={() => openOrderDetails(order.idZamowienie)} className='orderButton'>{order.idZamowienie}</button>
-                      </li>
-                    ))}</td>
-                    <td>{client.kierowca}</td>
-                    <td>{client.firma}</td>
-                    <td>{client.telefon}</td>
-                    <td>{client.nip}</td>
-                    
-                  </tr>
-                ))}
+              {console.log("Data.length" + clientsData.length)}
+              {clientsData.length > 0 ? (
+  clientsData.map((client) => (
+    <tr key={client.idKlient}>
+      <td>{client.idKlient}</td>
+      <td style={{ display: 'flex' }}>
+        {client.zamowienia.map((order) => (
+          <li key={order.idZamowienie}>
+            <button onClick={() => openOrderDetails(order.idZamowienie)} className='orderButton'>
+              {order.idZamowienie}
+            </button>
+          </li>
+        ))}
+      </td>
+      <td>{client.kierowca}</td>
+      <td>{client.firma}</td>
+      <td>{client.telefon}</td>
+      <td>{client.nip}</td>
+    </tr>
+  ))
+) : (
+  <tr>
+    <td colSpan="6">No data</td>
+  </tr>
+)}
               </tbody>
             </table>
           </div>
