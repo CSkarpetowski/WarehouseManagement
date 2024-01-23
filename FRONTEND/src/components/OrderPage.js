@@ -10,10 +10,10 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
   const handleRowClick = (row) => {
     handleCheck({ target: { checked: !tempTable.some(item => item.idProd === row.idProd) } }, row);
   };
-  const [language, setLanguage] = useGlobalState('language');
-  console.log(language);
+  const [language] = useGlobalState('language');
+  
 
-  const renderPolish = () => {
+  const renderPolish = () => { //Render PL
   return (
     <div className="orderleftPanel">
       <table className='orderTable'>
@@ -55,7 +55,7 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
       </table>
     </div>
   );}
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
     return (
       <div className="orderleftPanel">
         <table className='orderTable'>
@@ -97,7 +97,7 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
         </table>
       </div>
     );}
-    return (
+    return ( //Sprawdzenie czy wybrany jest PL czy EN
       <>
       {language == "PL" ? renderPolish() : renderEnglish()}
     
@@ -106,9 +106,9 @@ const LeftPanel = ({ tableData, tempTable, handleCheck, handleTableDataChange })
 };
 
 
-const RightPanel = ({ tempTable }) => {
+const RightPanel = ({ tempTable }) => { //Prawy Panel
   const [language, setLanguage] = useGlobalState('language');
-  console.log(language);
+  
   const renderPolish = () => {
   return (
     <div className="orderrightPanel">
@@ -135,7 +135,7 @@ const RightPanel = ({ tempTable }) => {
       <p style={{margin: 15}}>Jeśli ilość dodana do zamówienia przekracza ilość dostępną na stanie, dodawana jest tylko dostępna ilość.</p>
     </div>
   );}
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
     return (
       <div className="orderrightPanel">
         <table className='finalOrder'>
@@ -161,7 +161,7 @@ const RightPanel = ({ tempTable }) => {
         <p style={{margin: 15}}>If the quantity added to the order exceeds the quantity available in stock, only the available quantity is added.</p>
       </div>
     );}
-    return (
+    return ( //Sprawdzenie czy wybrany jest jezyk PL czy EN
       <>
       {language == "PL" ? renderPolish() : renderEnglish()}
     
@@ -177,19 +177,19 @@ const OrderPage = () => {
   const [selectedClient, setSelectedClient] = useState('');
   const [klient, setKlient] = useState([]);
   const [language, setLanguage] = useGlobalState('language');
-  console.log(language);
+  
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         if (selectedWarehouse === '') {
           const response = await axios.get(`https://localhost:7099/api/produkt/all`);
-          console.log(response.data);
+          
           setTableData(response.data);
         }
         if (selectedWarehouse) {
           const response = await axios.get(`https://localhost:7099/api/produkt/all/${selectedWarehouse}`);
-          console.log(response.data);
+          
           setTableData(response.data);
         }
       } catch (error) {
@@ -243,13 +243,18 @@ const OrderPage = () => {
           alert("Zamówienie dodano pomyślnie!");
           setGlobalState('signalChange',true);
         })
-        .catch((err) => alert("Coś poszło nie tak!"));
+        .catch((err) => {
+          if (err.response != undefined){
+            alert("Coś poszło nie tak!")
+          }
+          
+        });
     } else {
       alert("Nie znaleziono wybranego klienta!");
     }
   }
   const resetProductAdded = () => {
-    // setNotification({ showNotification: false });
+   
     setGlobalState('signalChange',false);
   };
 
@@ -271,7 +276,7 @@ const OrderPage = () => {
     setTableData(newTableData);
   };
 
-  const renderPolish = () => {
+  const renderPolish = () => { //Render PL
     return (
       <div id='mainPage'>
         <NavBar />
@@ -315,7 +320,7 @@ const OrderPage = () => {
       </div>
     );
   }
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
     return (
       <div id='mainPage'>
         <NavBar />

@@ -4,19 +4,19 @@ import axios from 'axios';
 import "./Order.css";
 import { format } from 'date-fns';
 import OrderDetailsForHistory from './OrderDetailsForHistory';
-import {useGlobalState, setGlobalState} from './GlobalVariables';
+import {useGlobalState} from './GlobalVariables';
 
 
 export default function Order() {
   const [History, setHistory] = useState([]);
   const [showDetails, setShowDetails] = useState(false);
   const [orderId, setOrderId] = useState(0);
-  const [language,setLanguage] = useGlobalState('language');
+  const [language] = useGlobalState('language');
   console.log(language);
 
   useEffect(() => {
     try {
-      // Replace the URL with your Postman data endpoint
+      
       axios.get('https://localhost:7099/api/zamowienie/getAllOld2').then((response) => {
         setHistory(response.data);
       });
@@ -38,7 +38,7 @@ export default function Order() {
     return <p>No data available</p>;
   }
 
-  const renderPolish = () => {
+  const renderPolish = () => { //Render PL
   return (
     <>
       {showDetails && <OrderDetailsForHistory orderId={orderId} handleClose={closeOrderDetails} />}
@@ -61,7 +61,7 @@ export default function Order() {
             {History.map((his) => (
                 <tr key={his.idHistoria}>
                   <td>{his.hIdZamowienie}</td>
-                  <td>{format(new Date(his.realizacja), 'HH:mm dd-MM-yyyy')}</td>
+                  <td>{format(new Date(his.realizacja), 'HH:mm dd-MM-yyyy')}</td> 
                   <td>{his.zamowienie.klient.firma}</td>
                   <td>{his.zamowienie.klient.nip}</td>
                   <td>{his.zamowienie.klient.kierowca}</td>
@@ -78,7 +78,7 @@ export default function Order() {
       </div>
     </>
   );}
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
     return (
       <>
         {showDetails && <OrderDetailsForHistory orderId={orderId} handleClose={closeOrderDetails} />}
@@ -98,10 +98,10 @@ export default function Order() {
                 </tr>
               </thead>
               <tbody>
-              {History.map((his) => (
+              {History.map((his) => (// Format Daty
                   <tr key={his.idHistoria}>
                     <td>{his.hIdZamowienie}</td>
-                    <td>{format(new Date(his.realizacja), 'HH:mm dd-MM-yyyy')}</td>
+                    <td>{format(new Date(his.realizacja), 'HH:mm dd-MM-yyyy')}</td> 
                     <td>{his.zamowienie.klient.firma}</td>
                     <td>{his.zamowienie.klient.nip}</td>
                     <td>{his.zamowienie.klient.kierowca}</td>

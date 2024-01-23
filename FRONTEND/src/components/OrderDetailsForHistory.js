@@ -11,7 +11,7 @@ export default function OrderDetailsForHistory(props) {
         .then( (response) => {
           const orderDataArray = [response.data];
           setOrderDetails(orderDataArray[0]);
-          console.log(orderDataArray);
+          
         });
       }
       catch (err){

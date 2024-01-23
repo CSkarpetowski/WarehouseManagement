@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactToPrint from 'react-to-print';
 import './OrderDetails.css';
 import axios from 'axios';
-import { useGlobalState, setGlobalState } from './GlobalVariables';
+import { useGlobalState} from './GlobalVariables';
 
 class ComponentToPrint extends React.Component {
   render() {
@@ -39,8 +39,8 @@ class ComponentToPrint extends React.Component {
 }
 
 export default function OrderDetails(props) {
-  const [language, setLanguage] = useGlobalState('language');
-  console.log(language);
+  const [language] = useGlobalState('language');
+  
   const { orderId, handleClose, companyName } = props;
   const [orderDetails, setOrderDetails] = useState([]);
   const componentRef = React.createRef();
@@ -58,13 +58,18 @@ export default function OrderDetails(props) {
 
   const deleteOrder = () => {
     try {
-      axios.delete(`https://localhost:7099/api/zamowienie/delete/${orderId}`).then(() => alert('Order deleted'));
+      axios.delete(`https://localhost:7099/api/zamowienie/delete/${orderId}`).then(() => 
+      {
+        alert('Order deleted')
+        window.location.reload();
+      });
+    
     } catch (err) {
       console.log(err);
     }
   };
 
-  const renderPolish = () => {
+  const renderPolish = () => { //Render PL
     return (
       <div className="orderDetailsMain">
         <h1 className="orderWindowBar">
@@ -98,7 +103,7 @@ export default function OrderDetails(props) {
     );
   };
 
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
     return (
       <div className="orderDetailsMain">
         <h1 className="orderWindowBar">
@@ -132,7 +137,7 @@ export default function OrderDetails(props) {
     );
   };
 
-  return (
+  return ( // Sprawdzene czy PL czy EN
     <>
       {language === "PL" ? renderPolish() : renderEnglish()}
     </>

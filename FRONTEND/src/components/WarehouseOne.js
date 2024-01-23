@@ -5,15 +5,15 @@ import NavBar from './NavBar';
 import QRCode from 'qrcode.react';
 import { useReactToPrint } from 'react-to-print';
 import { PiPrinter } from "react-icons/pi";
-import {useGlobalState, setGlobalState} from './GlobalVariables';
+import {useGlobalState} from './GlobalVariables';
 
 
 const WarehouseOne = () => {
   const [selectedRow, setSelectedRow] = useState(null);
   const [warehouseData, setWarehouseData] = useState([]);
   const leftPanelRef = useRef();
-  const [language,setLanguage] = useGlobalState('language');
-  console.log(language);
+  const [language] = useGlobalState('language');
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,7 +35,7 @@ const WarehouseOne = () => {
     try {
       axios.patch(`https://localhost:7099/api/produkt/isGood/${buttonID}`, { isGood: true })
         .then(() => {
-          console.log("Pomyslnie zaktualizowano isGood TRUE ");
+          
           window.location.reload();
         });
     } catch (err) {
@@ -49,7 +49,7 @@ const WarehouseOne = () => {
     try {
       axios.patch(`https://localhost:7099/api/produkt/isGood/${buttonID}`, { isGood: false })
         .then(() => {
-          console.log("Pomyslnie zaktualizowano isGood FALSE ");
+         
           window.location.reload();
         });
     } catch (err) {
@@ -89,7 +89,7 @@ const WarehouseOne = () => {
   });
 
   const RightPanel = ({ warehouseData, setSelectedRow }) => {
-    const renderEnglish = () => {
+    const renderEnglish = () => { //Render EN
     return (
       <div className="warehouserightPanel">
         <table className='qrTable'>
@@ -165,7 +165,7 @@ const WarehouseOne = () => {
   const handlePrintLeftPanel = useReactToPrint({
     content: () => leftPanelRef.current,
   });
-  const renderPolish = () => {
+  const renderPolish = () => { //Render PL
   return (
     <div id='WarehousePage'>
       <NavBar />
@@ -178,7 +178,7 @@ const WarehouseOne = () => {
       </div>
     </div>
   );}
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
     return (
       <div id='WarehousePage'>
         <NavBar />
@@ -191,7 +191,7 @@ const WarehouseOne = () => {
         </div>
       </div>
     );}
-    return (
+    return ( //Sprawdzenie czy wybrany jest PL czy EN
       <>
       {language == "PL" ? renderPolish() : renderEnglish()}
     

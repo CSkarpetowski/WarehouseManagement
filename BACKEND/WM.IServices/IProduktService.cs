@@ -6,6 +6,6 @@ namespace WM.IServices
     {
         public Task<Produkt> GetProduktByIdProduktu(int IdProd);
         public Task<Produkt> CreateProdukt(AddProdukt createProdukt);
-        Task EditProdukt(EditProdukt AddProdukt, int IdProd); //Tu może być sraka
+        Task EditProdukt(EditProdukt AddProdukt, int IdProd); 
     }
 }

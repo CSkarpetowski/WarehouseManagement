@@ -8,12 +8,10 @@ import AddProduct from './components/AddProduct';
 import WarehouseOne from './components/WarehouseOne';
 import WarehouseTwo from './components/WarehouseTwo';
 import WarehouseThree from './components/WarehouseThree';
-import ConnectionTest from './components/ConnectionTest'
 import Order from './components/Order';
 import OrderHistory from './components/OrderHistory';
 import WorkersPage from './components/WorkersPage';
-import {jwtDecode} from "jwt-decode";
-import { el } from 'date-fns/locale';
+
 
 
 function App() {

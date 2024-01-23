@@ -25,7 +25,6 @@ namespace WM.Services
         public async Task EditProdukt(EditProdukt createProdukt, int IdProd)
         {
             var Produkt = await _produktRepository.GetProdukt(IdProd);
-            //Produkt.EditProdukt(createProdukt.Nazwa, createProdukt.LOT, createProdukt.Ilosc, createProdukt.IsGood, createProdukt.pIdMagazyn);
             Produkt.EditProdukt(createProdukt.Nazwa, createProdukt.LOT, createProdukt.Ilosc, createProdukt.IsGood);
             await _produktRepository.EditProdukt(Produkt);
         }

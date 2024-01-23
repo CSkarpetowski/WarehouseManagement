@@ -43,24 +43,7 @@ namespace WarehouseManagement.Controllers
         }
 
 
-        [ValidationModel]
-
-        //public async Task<IActionResult> Post([FromBody] WM.IServices.AddProdukt createProdukt)
-        //{
-        //    Debug.WriteLine("DODAJESZ ********************* " + Newtonsoft.Json.JsonConvert.SerializeObject(createProdukt));
-
-        //    var Produkt = await _produktService.CreateProdukt(createProdukt);
-
-        //    return Created(Produkt.IdProd.ToString(), new ProduktViewModel {
-        //                IdProd = Produkt.IdProd,
-        //                Nazwa = Produkt.Nazwa,
-        //                Ilosc = Produkt.Ilosc,
-        //                LOT = Produkt.LOT,
-        //                IsGood = Produkt.IsGood,
-        //                pIdMagazyn = Produkt.pIdMagazyn
-        //    });
-
-        //}
+       
 
         [ValidationModel]
         public async Task<IActionResult> Post([FromBody] AddProduct addProduct)

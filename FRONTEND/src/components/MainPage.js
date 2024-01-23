@@ -5,7 +5,7 @@ import axios from 'axios';
 import warehouseIcon from '../img/warehouse.png';
 import Clock from 'react-live-clock';
 import { useNavigate } from 'react-router-dom';
-import {useGlobalState, setGlobalState} from './GlobalVariables';
+import {useGlobalState} from './GlobalVariables';
 import checkjwt from './CheckJwt';
 
 export default function MainPage() {
@@ -15,8 +15,8 @@ export default function MainPage() {
   const [stanone, setstanone] = useState({ ilosc: 0, pojemnosc: 0 });
   const [stantwo, setstantwo] = useState({ ilosc: 0, pojemnosc: 0 });
   const [stanthree, setstanthree] = useState({ ilosc: 0, pojemnosc: 0 });
-  const [language,setLanguage] = useGlobalState('language');
-  console.log(language);
+  const [language] = useGlobalState('language');
+  
  
     useEffect(() => {
       const fetchData = async () => {
@@ -44,7 +44,7 @@ export default function MainPage() {
   
       fetchData();
     }, []);
-        console.log(stanone);
+        
     
         function Progres({ stan }) {
           if (stan.ilosc / stan.pojemnosc >= 0.9) {

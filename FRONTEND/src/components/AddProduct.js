@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, {} from 'react';
 import './AddProduct.css';
 import NavBar from './NavBar';
 import formImage from '../img/addProductimg.jpg';
 import axios from 'axios';
 import {useGlobalState, setGlobalState} from './GlobalVariables';
-import { add } from 'date-fns';
-import {jwtDecode} from "jwt-decode";
 import checkjwt from './CheckJwt.js';
-import { FaLessThanEqual } from 'react-icons/fa';
+
 
 export default function AddProduct() {
   
@@ -36,19 +34,22 @@ export default function AddProduct() {
         "pIdMagazyn": productWarehouse
       })
         .then((response) => {
-          alert("Produkt dodano pomyślnie !");
-         
-         // setNotification({ showNotification: true }); // Set productAdded to true when product is added
+         alert("Produkt dodano pomyślnie !");
          setGlobalState('signalChange',true);
         })
-        .catch((error) => alert(error.response.data));
+        .catch((err) => {
+          if(err.response != undefined){
+            alert(err.response.data)  
+          }
+          
+        });
     }
   }
 
 
 
 
-  function generateLOT()
+  function generateLOT() //Automatyczna generacja LOT
   {
     
     if (document.getElementById('addProductName').value === undefined || document.getElementById('addProductName').value === null || document.getElementById('addProductName').value == ""){
@@ -95,10 +96,10 @@ export default function AddProduct() {
     }
   }
 
-  const [language,setLanguage] = useGlobalState('language');
-   console.log(language);
+  const [language] = useGlobalState('language');
+   
   const resetProductAdded = () => {
-   // setNotification({ showNotification: false });
+   
    setGlobalState('signalChange',false);
   };
 
@@ -106,7 +107,7 @@ export default function AddProduct() {
     return(
       <div className='addProductPage'>
       <h1 className='cardTitle'>Dodaj Produkt</h1>
-      {/* Pass the callback function to reset productAdded to NavBar */}
+      
       <NavBar />
       <div className='addProductArea'>
         <div className='leftSideForm'><img src={formImage} style={{ width: '160%' }} /></div>
@@ -128,11 +129,11 @@ export default function AddProduct() {
     </div>
     )
   }
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
     return(
       <div className='addProductPage'>
       <h1 className='cardTitle'>Add Product</h1>
-      {/* Pass the callback function to reset productAdded to NavBar */}
+      
       <NavBar />
       <div className='addProductArea'>
         <div className='leftSideForm'><img src={formImage} style={{ width: '160%' }} /></div>
@@ -155,7 +156,7 @@ export default function AddProduct() {
     )
   }
 
-  return (
+  return ( //Sprawdzenie czy PL czy EN
     <>
     {language == "PL" ? renderPolish() : renderEnglish()}
 

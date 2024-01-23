@@ -7,17 +7,17 @@ export default function ConnectionTest() {
 
   useEffect(() => {
     const connection = new signalR.HubConnectionBuilder()
-        .withUrl("https://localhost:7099/productChanged") // Replace with your SignalR endpoint
+        .withUrl("https://localhost:7099/productChanged") // SignalR
         .build();
 
     connection.start()
         .then(() => {
-            console.log("SignalR Connected!");
+            
         })
         .catch(err => console.error(err));
 
     connection.on("ProductChanged",()=>{
-      console.log("Sachnik Kurwa !");
+      
     }) 
 }, []);
 

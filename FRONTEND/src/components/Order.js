@@ -3,21 +3,21 @@ import NavBar from './NavBar';
 import axios from 'axios';
 import "./Order.css";
 import OrderDetails from './OrderDetails';
-import { useGlobalState, setGlobalState } from './GlobalVariables';
+import { useGlobalState} from './GlobalVariables';
 
 export default function Order() {
   const [clientsData, setClientsData] = useState([]);
   const [showDetails, setShowDetails] = useState(false);
   const [orderId, setOrderId] = useState(0);
-  const [companyName, setCompanyName] = useState(null);  // Change to companyName
-  const [language, setLanguage] = useGlobalState('language');
-  console.log(language);
+  const [companyName, setCompanyName] = useState(null);  
+  const [language] = useGlobalState('language');
+  
 
   useEffect(() => {
     try {
       axios.get('https://localhost:7099/Drivers/ForDrivers').then((Response) => {
         setClientsData(Response.data);
-        console.log(Response.data);
+        
       });
     } catch (err) {
       console.log(err);
@@ -27,7 +27,7 @@ export default function Order() {
   function openOrderDetails(idZam, companyName) {
     setShowDetails(true);
     setOrderId(idZam);
-    setCompanyName(companyName);  // Update to pass company name
+    setCompanyName(companyName);  
   }
 
   function closeOrderDetails() {
@@ -38,7 +38,7 @@ export default function Order() {
     return <p>No data available</p>;
   }
 
-  const renderPolish = () => {
+  const renderPolish = () => { //Render PL
     return (
       <>
         {showDetails && <OrderDetails orderId={orderId} companyName={companyName} handleClose={closeOrderDetails} />}
@@ -90,7 +90,7 @@ export default function Order() {
     );
   };
 
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
     return (
       <>
         {showDetails && <OrderDetails orderId={orderId} companyName={companyName} handleClose={closeOrderDetails} />}
@@ -142,7 +142,7 @@ export default function Order() {
     );
   };
 
-  return (
+  return ( //Sprawdzenie czy PL czy EN
     <>
       {language === "PL" ? renderPolish() : renderEnglish()}
     </>

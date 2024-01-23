@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 export default function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [setError] = useState('');
   const navigate = useNavigate();
 
   const isManager = async (username) => {
@@ -17,7 +17,7 @@ export default function LoginPage() {
       // Sprawdź odpowiedź serwera - jeśli zawiera odpowiednią informację, zwróć true, w przeciwnym razie false
       localStorage.setItem("isManager",response.data);
     } catch (err) {
-      setError("ARGH !");
+      setError("Error");
     }
   };
 
@@ -31,7 +31,7 @@ export default function LoginPage() {
           localStorage.setItem("token", token);
           localStorage.setItem("username", username);
           isManager(username);
-          alert("Pomyslnie Zalogowano!");
+          
           navigate('/');
           window.location.reload();
       } catch (err) {

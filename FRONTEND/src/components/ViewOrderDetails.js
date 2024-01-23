@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./ViewOrderDetails.css";
 import NavBar from "./NavBar";
-import axios from "axios";
+
 
 const initialOrderList = [
   { idZamowienie: 1, IsOld: "not ready", zIdKlient: 19 },
@@ -11,7 +11,7 @@ const initialOrderList = [
   { idZamowienie: 4, IsOld: "not ready", zIdKlient: 51 },
 ];
 
-const orderData = {
+const orderData = { //Symulator produktu
   1: [
     { LpZamowienie: 1, IDProd: "1", nazwa: "dwumasa", ilosc: "3", lot: "1245" },
     { LpZamowienie: 2, IDProd: "3", nazwa: "sprzęgło", ilosc: "2", lot: "5732" },
@@ -95,7 +95,7 @@ const RightPanel = ({ selectedOrder }) => {
 };
 
 export default function ViewOrderDetails() {
-  const [orderList, setOrders] = useState(initialOrderList);
+  const [orderList] = useState(initialOrderList);
   const [selectedOrder, setSelectedOrder] = useState(null);
 
   const handleOrderClick = (order) => {

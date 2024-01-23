@@ -3,21 +3,19 @@ import NavBar from './NavBar';
 import axios from 'axios';
 import "./Order.css";
 import { RiMailAddFill } from "react-icons/ri";
-import { hover } from '@testing-library/user-event/dist/hover';
-import {useGlobalState, setGlobalState} from './GlobalVariables';
+import {useGlobalState} from './GlobalVariables';
 
 
 export default function Order() {
   const [employeesData, setEmployeesData] = useState([]);
-  const [showDetails, setShowDetails] = useState(false);
-  const [employeeId, setEmployeeId] = useState(0);
+  const [setShowDetails] = useState(false);
+  const [setEmployeeId] = useState(0);
   const [showMailPopUp, setShowMailPopUp] = useState(false);
   const [userMailId, setUserMailId] = useState();
-  const [language,setLanguage] = useGlobalState('language');
-  console.log(language);
+  const [language] = useGlobalState('language');
   useEffect(() => {
     try {
-      // Replace the URL with your Postman data endpoint
+      // Url Axios endpoint
       axios.get('https://localhost:7099/api/pracownik/all').then((response) => {
         setEmployeesData(response.data);
       });
@@ -26,14 +24,9 @@ export default function Order() {
     }
   }, []);
 
-  function openEmployeeDetails(idPracownik) {
-    setShowDetails(true);
-    setEmployeeId(idPracownik);
-  }
+  
 
-  function closeEmployeeDetails() {
-    setShowDetails(false);
-  }
+
 
   if (!Array.isArray(employeesData)) {
     return <p>No data available</p>;
@@ -42,7 +35,7 @@ export default function Order() {
   function sendMail(mail,subject, body){
 
     try {
-      // Replace the URL with your Postman data endpoint
+      // URL Axios endpoint
       axios.post('https://localhost:7099/api/pracownik/SendEmail',{
         "Email": mail,
         "Subject": subject,
@@ -55,7 +48,7 @@ export default function Order() {
   }
  
 
-  const MailPopUp = () => {
+  const MailPopUp = () => { // Okno Mail do Pracownika
     return(
       <div style={{position:'absolute',
        backgroundColor:'#0d2730',
@@ -85,17 +78,15 @@ export default function Order() {
            const MailText = await String(document.getElementById('mailContent').value);
            const MailSubject = await String(document.getElementById('mailSubject').value);
            sendMail(userMailId, MailSubject, MailText);
-           alert(MailText); // Gruby czarodzieju tu masz gotowca tylko w mail wyslac uzyj:
-            // async await-> na gorze masz przyklad  O========3
+           alert(MailText); 
           }}>Wyślij!</button>
       </div>
     );
   }
-  const renderPolish = () => {
+  const renderPolish = () => { //Render PL
     return (
       <>
-        {/* Add your OrderDetails component if needed */}
-        {/* {showDetails && <OrderDetails employeeId={employeeId} handleClose={closeEmployeeDetails} />} */}
+        
         <div className='driverPage'>
           <NavBar />
           {showMailPopUp ? MailPopUp() : null}
@@ -109,7 +100,7 @@ export default function Order() {
                   <th>Telefon</th>
                   <th>Menadżer</th>
                   <th>ID Magazynu</th>
-                  {/* Add additional headers as needed */}
+                  
                   <th></th>
                 </tr>
               </thead>
@@ -121,7 +112,6 @@ export default function Order() {
                     <td>{employee.telefon}</td>
                     <td>{employee.isManager ? 'Tak' : 'Nie'}</td>
                     <td>{employee.pIdMagazyn}</td>
-                    {/* Add additional cells as needed */}
                     <td style={{ textAlign: 'center' }} onClick={() => {
                       setShowMailPopUp(true)
                       setUserMailId(employee.email)
@@ -136,11 +126,10 @@ export default function Order() {
       </>
     );
   }
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
     return (
       <>
-        {/* Add your OrderDetails component if needed */}
-        {/* {showDetails && <OrderDetails employeeId={employeeId} handleClose={closeEmployeeDetails} />} */}
+        
         <div className='driverPage'>
           <NavBar />
           {showMailPopUp ? MailPopUp() : null}
@@ -154,7 +143,7 @@ export default function Order() {
                   <th>Phone number</th>
                   <th>Menager</th>
                   <th>Warehouse ID</th>
-                  {/* Add additional headers as needed */}
+                  
                   <th></th>
                 </tr>
               </thead>
@@ -166,7 +155,7 @@ export default function Order() {
                     <td>{employee.telefon}</td>
                     <td>{employee.isManager ? 'Yes' : 'No'}</td>
                     <td>{employee.pIdMagazyn}</td>
-                    {/* Add additional cells as needed */}
+                    
                     <td style={{ textAlign: 'center' }} onClick={() => {
                       setShowMailPopUp(true)
                       setUserMailId(employee.email)
@@ -182,7 +171,7 @@ export default function Order() {
     );
   }
 
-  return (
+  return ( //Sprawdzenie czy wybrany jest PL czy EN
     <>
     {language == "PL" ? renderPolish() : renderEnglish()}
 

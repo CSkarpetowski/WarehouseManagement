@@ -21,50 +21,7 @@ namespace WM.Data.Sql
         //przykład konfiguracji modeli/encji poprzez klasy konfiguracyjne z folderu DAOConfigurations
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            //builder.Entity<Produkt>(entity =>
-            //{
-            //    entity.HasKey(e => e.IdProd).HasName("PRIMARY");
-
-            //    entity.ToTable("produkt");
-
-            //    entity.Property(e => e.IdProd)
-            //        .HasColumnName("IdProd");
-            //    entity.Property(e => e.Ilosc).HasColumnName("Ilosc");
-            //    entity.Property(e => e.IsGood)
-            //        .HasMaxLength(1)
-            //        .IsFixedLength()
-            //        .HasColumnName("IsGood");
-            //    entity.Property(e => e.LOT)
-            //        .HasMaxLength(50)
-            //        .IsFixedLength()
-            //        .HasColumnName("LOT");
-            //    entity.Property(e => e.Nazwa)
-            //        .HasMaxLength(80)
-            //        .IsFixedLength()
-            //        .HasColumnName("Nazwa");
-            //});
-
-            //builder.Entity<ZamowienieLista>(entity =>
-            //{
-            //    entity.HasKey(e => e.LpZamowienie).HasName("PRIMARY");
-
-            //    entity.ToTable("Zamowienielista");
-
-            //    // entity.HasIndex(e => e.zIdProd, "zamowienielista_produkt_fk");
-
-            //    entity.Property(e => e.LpZamowienie)
-            //        .HasColumnName("LpZamowienie");
-            //    entity.Property(e => e.ilosc).HasColumnName("ilosc");
-            //    entity.Property(e => e.LOT)
-            //        .HasMaxLength(120)
-            //        .IsFixedLength()
-            //        .HasColumnName("LOT");
-            //    entity.Property(e => e.zIdProd).HasColumnName("zIdProd");
-
-            //    entity.HasOne(d => d.Produkt).WithMany(p => p.ZamowienieListas)
-            //        .HasForeignKey(d => d.zIdProd)
-            //        .OnDelete(DeleteBehavior.Cascade);
-            //});
+          
 
 
 

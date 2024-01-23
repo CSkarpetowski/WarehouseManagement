@@ -1,23 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './WarehouseWeather.css';
 import ReactWeather, { useVisualCrossing } from 'react-open-weather';
-import {useGlobalState, setGlobalState} from './GlobalVariables';
+import {useGlobalState} from './GlobalVariables';
 
 
 
 const WarehouseWeather = ({ Wheater, ShowWeather }) => {
 
-  const [language,setLanguage] = useGlobalState('language');
-  console.log(language);
+  const [language] = useGlobalState('language');
   const { data, isLoading, errorMessage } = useVisualCrossing({
-    key: '24ACX68MVGMUUKAFVR5CUHNNQ',
+    key: '24ACX68MVGMUUKAFVR5CUHNNQ', //Koordynaty 
     lat: '50.76844',
     lon: '17.84652',
-    lang: 'pl',
-    unit: 'metric', // values are (metric,us,uk)
+    lang: 'pl', //język
+    unit: 'metric', // Wybór jednostki
   });
 
-const renderPolish = () => {
+const renderPolish = () => { //Render PL
   return (
     <div className="warehouse-weather-container">
       {Wheater && (
@@ -38,7 +37,7 @@ const renderPolish = () => {
       )}
     </div>
   );}
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
     return (
       <div className="warehouse-weather-container">
         {Wheater && (
@@ -59,7 +58,7 @@ const renderPolish = () => {
         )}
       </div>
     );}
-    return (
+    return ( // Sprawdzenie czy wybrany jest PL czy EN
       <>
       {language == "PL" ? renderPolish() : renderEnglish()}
     

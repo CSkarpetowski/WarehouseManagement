@@ -1,7 +1,7 @@
 import React from 'react'
 import './PageLoader.css';
 import { Vortex } from 'react-loader-spinner';
-export default function PageLoader() {
+export default function PageLoader() { //Przeładowanie strony
   return (
     <div className='page-loader'>
   <Vortex

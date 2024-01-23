@@ -6,6 +6,6 @@ namespace WM.IServices
     {
         public Task<Klient> GetKlientByIdKlienta(int IdKlient);
         public Task<Klient> CreateKlient(AddKlient createKlient);
-        Task EditKlient(EditKlient AddKlient, int IdKlienta); //Tu może być sraka
+        Task EditKlient(EditKlient AddKlient, int IdKlienta); 
     }
 }

@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import "./NavBar.css";
 import WarehouseWeather from './WarehouseWeather';
-import {jwtDecode} from "jwt-decode";
 import {BiUserCircle} from "react-icons/bi";
 import {BiBell} from "react-icons/bi";
-import {AiOutlineIdcard} from 'react-icons/ai';
 import {AiOutlineDashboard} from 'react-icons/ai';
-import {LiaClipboardListSolid} from 'react-icons/lia';
 import langPL from '../img/langPL.png';
 import langEN from '../img/langEN.png';
 import {GoPeople} from 'react-icons/go';
@@ -16,12 +13,9 @@ import {FaSignOutAlt} from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { FiAlignLeft } from "react-icons/fi";
 import { PiCloudSunBold } from "react-icons/pi";
-import LoginPage from './LoginPage';
-import AddProduct from './AddProduct';
-import OrderPage from './OrderPage';
 import { MdAssignmentAdd } from "react-icons/md";
-import WarehouseNote from './WarehouseNote'; //Import powiadomień
-import {useGlobalState, setGlobalState} from './GlobalVariables';
+import WarehouseNote from './WarehouseNote'; 
+import {useGlobalState} from './GlobalVariables';
 import * as signalR from '@microsoft/signalr';
 import { LiaHistorySolid } from "react-icons/lia";
 import checkjwt from './CheckJwt';
@@ -29,12 +23,12 @@ import checkjwt from './CheckJwt';
 export default function NavBar() {
   const [bellGreen,setBellGreen] = useState();
   const [language,setLanguage] = useGlobalState('language');
-  console.log(language);
+  
 
 
   useEffect(() => {
     const connection = new signalR.HubConnectionBuilder()
-      .withUrl("https://localhost:7099/productChanged") // Replace with your SignalR endpoint
+      .withUrl("https://localhost:7099/productChanged") //SignalR 
       .build();
 
     connection.start()
@@ -44,7 +38,7 @@ export default function NavBar() {
       .catch(err => console.error(err));
 
     connection.on("ProductChanged", () => {
-      console.log("Sachnik Kurwa szef!");
+     
       setBellGreen(true);
     });
   }, []);
@@ -85,7 +79,7 @@ export default function NavBar() {
   const navDriver = () => {checkjwt(); navigate("/Driver")}
   const navHistory = () => {checkjwt(); navigate("/History")}
 
-  const renderPolish = () => {
+  const renderPolish = () => { //Render PL
   return (
     <nav>
       <div>
@@ -160,12 +154,7 @@ export default function NavBar() {
             <p>Dodaj Zam.</p>
             </div>
           </li>
-           {/* <li className='listItem'>
-            <div onClick={navOrders}>
-              <LiaClipboardListSolid size={20} color="#c87cfc"/>
-              <p></p> Orders
-            </div>
-            </li> */}
+           
 
           <li className='listItem'>
             <div onClick={navWorkers}>
@@ -188,7 +177,7 @@ export default function NavBar() {
       </div>
     </nav>
   );}
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
     return (
       <nav>
         <div>
@@ -263,12 +252,7 @@ export default function NavBar() {
               <p>AddOrder</p>
               </div>
             </li>
-             {/* <li className='listItem'>
-              <div onClick={navOrders}>
-                <LiaClipboardListSolid size={20} color="#c87cfc"/>
-                <p></p> Orders
-              </div>
-              </li> */}
+             
   
             <li className='listItem'>
               <div onClick={navWorkers}>
@@ -291,7 +275,7 @@ export default function NavBar() {
         </div>
       </nav>
     );}
-    return (
+    return (//Sprawdzenie czy EN czy PL
       <>
       {language == "PL" ? renderPolish() : renderEnglish()}
     

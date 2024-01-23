@@ -4,29 +4,29 @@ import './WarehouseNote.css';
 import { RiAddLine } from 'react-icons/ri';
 import { format } from 'date-fns';
 import axios from 'axios';
-import {useGlobalState, setGlobalState} from './GlobalVariables';
+import {useGlobalState} from './GlobalVariables';
 
 
-const WarehouseNote = ({ showNote, toggleNote }) => {
+const WarehouseNote = ({ showNote}) => {
   const [notes, setNotes] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [language,setLanguage] = useGlobalState('language');
-  console.log(language);
+  const [language] = useGlobalState('language');
+  
 
   useEffect(() => {
-    // Fetch notes from the server when the component mounts
+   
     axios.get("https://localhost:7099/Note/all")
       .then((response) => {
-        setNotes(response.data); // Assuming the response.data is an array of notes
+        setNotes(response.data); 
       })
       .catch((err) => console.error("Error fetching notes:", err));
-  }, []); // Empty dependency array means this effect runs only once when the component mounts
+  }, []); 
 
   const addNote = () => {
     let queryFlag = false;
     let Tresc = document.getElementById('addTresc').value;
     let kIdMagazyn = (1);
-    // let kIdMagazyn = document.getElementById('addkIdMagazyn').value;
+    
 
     if (Tresc == null || kIdMagazyn == null) {
       alert("Coś poszło nie tak!");
@@ -42,8 +42,8 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
       })
         .then((response) => {
           alert("Dodano pomyślnie!");
-          // Refresh notes after successfully adding a new note
-          axios.get("https://localhost:7099/Note/all")  // Update the endpoint here
+          
+          axios.get("https://localhost:7099/Note/all")  // URL axios endpoint
             .then((response) => {
               setNotes(response.data);
             })
@@ -66,7 +66,7 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
     addNote();
 
   };
-  const renderPolish = () => {
+  const renderPolish = () => { //Render PL
   return (
     <div className="warehouse-note-container">
       {showNote && (
@@ -107,7 +107,7 @@ const WarehouseNote = ({ showNote, toggleNote }) => {
     </div>
   );
   }
-const renderEnglish = () => {
+const renderEnglish = () => { //Render EN
   return (
     <div className="warehouse-note-container">
       {showNote && (
@@ -150,7 +150,7 @@ const renderEnglish = () => {
     </div>
   );
  }
-  return (
+  return ( //Sprawdzenie czy wybrany jest PL czy EN
   <>
   {language == "PL" ? renderPolish() : renderEnglish()}
 

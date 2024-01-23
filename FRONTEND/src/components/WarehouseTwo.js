@@ -5,20 +5,20 @@ import NavBar from './NavBar';
 import QRCode from 'qrcode.react';
 import { useReactToPrint } from 'react-to-print';
 import { PiPrinter } from "react-icons/pi";
-import {useGlobalState, setGlobalState} from './GlobalVariables';
+import {useGlobalState} from './GlobalVariables';
 
 
 const WarehouseTwo = () => {
   const [selectedRow, setSelectedRow] = useState(null);
   const [warehouseData, setWarehouseData] = useState([]);
   const leftPanelRef = useRef();
-  const [language,setLanguage] = useGlobalState('language');
-  console.log(language);
+  const [language] = useGlobalState('language');
+  
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://localhost:7099/api/produkt/all/2");
+        const response = await axios.get("https://localhost:7099/api/produkt/all/2"); //Url axios endpoint
         setWarehouseData(response.data);
         console.log(response.data);
       } catch (err) {
@@ -35,7 +35,7 @@ const WarehouseTwo = () => {
     try {
       axios.patch(`https://localhost:7099/api/produkt/isGood/${buttonID}`, { isGood: true })
         .then(() => {
-          console.log("Pomyslnie zaktualizowano isGood TRUE ");
+          
           window.location.reload();
         });
     } catch (err) {
@@ -49,7 +49,7 @@ const WarehouseTwo = () => {
     try {
       axios.patch(`https://localhost:7099/api/produkt/isGood/${buttonID}`, { isGood: false })
         .then(() => {
-          console.log("Pomyslnie zaktualizowano isGood FALSE ");
+          
           window.location.reload();
         });
     } catch (err) {
@@ -57,7 +57,7 @@ const WarehouseTwo = () => {
     }
   };
 
-  const LeftPanel = React.forwardRef(({ selectedRow }, ref) => {
+  const LeftPanel = React.forwardRef(({ selectedRow }, ref) => { //Lewy panel
     const [qrCodeValue, setQRCodeValue] = useState('');
 
     useEffect(() => {
@@ -89,7 +89,7 @@ const WarehouseTwo = () => {
   });
 
   const RightPanel = ({ warehouseData, setSelectedRow }) => {
-    const renderPolish = () => {
+    const renderPolish = () => { //Render PL
     return (
       <div className="warehouserightPanel">
         <table className='qrTable'>
@@ -121,7 +121,7 @@ const WarehouseTwo = () => {
         </table>
       </div>
     );}
-    const renderEnglish = () => {
+    const renderEnglish = () => { //Render EN
       return (
         <div className="warehouserightPanel">
           <table className='qrTable'>
@@ -164,7 +164,7 @@ const WarehouseTwo = () => {
   const handlePrintLeftPanel = useReactToPrint({
     content: () => leftPanelRef.current,
   });
-  const renderEnglish = () => {
+  const renderEnglish = () => { //Render EN
   return (
     <div id='WarehousePage'>
       <NavBar />
@@ -177,7 +177,7 @@ const WarehouseTwo = () => {
       </div>
     </div>
   );}
-  const renderPolish = () => {
+  const renderPolish = () => { //Render PL
     return (
       <div id='WarehousePage'>
         <NavBar />
@@ -190,7 +190,7 @@ const WarehouseTwo = () => {
         </div>
       </div>
     );}
-    return (
+    return ( // Sprawdzenie czy wybrany jest PL czy EN
       <>
       {language == "PL" ? renderPolish() : renderEnglish()}
     

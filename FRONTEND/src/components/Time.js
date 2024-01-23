@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Time.css';
-
+//Zegar
 
 export default function Time() {
     const [currentDateTime, setCurrentDateTime] = useState(new Date());

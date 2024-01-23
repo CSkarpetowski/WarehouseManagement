@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NavBar from './NavBar';
 import './ProductPage.css';
 import productDetails from '../img/productDetails.jpg';
@@ -8,7 +8,7 @@ export default function ProductPage() {
     axios.get("https://localhost:7099/api/produkt/1")
     .then((response) => {
         const data = response.data;
-        console.log(data);
+       
         document.getElementById('productName').value = data.nazwa || '';
         document.getElementById('productQuantity').value = data.ilosc || '';
         document.getElementById('productLOT').value = data.lot || '';
@@ -34,7 +34,7 @@ export default function ProductPage() {
                 type='text'
                 id='productName'
                 className='productInput'
-                //value={}
+               
                 readOnly
               />
             </div>
@@ -44,7 +44,7 @@ export default function ProductPage() {
                 type='number'
                 id='productQuantity'
                 className='productInput'
-                //value={}
+               
                 readOnly
               />
             </div>
@@ -54,7 +54,7 @@ export default function ProductPage() {
                 type='text'
                 id='productLOT'
                 className='productInput'
-                //value={}
+                
                 readOnly
               />
             </div>
@@ -64,7 +64,7 @@ export default function ProductPage() {
                 type='text'
                 id='productWarehouse'
                 className='productInput'
-               // value={}
+               
                 readOnly
               />
             </div>
